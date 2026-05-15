@@ -1,809 +1,1391 @@
-Lab 1: BlueWave Clinic Lab 1: Environment Orientation and Case Study Setup
-Estimated Duration
-```text
+# Lab 01 - BlueWave Clinic Environment Orientation and Case Study Setup
+
+## Estimated Time
+
 60–90 minutes
-```
+
 ---
-Difficulty Level
-Beginner
+
+## Lab Purpose
+
+In this lab, you will become familiar with the two virtual machines used in the BlueWave Clinic cyber operations environment.
+
+You will identify system names, user accounts, IP addresses, network connectivity, lab file locations, and evidence folders.
+
+This lab prepares you for later labs where the Windows 11 endpoint sends logs to Elastic and Kibana on the Ubuntu SOC server.
+
 ---
-Lab Scenario
-BlueWave Clinic is a small healthcare organisation that is starting to build a cyber operations capability.
-You are a junior cyber operations analyst. Your first job is to understand the lab environment before any monitoring or investigation work begins.
-In this lab, you will explore two virtual machines:
-A Windows 11 endpoint named WIN11-CLIENT.
-An Ubuntu SOC server named UBUNTU-SOC.
-You will identify hostnames, IP addresses, basic connectivity, and evidence storage locations. These details will be reused in later labs when Windows logs are sent to Elastic and analysed in Kibana.
----
-Learning Objectives
+
+## Learning Objectives
+
 By the end of this lab, you will be able to:
-Identify the purpose of each virtual machine in the BlueWave Clinic lab.
-Open PowerShell on WIN11-CLIENT.
-Open Terminal on UBUNTU-SOC.
-Collect hostname, username, and IP address information.
-Test basic network connectivity between the two virtual machines.
-Create evidence folders for future investigation work.
-Document environment information in a simple evidence file.
+
+- Identify the purpose of each virtual machine in the lab.
+- Use PowerShell on Windows to collect basic system information.
+- Use Terminal on Ubuntu to collect basic system information.
+- Identify IPv4 addresses on Windows and Ubuntu.
+- Test basic connectivity between the two lab machines.
+- Create evidence folders on Windows and Ubuntu.
+- Locate the preloaded lab files.
+- Create a structured Lab 01 evidence notes file.
+
 ---
-Required Machines
-Machine	Purpose
-WIN11-CLIENT	Windows 11 endpoint and analyst workstation
-UBUNTU-SOC	Ubuntu SOC server that will later run Elastic and Kibana
+
+## Scenario
+
+BlueWave Clinic is a small healthcare organisation that is building a basic Security Operations Centre, also known as a SOC.
+
+You are a junior cyber operations analyst.
+
+Before collecting logs, using Kibana, or investigating alerts, you must understand the lab environment.
+
+The lab contains two virtual machines:
+
+| Machine | Role |
+|---|---|
+| WIN11-CLIENT | Windows 11 endpoint and analyst workstation |
+| UBUNTU-SOC | Ubuntu SOC server that will later run Elastic, Kibana, and Fleet |
+
+In later labs:
+
+- WIN11-CLIENT will generate Windows logs.
+- WIN11-CLIENT will generate Sysmon process activity.
+- Elastic Agent will send logs to UBUNTU-SOC.
+- Kibana will be used to search and analyse the logs.
+
+In this first lab, you will document the environment and prepare evidence folders.
+
+> [!note]
+> Elastic and Kibana are not used in this lab. They are introduced in Lab 02.
+
+> [!note]
+> This lab does not require internet access.
+
+> [!alert]
+> Do not run the simulator in this lab. `BlueWaveActivitySimulator.exe` is introduced in a later lab.
+
 ---
-Required Files
-File	Location	Purpose
-None required	N/A	This lab focuses on environment orientation and evidence setup
+
+## Required Machines
+
+| Machine | Used For |
+|---|---|
+| WIN11-CLIENT | Windows commands, evidence folder, lab notes |
+| UBUNTU-SOC | Ubuntu commands, evidence folder, network checks |
+
 ---
-Before You Begin
-Before starting this lab, confirm the following:
-You can access the Skillable lab environment.
-You can sign in to WIN11-CLIENT.
-You can sign in to UBUNTU-SOC.
-You can open PowerShell on WIN11-CLIENT.
-You can open Terminal on UBUNTU-SOC.
-You do not need internet access for this lab.
-You do not need to install Elastic in this lab.
-You do not need to run the simulator in this lab.
+
+## Required Files
+
+No files are required to complete this lab.
+
+You will only verify that the preloaded lab folders exist.
+
 ---
-Key Terms
-Term	Meaning
-Virtual machine	A computer running inside the lab environment
-Endpoint	A user workstation or device that can generate logs
-SOC	Security Operations Centre
-Hostname	The name of a computer on a network
-IP address	A network address used to communicate with another computer
-PowerShell	A Windows command-line tool
-Terminal	A Linux command-line tool
-Evidence	Information saved during an investigation or lab
-Connectivity	The ability of two machines to communicate
-Case study	A fictional scenario used to guide the labs
----
-Task 1: Review the BlueWave Clinic Lab Environment
-Purpose
-This task helps you understand the two machines used throughout the course.
-You will identify which machine is the Windows endpoint and which machine is the SOC server.
----
-Steps
-On WIN11-CLIENT
-Sign in to the Windows 11 virtual machine.
-Look at the desktop.
-Confirm that you are working on the Windows machine.
-Open the Start menu.
-Type:
-```text
-About your PC
-```
-Open About your PC.
-Review the device information.
-Close the Settings window.
----
-On UBUNTU-SOC
-Sign in to the Ubuntu virtual machine.
-Look at the desktop or terminal environment.
-Confirm that you are working on the Ubuntu machine.
-Open Terminal.
-Type the following command:
-```bash
-hostname
-```
-Press Enter.
----
-Expected Result
-On WIN11-CLIENT, you should see that the system is running Windows 11.
-On UBUNTU-SOC, the hostname should display something similar to:
-```text
-UBUNTU-SOC
-```
-If the hostname is slightly different, record the exact value shown.
----
-Screenshot Checkpoint
-Capture one screenshot showing that you are signed in to WIN11-CLIENT.
-Capture one screenshot showing the Ubuntu Terminal with the hostname command result.
----
-Student Note
-In your notes, write:
-```text
-Lab environment contains two virtual machines:
-1. WIN11-CLIENT - Windows 11 endpoint and analyst workstation
-2. UBUNTU-SOC - Ubuntu SOC server
-```
-Also write the actual hostname shown on the Ubuntu machine.
----
-Task 2: Identify the Windows Hostname and Current User
-Purpose
-The hostname helps you identify which computer generated logs.
-The username helps you identify which account performed an action.
-In later labs, you will search for this information in Kibana.
----
-Steps
-On WIN11-CLIENT
-Click the Start button.
-Type:
-```text
-PowerShell
-```
-Click Windows PowerShell.
-In PowerShell, type:
-```powershell
-hostname
-```
-Press Enter.
-Record the result.
-In the same PowerShell window, type:
-```powershell
-whoami
-```
-Press Enter.
-Record the result.
-Type the following command:
-```powershell
-$env:COMPUTERNAME
-```
-Press Enter.
-Compare the result with the earlier `hostname` result.
----
-Expected Result
-The hostname should be similar to:
-```text
-WIN11-CLIENT
-```
-The current user should be shown in this format:
-```text
-computername\username
-```
-Example:
-```text
-win11-client\student
-```
-The command:
-```powershell
-$env:COMPUTERNAME
-```
-should return the Windows computer name.
----
-Screenshot Checkpoint
-Capture a screenshot showing the PowerShell results for:
-```powershell
-hostname
-whoami
-$env:COMPUTERNAME
-```
----
-Student Note
-Write the following in your evidence notes:
-```text
-Windows hostname:
-Windows logged-in user:
-Windows COMPUTERNAME value:
-```
-Example:
-```text
-Windows hostname: WIN11-CLIENT
-Windows logged-in user: win11-client\student
-Windows COMPUTERNAME value: WIN11-CLIENT
-```
----
-Task 3: Identify the Windows IP Address
-Purpose
-The Windows IP address is needed to confirm network communication with the Ubuntu SOC server.
-In later labs, IP addresses may also appear in Elastic events, network logs, or investigation notes.
----
-Steps
-On WIN11-CLIENT
-Keep Windows PowerShell open.
-Type:
-```powershell
-ipconfig
-```
-Press Enter.
-Look for the active network adapter.
-Find the line named:
-```text
-IPv4 Address
-```
-Record the IPv4 address.
-Run this command for a cleaner IPv4 address view:
-```powershell
-Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
-```
-Press Enter.
-Identify the IP address for the active lab network adapter.
----
-Expected Result
-You should see an IPv4 address.
-It may look similar to one of these examples:
-```text
-10.x.x.x
-172.16.x.x
-192.168.x.x
-```
-The exact address depends on the Skillable lab network.
-Example output:
-```text
-InterfaceAlias        IPAddress       PrefixLength
---------------        ---------       ------------
-Ethernet              10.1.1.20       24
-```
----
-Screenshot Checkpoint
-Capture a screenshot showing the Windows IPv4 address.
-The screenshot may show either:
-```powershell
-ipconfig
-```
-or:
-```powershell
-Get-NetIPAddress -AddressFamily IPv4
-```
----
-Student Note
-Write the following in your evidence notes:
-```text
-Windows IPv4 address:
-Windows network adapter name:
-```
-Example:
-```text
-Windows IPv4 address: 10.1.1.20
-Windows network adapter name: Ethernet
-```
----
-Task 4: Identify the Ubuntu Hostname and Current User
-Purpose
-The Ubuntu server will later host Elasticsearch, Kibana, Fleet, and evidence files.
-You need to identify the Ubuntu hostname and current user so that later investigation notes are accurate.
----
-Steps
-On UBUNTU-SOC
-Open Terminal.
-Type:
-```bash
-hostname
-```
-Press Enter.
-Record the result.
-Type:
-```bash
-whoami
-```
-Press Enter.
-Record the result.
-Type:
-```bash
-pwd
-```
-Press Enter.
-Record the current working directory.
----
-Expected Result
-The hostname should be similar to:
-```text
-UBUNTU-SOC
-```
-The username should be similar to:
-```text
-student
-```
-The working directory may be:
-```text
-/home/student
-```
----
-Screenshot Checkpoint
-Capture a screenshot showing the Ubuntu Terminal results for:
-```bash
-hostname
-whoami
-pwd
-```
----
-Student Note
-Write the following in your evidence notes:
-```text
-Ubuntu hostname:
-Ubuntu logged-in user:
-Ubuntu home directory:
-```
-Example:
-```text
-Ubuntu hostname: UBUNTU-SOC
-Ubuntu logged-in user: student
-Ubuntu home directory: /home/student
-```
----
-Task 5: Identify the Ubuntu IP Address
-Purpose
-The Ubuntu IP address is important because WIN11-CLIENT will later connect to Kibana on UBUNTU-SOC.
-You will also use the Ubuntu IP address when testing network connectivity between the two machines.
----
-Steps
-On UBUNTU-SOC
-In Terminal, type:
-```bash
-hostname -I
-```
-Press Enter.
-Record the IP address shown.
-Type:
-```bash
-ip addr show
-```
-Press Enter.
-Look for the active network interface.
-Find the IP address listed after:
-```text
-inet
-```
-Ignore the loopback address:
-```text
-127.0.0.1
-```
-Record the Ubuntu IPv4 address.
----
-Expected Result
-You should see an IPv4 address for UBUNTU-SOC.
-It may look similar to:
-```text
-10.1.1.10
-```
-or:
-```text
-192.168.1.10
-```
-Example output from `hostname -I`:
-```text
-10.1.1.10
-```
-Example output from `ip addr show`:
-```text
-inet 10.1.1.10/24
-```
----
-Screenshot Checkpoint
-Capture a screenshot showing the Ubuntu IP address.
-The screenshot may show either:
-```bash
-hostname -I
-```
-or:
-```bash
-ip addr show
-```
----
-Student Note
-Write the following in your evidence notes:
-```text
-Ubuntu IPv4 address:
-Ubuntu network interface name:
-```
-Example:
-```text
-Ubuntu IPv4 address: 10.1.1.10
-Ubuntu network interface name: ens33
-```
----
-Task 6: Confirm Connectivity from Windows to Ubuntu
-Purpose
-WIN11-CLIENT must be able to reach UBUNTU-SOC.
-In later labs, Windows will open Kibana in a browser and send logs to Elastic.
-This task confirms that basic communication is working.
----
-Steps
-On WIN11-CLIENT
-Go back to Windows PowerShell.
-Identify the Ubuntu IP address that you recorded earlier.
-Type the following command.
-Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu IP address.
-```powershell
-ping <UBUNTU-SOC-IP>
-```
-Example:
-```powershell
-ping 10.1.1.10
-```
-Press Enter.
-Review the result.
-Run this additional connectivity command:
-```powershell
-Test-NetConnection <UBUNTU-SOC-IP>
-```
-Example:
-```powershell
-Test-NetConnection 10.1.1.10
-```
-Press Enter.
----
-Expected Result
-A successful ping should show replies similar to:
-```text
-Reply from 10.1.1.10: bytes=32 time<1ms TTL=64
-```
-A successful `Test-NetConnection` result may show:
-```text
-PingSucceeded : True
-```
-If ping is blocked, you may see:
-```text
-Request timed out.
-```
-If ping fails, do not panic. Some lab environments block ICMP traffic.
-Record the result exactly as shown.
----
-Screenshot Checkpoint
-Capture a screenshot showing the Windows connectivity test to UBUNTU-SOC.
-The screenshot should show either:
-```powershell
-ping <UBUNTU-SOC-IP>
-```
-or:
-```powershell
-Test-NetConnection <UBUNTU-SOC-IP>
-```
----
-Student Note
-Write the following in your evidence notes:
-```text
-Windows-to-Ubuntu connectivity test:
-Command used:
-Result:
-```
-Example:
-```text
-Windows-to-Ubuntu connectivity test:
-Command used: ping 10.1.1.10
-Result: Successful replies received
-```
-Or:
-```text
-Windows-to-Ubuntu connectivity test:
-Command used: ping 10.1.1.10
-Result: Request timed out. ICMP may be blocked.
-```
----
-Task 7: Confirm Connectivity from Ubuntu to Windows
-Purpose
-Testing connectivity in both directions helps confirm the lab network is working.
-This is useful when troubleshooting log forwarding, browser access, and future Elastic Agent communication.
----
-Steps
-On UBUNTU-SOC
-Go back to Terminal.
-Identify the Windows IP address that you recorded earlier.
-Type the following command.
-Replace `<WIN11-CLIENT-IP>` with the actual Windows IP address.
-```bash
-ping -c 4 <WIN11-CLIENT-IP>
-```
-Example:
-```bash
-ping -c 4 10.1.1.20
-```
-Press Enter.
-Review the result.
----
-Expected Result
-A successful ping should show replies similar to:
-```text
-64 bytes from 10.1.1.20: icmp_seq=1 ttl=128 time=1.10 ms
-64 bytes from 10.1.1.20: icmp_seq=2 ttl=128 time=1.02 ms
-64 bytes from 10.1.1.20: icmp_seq=3 ttl=128 time=0.98 ms
-64 bytes from 10.1.1.20: icmp_seq=4 ttl=128 time=1.05 ms
-```
-A summary may show:
-```text
-4 packets transmitted, 4 received, 0% packet loss
-```
-If ping is blocked by the Windows firewall, you may see packet loss.
-Record the result exactly as shown.
----
-Screenshot Checkpoint
-Capture a screenshot showing the Ubuntu connectivity test to WIN11-CLIENT.
----
-Student Note
-Write the following in your evidence notes:
-```text
-Ubuntu-to-Windows connectivity test:
-Command used:
-Result:
-```
-Example:
-```text
-Ubuntu-to-Windows connectivity test:
-Command used: ping -c 4 10.1.1.20
-Result: 4 packets transmitted, 4 received, 0% packet loss
-```
----
-Task 8: Create the Windows Evidence Folder
-Purpose
-Every lab requires evidence.
-The Windows evidence folder will store investigation notes, timelines, screenshots, and reports.
-You will use this folder throughout the course.
----
-Steps
-On WIN11-CLIENT
-Open Windows PowerShell.
-Type the following command:
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
-Press Enter.
-Confirm the folder exists by typing:
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-Press Enter.
-Open File Explorer.
-Go to:
-```text
-C:\BlueWave\Evidence
-```
-Confirm the folder opens.
----
-Expected Result
-PowerShell should create the folder or confirm it already exists.
-The command:
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-should return:
-```text
-True
-```
-File Explorer should show the folder:
-```text
-C:\BlueWave\Evidence
-```
----
-Screenshot Checkpoint
-Capture a screenshot showing either:
-PowerShell with `Test-Path` returning `True`, or
-File Explorer open at `C:\BlueWave\Evidence`.
----
-Student Note
-Write the following in your evidence notes:
-```text
-Windows evidence folder created:
-C:\BlueWave\Evidence
-```
----
-Task 9: Create the Ubuntu Evidence Folder
-Purpose
-Some evidence may also be stored on UBUNTU-SOC.
-This folder will be used when working with Elastic, Kibana, templates, and final reports.
----
-Steps
-On UBUNTU-SOC
-Open Terminal.
-Type the following command:
-```bash
-mkdir -p /home/student/bluewave/evidence
-```
-Press Enter.
-Confirm the folder exists by typing:
-```bash
-ls -ld /home/student/bluewave/evidence
-```
-Press Enter.
-Type:
-```bash
-pwd
-```
-Press Enter.
----
-Expected Result
-You should see output similar to:
-```text
-drwxr-xr-x 2 student student 4096 May 15 10:00 /home/student/bluewave/evidence
-```
-The folder should exist at:
-```text
-/home/student/bluewave/evidence
-```
----
-Screenshot Checkpoint
-Capture a screenshot showing the Ubuntu evidence folder exists.
----
-Student Note
-Write the following in your evidence notes:
-```text
-Ubuntu evidence folder created:
-/home/student/bluewave/evidence
-```
----
-Task 10: Review the Preloaded Lab File Locations
-Purpose
-The course assumes that required lab tools, templates, installers, logs, and simulator files are already preloaded.
-In this task, you will confirm the main lab folders exist.
-You will not run any simulator or install any tool in this lab.
----
-Steps
-On WIN11-CLIENT
-Open Windows PowerShell.
-Type:
-```powershell
-Test-Path "C:\LabFiles"
-```
-Press Enter.
-Type:
-```powershell
-Get-ChildItem "C:\LabFiles"
-```
-Press Enter.
-Look for folders such as:
-```text
-Tools
-Simulators
-Logs
-Templates
-```
----
-On UBUNTU-SOC
-Open Terminal.
-Type:
-```bash
-ls -la /home/student/labfiles
-```
-Press Enter.
-Look for folders such as:
-```text
-logs
-scripts
-templates
-capstone
-```
----
-Expected Result
-On WIN11-CLIENT, you should see:
+
+## Important Paths
+
+You will use the following paths throughout the course.
+
+### Windows Paths
+
 ```text
 C:\LabFiles
 C:\LabFiles\Tools
 C:\LabFiles\Simulators
 C:\LabFiles\Logs
 C:\LabFiles\Templates
+C:\BlueWave
+C:\BlueWave\Evidence
 ```
-On UBUNTU-SOC, you should see:
+
+### Ubuntu Paths
+
 ```text
 /home/student/labfiles
 /home/student/labfiles/logs
 /home/student/labfiles/scripts
 /home/student/labfiles/templates
 /home/student/labfiles/capstone
+/home/student/bluewave
+/home/student/bluewave/evidence
 ```
-If one or more folders are missing, record what is missing.
-Do not create missing course content yourself unless instructed by your instructor.
+
 ---
-Screenshot Checkpoint
-Capture one screenshot showing the Windows `C:\LabFiles` folder listing.
-Capture one screenshot showing the Ubuntu `/home/student/labfiles` folder listing.
+
+## Evidence You Will Create
+
+You will create these evidence files:
+
+| Evidence File | Location |
+|---|---|
+| Lab01-Environment-Notes.txt | `C:\BlueWave\Evidence\Lab01-Environment-Notes.txt` |
+| Lab01-Environment-Notes.txt | `/home/student/bluewave/evidence/Lab01-Environment-Notes.txt` |
+
 ---
-Student Note
-Write the following in your evidence notes:
+
+## Screenshots You Should Capture
+
+Capture screenshots as instructed by your trainer or Skillable platform.
+
+Recommended screenshots:
+
+1. Windows hostname and username.
+2. Windows IPv4 address.
+3. Ubuntu hostname and username.
+4. Ubuntu IPv4 address.
+5. Windows-to-Ubuntu connectivity test.
+6. Ubuntu-to-Windows connectivity test.
+7. Windows evidence folder.
+8. Ubuntu evidence folder.
+9. Windows lab files folder listing.
+10. Ubuntu lab files folder listing.
+11. Completed Windows evidence notes file.
+
+---
+
+## Key Terms
+
+| Term | Meaning |
+|---|---|
+| Endpoint | A user workstation or device that can generate logs |
+| SOC | Security Operations Centre |
+| Hostname | The name of a computer on a network |
+| IP address | A network address used by computers to communicate |
+| PowerShell | A Windows command-line tool |
+| Terminal | A Linux command-line tool |
+| Evidence | Information saved during a lab or investigation |
+| Connectivity | The ability of two machines to communicate |
+| Elastic | A platform used to store, search, and analyse events |
+| Kibana | The web interface used to search and review Elastic data |
+| Loopback address | A local-only address, usually `127.0.0.1`, that should not be used as the lab network IP |
+
+---
+
+# Task 1 - Sign In to WIN11-CLIENT
+
+## Where to Work
+
+Use the **WIN11-CLIENT** virtual machine.
+
+## Steps
+
+1. Open the **WIN11-CLIENT** virtual machine.
+2. Sign in using the credentials provided by your instructor or Skillable environment.
+3. Wait for the Windows desktop to load.
+4. Confirm you can see the Windows desktop.
+
+## Expected Result
+
+You should be signed in to the Windows 11 endpoint.
+
+You should be able to see the Windows desktop.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing that you are signed in to WIN11-CLIENT.
+
+## Record in Evidence Notes
+
+Record this later in your evidence file:
+
 ```text
-Windows lab files folder checked:
-C:\LabFiles
-
-Ubuntu lab files folder checked:
-/home/student/labfiles
-
-Missing folders, if any:
+Windows VM access confirmed: Yes
 ```
+
 ---
-Task 11: Create the Lab 1 Evidence File on Windows
-Purpose
-Cyber operations work must be documented.
-In this task, you will create your first evidence file for BlueWave Clinic.
-This file records the environment information collected during the lab.
+
+# Task 2 - Confirm the Windows Operating System
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+## Steps
+
+1. Select the **Windows Start** menu.
+2. Search for:
+
+```text
+About your PC
+```
+
+3. Open **About your PC**.
+4. Review the Windows device information.
+5. Confirm the operating system is Windows 11.
+6. Close the Settings window.
+
+## Expected Result
+
+You should see that the system is running Windows 11.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Windows device information if required by your instructor.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows operating system: Windows 11
+```
+
 ---
-Steps
-On WIN11-CLIENT
-Open Notepad.
-Copy the following template into Notepad:
+
+# Task 3 - Open Windows PowerShell
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+## Steps
+
+1. Select the **Windows Start** menu.
+2. Search for:
+
+```text
+PowerShell
+```
+
+3. Open **Windows PowerShell**.
+4. Wait for the PowerShell prompt to appear.
+
+## Expected Result
+
+A PowerShell window should open.
+
+The prompt may look similar to:
+
+```text
+PS C:\Users\student>
+```
+
+## Screenshot Checkpoint
+
+No screenshot is required for this task unless instructed.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+PowerShell opened: Yes
+```
+
+---
+
+# Task 4 - Identify the Windows Hostname
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. In PowerShell, type:
+
+```powershell
+hostname
+```
+
+2. Press **Enter**.
+3. Read the result.
+4. Record the hostname.
+
+## Expected Result
+
+The hostname should usually be:
+
+```text
+WIN11-CLIENT
+```
+
+If your result is different, record the exact hostname shown.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the `hostname` command and result.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows hostname:
+```
+
+Example:
+
+```text
+Windows hostname: WIN11-CLIENT
+```
+
+---
+
+# Task 5 - Identify the Windows Logged-In User
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. In PowerShell, type:
+
+```powershell
+whoami
+```
+
+2. Press **Enter**.
+3. Read the result.
+4. Record the logged-in user.
+
+## Expected Result
+
+The result may look similar to:
+
+```text
+win11-client\student
+```
+
+Your result may be different.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the `whoami` command and result.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows logged-in user:
+```
+
+Example:
+
+```text
+Windows logged-in user: win11-client\student
+```
+
+---
+
+# Task 6 - Confirm the Windows Computer Name Variable
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. In PowerShell, type:
+
+```powershell
+$env:COMPUTERNAME
+```
+
+2. Press **Enter**.
+3. Compare the result with the hostname from Task 4.
+4. Record the value.
+
+## Expected Result
+
+The result should usually be:
+
+```text
+WIN11-CLIENT
+```
+
+This should match the hostname result.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the command and result.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows COMPUTERNAME value:
+```
+
+Example:
+
+```text
+Windows COMPUTERNAME value: WIN11-CLIENT
+```
+
+---
+
+# Task 7 - Identify the Windows IPv4 Address
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. In PowerShell, type:
+
+```powershell
+ipconfig
+```
+
+2. Press **Enter**.
+3. Look for the active network adapter.
+4. Find the line named:
+
+```text
+IPv4 Address
+```
+
+5. Record the IPv4 address.
+6. Run this command for a cleaner IPv4 display:
+
+```powershell
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
+```
+
+7. Press **Enter**.
+8. Identify the active network adapter.
+9. Record the adapter name.
+
+## Expected Result
+
+You should see an IPv4 address.
+
+The address may look similar to:
+
+```text
+10.1.1.20
+```
+
+or:
+
+```text
+192.168.1.20
+```
+
+Example output:
+
+```text
+InterfaceAlias        IPAddress       PrefixLength
+--------------        ---------       ------------
+Ethernet              10.1.1.20       24
+```
+
+> [!alert]
+> Do not record `127.0.0.1`. That is the loopback address.
+
+> [!hint]
+> Ignore adapters that show `Media disconnected`.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Windows IPv4 address.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows IPv4 address:
+Windows network adapter:
+```
+
+Example:
+
+```text
+Windows IPv4 address: 10.1.1.20
+Windows network adapter: Ethernet
+```
+
+---
+
+# Task 8 - Sign In to UBUNTU-SOC
+
+## Where to Work
+
+Use the **UBUNTU-SOC** virtual machine.
+
+## Steps
+
+1. Open the **UBUNTU-SOC** virtual machine.
+2. Sign in using the credentials provided by your instructor or Skillable environment.
+3. Wait for the Ubuntu desktop or terminal environment to load.
+
+## Expected Result
+
+You should be signed in to the Ubuntu SOC server.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing that you are signed in to UBUNTU-SOC if required.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu VM access confirmed: Yes
+```
+
+---
+
+# Task 9 - Open Ubuntu Terminal
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+## Steps
+
+1. Open **Terminal**.
+2. Wait for the Terminal prompt to appear.
+
+The prompt may look similar to:
+
+```text
+student@UBUNTU-SOC:~$
+```
+
+## Expected Result
+
+A Terminal window should open.
+
+## Screenshot Checkpoint
+
+No screenshot is required for this task unless instructed.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu Terminal opened: Yes
+```
+
+---
+
+# Task 10 - Identify the Ubuntu Hostname
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. In Terminal, type:
+
+```bash
+hostname
+```
+
+2. Press **Enter**.
+3. Read the result.
+4. Record the hostname.
+
+## Expected Result
+
+The hostname should usually be:
+
+```text
+UBUNTU-SOC
+```
+
+If your result is different, record the exact hostname shown.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the `hostname` command and result.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu hostname:
+```
+
+Example:
+
+```text
+Ubuntu hostname: UBUNTU-SOC
+```
+
+---
+
+# Task 11 - Identify the Ubuntu Logged-In User
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. In Terminal, type:
+
+```bash
+whoami
+```
+
+2. Press **Enter**.
+3. Read the result.
+4. Record the logged-in user.
+
+## Expected Result
+
+The result should usually be:
+
+```text
+student
+```
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the `whoami` command and result.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu logged-in user:
+```
+
+Example:
+
+```text
+Ubuntu logged-in user: student
+```
+
+---
+
+# Task 12 - Identify the Ubuntu Home Directory
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. In Terminal, type:
+
+```bash
+pwd
+```
+
+2. Press **Enter**.
+3. Record the current directory.
+
+## Expected Result
+
+The result should usually be:
+
+```text
+/home/student
+```
+
+## Screenshot Checkpoint
+
+No screenshot is required unless instructed.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu home directory:
+```
+
+Example:
+
+```text
+Ubuntu home directory: /home/student
+```
+
+---
+
+# Task 13 - Identify the Ubuntu IPv4 Address
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. In Terminal, type:
+
+```bash
+hostname -I
+```
+
+2. Press **Enter**.
+3. Record the IP address shown.
+4. Run this command for more network detail:
+
+```bash
+ip addr show
+```
+
+5. Press **Enter**.
+6. Look for the active network interface.
+7. Find the IP address after the word:
+
+```text
+inet
+```
+
+8. Record the Ubuntu IPv4 address.
+9. Record the network interface name.
+
+## Expected Result
+
+You should see an IPv4 address.
+
+The address may look similar to:
+
+```text
+10.1.1.10
+```
+
+or:
+
+```text
+192.168.1.10
+```
+
+Example output:
+
+```text
+inet 10.1.1.10/24
+```
+
+> [!alert]
+> Do not record `127.0.0.1`. That is the loopback address.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Ubuntu IPv4 address.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu IPv4 address:
+Ubuntu network interface:
+```
+
+Example:
+
+```text
+Ubuntu IPv4 address: 10.1.1.10
+Ubuntu network interface: ens33
+```
+
+---
+
+# Task 14 - Test Connectivity from Windows to Ubuntu
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. Return to **WIN11-CLIENT**.
+2. Open **Windows PowerShell** if it is not already open.
+3. Find the Ubuntu IPv4 address you recorded in Task 13.
+4. In PowerShell, type the following command.
+5. Replace `<UBUNTU-SOC-IP>` with your Ubuntu IP address.
+
+```powershell
+ping <UBUNTU-SOC-IP>
+```
+
+Example:
+
+```powershell
+ping 10.1.1.10
+```
+
+6. Press **Enter**.
+7. Review the result.
+8. Run this additional command.
+9. Replace `<UBUNTU-SOC-IP>` with your Ubuntu IP address.
+
+```powershell
+Test-NetConnection <UBUNTU-SOC-IP>
+```
+
+Example:
+
+```powershell
+Test-NetConnection 10.1.1.10
+```
+
+10. Press **Enter**.
+11. Record both results.
+
+## Expected Result
+
+A successful ping may show:
+
+```text
+Reply from 10.1.1.10: bytes=32 time<1ms TTL=64
+```
+
+A successful `Test-NetConnection` result may show:
+
+```text
+PingSucceeded : True
+```
+
+If ping fails, you may see:
+
+```text
+Request timed out.
+```
+
+> [!note]
+> Some lab environments block ping. If ping fails, record the result and continue.
+
+> [!alert]
+> Do not change firewall settings in this lab.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Windows-to-Ubuntu connectivity test.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows-to-Ubuntu command:
+Windows-to-Ubuntu result:
+```
+
+Example:
+
+```text
+Windows-to-Ubuntu command: ping 10.1.1.10
+Windows-to-Ubuntu result: Reply received
+```
+
+---
+
+# Task 15 - Test Connectivity from Ubuntu to Windows
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. Return to **UBUNTU-SOC**.
+2. Open **Terminal** if it is not already open.
+3. Find the Windows IPv4 address you recorded in Task 7.
+4. In Terminal, type the following command.
+5. Replace `<WIN11-CLIENT-IP>` with your Windows IP address.
+
+```bash
+ping -c 4 <WIN11-CLIENT-IP>
+```
+
+Example:
+
+```bash
+ping -c 4 10.1.1.20
+```
+
+6. Press **Enter**.
+7. Review the result.
+8. Record the result.
+
+## Expected Result
+
+A successful result may show:
+
+```text
+4 packets transmitted, 4 received, 0% packet loss
+```
+
+If ping fails, the result may show packet loss.
+
+> [!note]
+> A failed ping does not always mean the lab is broken. The Windows firewall may block ping.
+
+> [!alert]
+> Do not change firewall settings in this lab.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Ubuntu-to-Windows connectivity test.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu-to-Windows command:
+Ubuntu-to-Windows result:
+```
+
+Example:
+
+```text
+Ubuntu-to-Windows command: ping -c 4 10.1.1.20
+Ubuntu-to-Windows result: 4 packets transmitted, 4 received, 0% packet loss
+```
+
+---
+
+# Task 16 - Create the Windows Evidence Folder
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. Return to **WIN11-CLIENT**.
+2. Open **Windows PowerShell**.
+3. Run this command:
+
+```powershell
+New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
+```
+
+4. Press **Enter**.
+5. Confirm the folder exists:
+
+```powershell
+Test-Path "C:\BlueWave\Evidence"
+```
+
+6. Press **Enter**.
+7. Open **File Explorer**.
+8. Browse to:
+
+```text
+C:\BlueWave\Evidence
+```
+
+## Expected Result
+
+The `Test-Path` command should return:
+
+```text
+True
+```
+
+File Explorer should open the folder:
+
+```text
+C:\BlueWave\Evidence
+```
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Windows evidence folder exists.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows evidence folder: C:\BlueWave\Evidence
+```
+
+---
+
+# Task 17 - Create the Ubuntu Evidence Folder
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. Return to **UBUNTU-SOC**.
+2. Open **Terminal**.
+3. Run this command:
+
+```bash
+mkdir -p /home/student/bluewave/evidence
+```
+
+4. Press **Enter**.
+5. Confirm the folder exists:
+
+```bash
+ls -ld /home/student/bluewave/evidence
+```
+
+6. Press **Enter**.
+
+## Expected Result
+
+You should see folder details similar to:
+
+```text
+drwxr-xr-x 2 student student 4096 May 15 10:00 /home/student/bluewave/evidence
+```
+
+The date and time may be different.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Ubuntu evidence folder exists.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu evidence folder: /home/student/bluewave/evidence
+```
+
+---
+
+# Task 18 - Check the Windows Lab Files Folder
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. Return to **WIN11-CLIENT**.
+2. Open **Windows PowerShell**.
+3. Check whether the main lab files folder exists:
+
+```powershell
+Test-Path "C:\LabFiles"
+```
+
+4. Press **Enter**.
+5. List the folder contents:
+
+```powershell
+Get-ChildItem "C:\LabFiles"
+```
+
+6. Press **Enter**.
+7. Look for these folders:
+
+```text
+Tools
+Simulators
+Logs
+Templates
+```
+
+## Expected Result
+
+The `Test-Path` command should return:
+
+```text
+True
+```
+
+The folder listing should include:
+
+```text
+Tools
+Simulators
+Logs
+Templates
+```
+
+> [!alert]
+> Do not run files from the `Simulators` folder in this lab.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the `C:\LabFiles` folder listing.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Windows lab files path: C:\LabFiles
+Windows lab folders seen:
+```
+
+Example:
+
+```text
+Windows lab folders seen: Tools, Simulators, Logs, Templates
+```
+
+---
+
+# Task 19 - Check the Ubuntu Lab Files Folder
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. Return to **UBUNTU-SOC**.
+2. Open **Terminal**.
+3. Run this command:
+
+```bash
+ls -la /home/student/labfiles
+```
+
+4. Press **Enter**.
+5. Look for these folders:
+
+```text
+logs
+scripts
+templates
+capstone
+```
+
+## Expected Result
+
+The folder listing should include:
+
+```text
+logs
+scripts
+templates
+capstone
+```
+
+If folders are missing, record what is missing.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the `/home/student/labfiles` folder listing.
+
+## Record in Evidence Notes
+
+Record:
+
+```text
+Ubuntu lab files path: /home/student/labfiles
+Ubuntu lab folders seen:
+```
+
+Example:
+
+```text
+Ubuntu lab folders seen: logs, scripts, templates, capstone
+```
+
+---
+
+# Task 20 - Create the Lab 01 Evidence Notes File on Windows
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Notepad**.
+
+## Steps
+
+1. Return to **WIN11-CLIENT**.
+2. Open **Notepad**.
+3. Copy the template below into Notepad.
+4. Fill in the missing information using your lab results.
+5. Select **File**.
+6. Select **Save As**.
+7. Browse to:
+
+```text
+C:\BlueWave\Evidence
+```
+
+8. Save the file as:
+
+```text
+Lab01-Environment-Notes.txt
+```
+
+## Evidence Notes Template
+
 ```text
 BlueWave Clinic Cyber Operations with Elastic
-Lab 1: Environment Orientation and Case Study Setup
+Lab 01 - Environment Orientation and Case Study Setup
 
 Student Name:
 Date:
-Lab Environment:
 
 1. Windows Endpoint
-Hostname:
-Logged-in user:
-IPv4 address:
-Network adapter:
-Evidence folder:
+
+Windows VM access confirmed:
+Windows operating system:
+PowerShell opened:
+Windows hostname:
+Windows logged-in user:
+Windows COMPUTERNAME value:
+Windows IPv4 address:
+Windows network adapter:
+Windows evidence folder:
 
 2. Ubuntu SOC Server
-Hostname:
-Logged-in user:
-IPv4 address:
-Network interface:
-Evidence folder:
+
+Ubuntu VM access confirmed:
+Ubuntu Terminal opened:
+Ubuntu hostname:
+Ubuntu logged-in user:
+Ubuntu home directory:
+Ubuntu IPv4 address:
+Ubuntu network interface:
+Ubuntu evidence folder:
 
 3. Connectivity Tests
+
 Windows-to-Ubuntu command:
 Windows-to-Ubuntu result:
 
 Ubuntu-to-Windows command:
 Ubuntu-to-Windows result:
 
-4. Lab File Locations Checked
+4. Lab File Locations
+
 Windows lab files path:
 Windows lab folders seen:
 
 Ubuntu lab files path:
 Ubuntu lab folders seen:
 
-5. Notes
+5. Lab Summary
+
 Write 3 to 5 sentences explaining what you learned about the BlueWave Clinic lab environment.
 ```
-Fill in the missing information.
-Click File.
-Click Save As.
-Browse to:
+
+## Expected Result
+
+The file should be saved as:
+
 ```text
-C:\BlueWave\Evidence
+C:\BlueWave\Evidence\Lab01-Environment-Notes.txt
 ```
-Save the file as:
-```text
-Lab1-Environment-Notes.txt
-```
-In PowerShell, confirm the file exists:
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab1-Environment-Notes.txt"
-```
-Press Enter.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the completed evidence notes file.
+
+## Record in Evidence Notes
+
+This task creates the main evidence notes file.
+
 ---
-Expected Result
-The file should exist at:
-```text
-C:\BlueWave\Evidence\Lab1-Environment-Notes.txt
+
+# Task 21 - Confirm the Windows Evidence Notes File Exists
+
+## Where to Work
+
+Use **WIN11-CLIENT**.
+
+Use **Windows PowerShell**.
+
+## Steps
+
+1. Open **Windows PowerShell**.
+2. Run this command:
+
+```powershell
+Test-Path "C:\BlueWave\Evidence\Lab01-Environment-Notes.txt"
 ```
+
+3. Press **Enter**.
+
+## Expected Result
+
 PowerShell should return:
+
 ```text
 True
 ```
+
+If the result is `False`, check the folder path and filename.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the validation result if required.
+
+## Record in Evidence Notes
+
+No additional note is required.
+
 ---
-Screenshot Checkpoint
-Capture a screenshot showing:
-The completed Notepad evidence file, or
-PowerShell showing the evidence file exists.
----
-Student Note
-Your evidence file must include:
-```text
-Windows hostname
-Windows user
-Windows IP address
-Ubuntu hostname
-Ubuntu user
-Ubuntu IP address
-Connectivity test results
-Evidence folder locations
-Lab file folder check results
-3 to 5 sentence summary
-```
----
-Task 12: Create a Copy of the Lab 1 Evidence File on Ubuntu
-Purpose
-Keeping a copy of evidence on UBUNTU-SOC helps prepare for later labs where the Ubuntu system acts as the SOC server and evidence repository.
-This task creates a simple Ubuntu-side notes file.
----
-Steps
-On UBUNTU-SOC
-Open Terminal.
-Create the evidence file by typing:
+
+# Task 22 - Create the Lab 01 Evidence Copy on Ubuntu
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. Return to **UBUNTU-SOC**.
+2. Open **Terminal**.
+3. Open a new notes file with nano:
+
 ```bash
-nano /home/student/bluewave/evidence/Lab1-Environment-Notes.txt
+nano /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
 ```
-Press Enter.
-Type a short summary using this structure:
+
+4. Press **Enter**.
+5. Copy the template below into nano.
+6. Fill in the missing information.
+7. Press **Ctrl + O**.
+8. Press **Enter** to save.
+9. Press **Ctrl + X** to exit nano.
+
+## Ubuntu Evidence Copy Template
+
 ```text
 BlueWave Clinic Cyber Operations with Elastic
-Lab 1 Ubuntu Evidence Copy
+Lab 01 - Ubuntu Evidence Copy
 
 Windows hostname:
 Windows IPv4 address:
+
 Ubuntu hostname:
 Ubuntu IPv4 address:
 
@@ -815,493 +1397,595 @@ Ubuntu evidence folder:
 
 Connectivity summary:
 ```
-Fill in the information.
-Press Ctrl + O to save.
-Press Enter to confirm the filename.
-Press Ctrl + X to exit nano.
-Confirm the file exists:
-```bash
-ls -l /home/student/bluewave/evidence/Lab1-Environment-Notes.txt
-```
-Display the file contents:
-```bash
-cat /home/student/bluewave/evidence/Lab1-Environment-Notes.txt
-```
----
-Expected Result
-The file should exist at:
+
+## Expected Result
+
+The Ubuntu evidence copy should be saved at:
+
 ```text
-/home/student/bluewave/evidence/Lab1-Environment-Notes.txt
+/home/student/bluewave/evidence/Lab01-Environment-Notes.txt
 ```
-The `cat` command should display your notes.
+
+## Screenshot Checkpoint
+
+No screenshot is required yet. You will validate the file in the next task.
+
+## Record in Evidence Notes
+
+No additional note is required.
+
 ---
-Screenshot Checkpoint
-Capture a screenshot showing the Ubuntu evidence file contents.
----
-Student Note
-Write in your Windows evidence file that an Ubuntu copy was also created:
+
+# Task 23 - Confirm the Ubuntu Evidence Notes File Exists
+
+## Where to Work
+
+Use **UBUNTU-SOC**.
+
+Use **Terminal**.
+
+## Steps
+
+1. In Terminal, run this command:
+
+```bash
+ls -l /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+2. Press **Enter**.
+3. Display the file contents:
+
+```bash
+cat /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+4. Press **Enter**.
+
+## Expected Result
+
+You should see the file listed.
+
+You should also see your evidence notes displayed in Terminal.
+
+## Screenshot Checkpoint
+
+Capture a screenshot showing the Ubuntu evidence notes file contents.
+
+## Record in Evidence Notes
+
+In your Windows notes file, add this line if it is not already included:
+
 ```text
-Ubuntu evidence copy created:
-/home/student/bluewave/evidence/Lab1-Environment-Notes.txt
+Ubuntu evidence copy created: Yes
 ```
+
 ---
-Task 13: Final Lab 1 Review
-Purpose
-This task confirms that you have completed the setup work needed for future labs.
-You will review your evidence and make sure the visible results are clear.
----
-Steps
-On WIN11-CLIENT
-Open File Explorer.
-Go to:
+
+# Task 24 - Final Validation
+
+## Where to Work
+
+Use both machines.
+
+## Steps on WIN11-CLIENT
+
+1. Open **Windows PowerShell**.
+2. Run:
+
+```powershell
+Test-Path "C:\BlueWave\Evidence\Lab01-Environment-Notes.txt"
+```
+
+3. Confirm the result is:
+
+```text
+True
+```
+
+4. Open **File Explorer**.
+5. Browse to:
+
 ```text
 C:\BlueWave\Evidence
 ```
-Confirm this file exists:
-```text
-Lab1-Environment-Notes.txt
-```
-Open the file.
-Review the contents.
-Confirm that no required section is blank.
----
-On UBUNTU-SOC
-Open Terminal.
-Type:
+
+6. Confirm that `Lab01-Environment-Notes.txt` exists.
+
+## Steps on UBUNTU-SOC
+
+1. Open **Terminal**.
+2. Run:
+
 ```bash
-ls -l /home/student/bluewave/evidence
+test -f /home/student/bluewave/evidence/Lab01-Environment-Notes.txt && echo "Ubuntu evidence file exists"
 ```
-Press Enter.
-Confirm this file exists:
+
+3. Confirm the result is:
+
 ```text
-Lab1-Environment-Notes.txt
+Ubuntu evidence file exists
 ```
+
+## Expected Result
+
+Both evidence files should exist.
+
+Both evidence folders should exist.
+
+Your notes should include hostnames, usernames, IP addresses, connectivity results, and lab file folder checks.
+
+## Screenshot Checkpoint
+
+Capture a final screenshot showing the Windows evidence folder.
+
+Capture a final screenshot showing the Ubuntu evidence validation result.
+
 ---
-Expected Result
-You should have a completed Lab 1 evidence file on Windows.
-You should also have a Lab 1 evidence copy on Ubuntu.
-Your evidence should include hostnames, IP addresses, connectivity results, and evidence folder paths.
+
+# Validation Checklist
+
+Before you finish the lab, confirm each item is complete.
+
+- [ ] I signed in to WIN11-CLIENT.
+- [ ] I confirmed WIN11-CLIENT is running Windows 11.
+- [ ] I opened Windows PowerShell.
+- [ ] I recorded the Windows hostname.
+- [ ] I recorded the Windows logged-in user.
+- [ ] I recorded the Windows COMPUTERNAME value.
+- [ ] I recorded the Windows IPv4 address.
+- [ ] I recorded the Windows network adapter.
+- [ ] I signed in to UBUNTU-SOC.
+- [ ] I opened Ubuntu Terminal.
+- [ ] I recorded the Ubuntu hostname.
+- [ ] I recorded the Ubuntu logged-in user.
+- [ ] I recorded the Ubuntu home directory.
+- [ ] I recorded the Ubuntu IPv4 address.
+- [ ] I recorded the Ubuntu network interface.
+- [ ] I tested connectivity from Windows to Ubuntu.
+- [ ] I tested connectivity from Ubuntu to Windows.
+- [ ] I created `C:\BlueWave\Evidence`.
+- [ ] I created `/home/student/bluewave/evidence`.
+- [ ] I checked `C:\LabFiles`.
+- [ ] I checked `/home/student/labfiles`.
+- [ ] I created `C:\BlueWave\Evidence\Lab01-Environment-Notes.txt`.
+- [ ] I created `/home/student/bluewave/evidence/Lab01-Environment-Notes.txt`.
+- [ ] I captured the required screenshots.
+- [ ] I reviewed my evidence notes for completeness.
+
 ---
-Screenshot Checkpoint
-Capture a final screenshot showing the completed Windows evidence folder.
-Capture a final screenshot showing the completed Ubuntu evidence folder.
----
-Student Note
-At the bottom of your Windows evidence file, add:
-```text
-Lab 1 completion statement:
-I confirmed the BlueWave Clinic lab environment, identified both virtual machines, recorded network information, tested connectivity, and created evidence folders for future cyber operations labs.
-```
----
-Validation Checklist
-Before finishing the lab, confirm each item is complete.
-[ ] I signed in to WIN11-CLIENT.
-[ ] I signed in to UBUNTU-SOC.
-[ ] I opened PowerShell on WIN11-CLIENT.
-[ ] I opened Terminal on UBUNTU-SOC.
-[ ] I identified the Windows hostname.
-[ ] I identified the Windows logged-in user.
-[ ] I identified the Windows IPv4 address.
-[ ] I identified the Ubuntu hostname.
-[ ] I identified the Ubuntu logged-in user.
-[ ] I identified the Ubuntu IPv4 address.
-[ ] I tested connectivity from Windows to Ubuntu.
-[ ] I tested connectivity from Ubuntu to Windows.
-[ ] I created the Windows evidence folder.
-[ ] I created the Ubuntu evidence folder.
-[ ] I checked the Windows lab files folder.
-[ ] I checked the Ubuntu lab files folder.
-[ ] I created `Lab1-Environment-Notes.txt` on Windows.
-[ ] I created a Lab 1 evidence copy on Ubuntu.
-[ ] I captured all required screenshots.
-[ ] I reviewed my evidence file for completeness.
----
-Troubleshooting
-Problem: I cannot find PowerShell on Windows
-Possible fix:
-Click Start, type:
+
+# Troubleshooting
+
+## Problem: PowerShell does not open
+
+Open the **Windows Start** menu.
+
+Search for:
+
 ```text
 PowerShell
 ```
-Then open Windows PowerShell.
-If Windows Terminal opens instead, that is also acceptable if it gives you a PowerShell prompt.
+
+Open **Windows PowerShell**.
+
+If Windows Terminal opens instead, that is acceptable if it gives you a PowerShell prompt.
+
 ---
-Problem: I typed a command and received an error
-Possible fix:
-Check the spelling of the command.
-For example, this is correct:
-```powershell
-hostname
+
+## Problem: Ubuntu Terminal does not open
+
+Open the Ubuntu application search.
+
+Search for:
+
+```text
+Terminal
 ```
-This is incorrect:
-```powershell
-host name
-```
+
+Open **Terminal**.
+
 ---
-Problem: The Windows hostname is not WIN11-CLIENT
-Possible fix:
-Record the actual hostname shown in PowerShell.
+
+## Problem: The Windows hostname is not WIN11-CLIENT
+
+Record the exact hostname shown.
+
 Tell your instructor if the hostname is very different from the lab instructions.
+
 ---
-Problem: The Ubuntu hostname is not UBUNTU-SOC
-Possible fix:
-Record the actual hostname shown in Terminal.
+
+## Problem: The Ubuntu hostname is not UBUNTU-SOC
+
+Record the exact hostname shown.
+
 Tell your instructor if the hostname is very different from the lab instructions.
+
 ---
-Problem: `ipconfig` shows many adapters
-Possible fix:
+
+## Problem: `ipconfig` shows many network adapters
+
 Look for the active Ethernet adapter.
+
 Ignore adapters that show:
+
 ```text
 Media disconnected
 ```
-Also ignore loopback addresses such as:
+
+Do not use:
+
 ```text
 127.0.0.1
 ```
+
 ---
-Problem: `hostname -I` shows more than one IP address
-Possible fix:
+
+## Problem: `hostname -I` shows more than one IP address
+
 Record the first non-loopback IPv4 address.
-If you are unsure, also check:
+
+You can also run:
+
 ```bash
 ip addr show
 ```
-Ask your instructor which interface is used for the lab network.
+
+Look for an address after:
+
+```text
+inet
+```
+
+Do not use:
+
+```text
+127.0.0.1
+```
+
 ---
-Problem: Ping from Windows to Ubuntu fails
-Possible fix:
+
+## Problem: Ping from Windows to Ubuntu fails
+
 Check that you typed the correct Ubuntu IP address.
-Try the command again:
+
+Try again:
+
 ```powershell
 ping <UBUNTU-SOC-IP>
 ```
+
 If it still fails, ICMP may be blocked.
+
 Record the failed result in your evidence file.
+
+Do not change firewall settings in this lab.
+
 ---
-Problem: Ping from Ubuntu to Windows fails
-Possible fix:
+
+## Problem: Ping from Ubuntu to Windows fails
+
 Check that you typed the correct Windows IP address.
-Try:
+
+Try again:
+
 ```bash
 ping -c 4 <WIN11-CLIENT-IP>
 ```
+
 If it still fails, the Windows firewall may be blocking ping.
+
 Record the failed result in your evidence file.
+
+Do not change firewall settings in this lab.
+
 ---
-Problem: I cannot create `C:\BlueWave\Evidence`
-Possible fix:
-Make sure you typed the command exactly:
+
+## Problem: The Windows evidence folder does not exist
+
+Run this command in PowerShell:
+
 ```powershell
 New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
 ```
-If the folder already exists, that is fine.
----
-Problem: I cannot create `/home/student/bluewave/evidence`
-Possible fix:
-Make sure you typed the command exactly:
-```bash
-mkdir -p /home/student/bluewave/evidence
-```
-Make sure you are signed in as the `student` user.
----
-Problem: I cannot save the Notepad file
-Possible fix:
-Make sure the folder exists first:
-```text
-C:\BlueWave\Evidence
-```
-Then save the file as:
-```text
-Lab1-Environment-Notes.txt
-```
----
-Problem: The lab files folder is missing
-Possible fix:
-Check the path carefully.
-On Windows, check:
-```text
-C:\LabFiles
-```
-On Ubuntu, check:
-```text
-/home/student/labfiles
-```
-If the folders are missing, record the issue and notify your instructor.
----
-Knowledge Check
-Answer the following questions in your own words.
-Do not include answers from another student.
-Question 1: Multiple Choice
-Which machine is the Windows endpoint in the BlueWave Clinic lab?
-A. UBUNTU-SOC  
-B. WIN11-CLIENT  
-C. Elastic Cloud  
-D. Internet Gateway
----
-Question 2: Multiple Choice
-Which machine will later host Elastic and Kibana?
-A. WIN11-CLIENT  
-B. UBUNTU-SOC  
-C. Windows Defender  
-D. Notepad
----
-Question 3: Fill in the Blank
-The Windows evidence folder used throughout the course is:
-```text
-____________________________
-```
----
-Question 4: Short Answer
-Why is it important to record hostnames during a cyber operations investigation?
----
-Question 5: Short Answer
-What does a connectivity test help confirm?
----
-What You Learned
-In this lab, you learned how to:
-Identify the two virtual machines used in the BlueWave Clinic case study.
-Use PowerShell to collect Windows hostname, username, and IP address information.
-Use Ubuntu Terminal to collect Linux hostname, username, and IP address information.
-Test basic network connectivity between Windows and Ubuntu.
-Create evidence folders on both machines.
-Create your first investigation notes file.
----
-Deliverables
-Submit or retain the following items as directed by your instructor.
-Deliverable	Location
-Lab 1 Windows evidence notes	`C:\BlueWave\Evidence\Lab1-Environment-Notes.txt`
-Lab 1 Ubuntu evidence copy	`/home/student/bluewave/evidence/Lab1-Environment-Notes.txt`
-Screenshot of Windows hostname and user	Submitted through Skillable instructions
-Screenshot of Windows IP address	Submitted through Skillable instructions
-Screenshot of Ubuntu hostname and user	Submitted through Skillable instructions
-Screenshot of Ubuntu IP address	Submitted through Skillable instructions
-Screenshot of Windows-to-Ubuntu connectivity test	Submitted through Skillable instructions
-Screenshot of Ubuntu-to-Windows connectivity test	Submitted through Skillable instructions
-Screenshot of Windows evidence folder	Submitted through Skillable instructions
-Screenshot of Ubuntu evidence folder	Submitted through Skillable instructions
-Screenshot of Windows lab files folder check	Submitted through Skillable instructions
-Screenshot of Ubuntu lab files folder check	Submitted through Skillable instructions
----
-Instructor Notes
-Instructor Overview
-This lab is designed to orient students to the two-machine Skillable environment.
-Students should not install Elastic, configure Elastic Agent, run Sysmon, or execute the simulator in this lab.
-The goal is environment awareness, basic command usage, connectivity testing, and evidence setup.
----
-Expected Machines
-Machine	Expected Role
-WIN11-CLIENT	Windows 11 endpoint and analyst workstation
-UBUNTU-SOC	Ubuntu SOC server for Elastic and Kibana
----
-Expected Windows Commands
-Students should run:
-```powershell
-hostname
-```
-```powershell
-whoami
-```
-```powershell
-$env:COMPUTERNAME
-```
-```powershell
-ipconfig
-```
-```powershell
-Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
-```
-```powershell
-ping <UBUNTU-SOC-IP>
-```
-```powershell
-Test-NetConnection <UBUNTU-SOC-IP>
-```
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
+
+Then confirm:
+
 ```powershell
 Test-Path "C:\BlueWave\Evidence"
 ```
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab1-Environment-Notes.txt"
+
+Expected result:
+
+```text
+True
 ```
+
 ---
-Expected Ubuntu Commands
-Students should run:
-```bash
-hostname
-```
-```bash
-whoami
-```
-```bash
-pwd
-```
-```bash
-hostname -I
-```
-```bash
-ip addr show
-```
-```bash
-ping -c 4 <WIN11-CLIENT-IP>
-```
+
+## Problem: The Ubuntu evidence folder does not exist
+
+Run this command in Terminal:
+
 ```bash
 mkdir -p /home/student/bluewave/evidence
 ```
+
+Then confirm:
+
 ```bash
 ls -ld /home/student/bluewave/evidence
 ```
-```bash
-nano /home/student/bluewave/evidence/Lab1-Environment-Notes.txt
-```
-```bash
-cat /home/student/bluewave/evidence/Lab1-Environment-Notes.txt
-```
+
 ---
-Expected Evidence Files
-Students should create:
+
+## Problem: The Windows evidence file is missing
+
+Check that you saved the file as:
+
 ```text
-C:\BlueWave\Evidence\Lab1-Environment-Notes.txt
+Lab01-Environment-Notes.txt
 ```
-And:
-```text
-/home/student/bluewave/evidence/Lab1-Environment-Notes.txt
-```
----
-Expected Evidence File Content
-The Windows evidence file should contain:
-Student name.
-Date.
-Windows hostname.
-Windows logged-in user.
-Windows IPv4 address.
-Windows evidence folder path.
-Ubuntu hostname.
-Ubuntu logged-in user.
-Ubuntu IPv4 address.
-Ubuntu evidence folder path.
-Windows-to-Ubuntu connectivity result.
-Ubuntu-to-Windows connectivity result.
-Confirmation of lab file locations.
-Short summary of what the student learned.
----
-Expected Visible Results
-Students should be able to visibly show:
-PowerShell command results.
-Ubuntu Terminal command results.
-Windows IPv4 address.
-Ubuntu IPv4 address.
-Connectivity test output.
-Windows evidence folder.
-Ubuntu evidence folder.
-Completed Lab 1 notes file.
----
-Common Student Mistakes
-Mistake	Guidance
-Student records `127.0.0.1` as the IP address	Explain that `127.0.0.1` is the loopback address and not the lab network address
-Student mixes up Windows and Ubuntu commands	Remind students that PowerShell commands run on Windows and Bash commands run on Ubuntu
-Student saves evidence in the wrong folder	Direct them to `C:\BlueWave\Evidence`
-Student forgets screenshots	Have them repeat the relevant command and capture the result
-Student worries about failed ping	Explain that some lab environments block ICMP and they should record the result
-Student tries to install Elastic	Remind them Elastic work starts in later labs
-Student tries to run the simulator	Remind them the simulator is introduced later
----
-Grading Guidance
-Suggested grading allocation:
-Criteria	Points
-Windows hostname, user, and IP recorded correctly	15
-Ubuntu hostname, user, and IP recorded correctly	15
-Connectivity tests attempted and documented	15
-Windows evidence folder created	10
-Ubuntu evidence folder created	10
-Lab file locations checked	10
-Evidence file completed clearly	15
-Screenshots captured	10
-Total	100
-Do not heavily penalise students if ping fails due to firewall or lab restrictions, as long as they attempted the correct commands and documented the result.
----
-Knowledge Check Answer Key
-Question 1
-Correct answer:
-```text
-B. WIN11-CLIENT
-```
-Question 2
-Correct answer:
-```text
-B. UBUNTU-SOC
-```
-Question 3
-Correct answer:
+
+Check that you saved it in:
+
 ```text
 C:\BlueWave\Evidence
 ```
-Question 4
-Expected answer:
-Hostnames help analysts identify which computer generated an event or was involved in an investigation.
-Question 5
-Expected answer:
-A connectivity test helps confirm that two machines can communicate across the lab network.
----
-Free Elastic Basic License Reminder
-Elastic is not actively used in this lab.
-The course must use self-managed Elastic with the free Basic license.
-Students should not use Elastic Cloud.
-Students should not create Elastic Cloud accounts.
-Students should not download tools from the internet.
----
-Fallback Option if Fleet Is Not Available
-Fleet is not used in Lab 1.
-If Fleet is unavailable at this stage, continue with the lab.
-Fleet will be reviewed in later labs.
----
-Instructor Preparation Check
-Before students begin Lab 1, confirm:
-WIN11-CLIENT is accessible.
-UBUNTU-SOC is accessible.
-Students can open PowerShell.
-Students can open Ubuntu Terminal.
-`C:\LabFiles` exists if required by the lab image.
-`/home/student/labfiles` exists if required by the lab image.
-Students have permission to create `C:\BlueWave\Evidence`.
-Students have permission to create `/home/student/bluewave/evidence`.
----
-Optional Extension Task: Compare Hostname and IP Address Documentation
-Purpose
-This optional task helps advanced students practise careful documentation.
-They will compare system identity information from both machines and explain why accurate host documentation matters in SOC investigations.
----
-Steps
-On WIN11-CLIENT
-Open your evidence file:
-```text
-C:\BlueWave\Evidence\Lab1-Environment-Notes.txt
-```
-Add a new section at the bottom:
-```text
-Optional Extension: Host Identity Comparison
 
-Windows hostname:
-Windows IP address:
-Ubuntu hostname:
-Ubuntu IP address:
+Confirm with:
 
-Why accurate host identity matters:
+```powershell
+Test-Path "C:\BlueWave\Evidence\Lab01-Environment-Notes.txt"
 ```
-Write 3 to 5 sentences explaining why hostnames and IP addresses are useful during log analysis.
----
-Expected Result
-Your evidence file should include an optional extension section explaining the value of accurate host identity.
----
-Screenshot Checkpoint
-Capture a screenshot showing the optional extension section in your evidence file.
----
-Student Note
-Add this sentence to your notes:
+
+Expected result:
+
 ```text
-Accurate hostnames and IP addresses help analysts connect log events to the correct machine during an investigation.
+True
 ```
+
 ---
-End of Lab 1.
+
+## Problem: The Ubuntu evidence file is missing
+
+Create it again:
+
+```bash
+nano /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+Then confirm:
+
+```bash
+ls -l /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+---
+
+## Problem: `C:\LabFiles` is missing
+
+Check the path carefully:
+
+```text
+C:\LabFiles
+```
+
+If it is still missing, record the issue and notify your instructor.
+
+Do not download files from the internet.
+
+---
+
+## Problem: `/home/student/labfiles` is missing
+
+Check the path carefully:
+
+```text
+/home/student/labfiles
+```
+
+If it is still missing, record the issue and notify your instructor.
+
+Do not download files from the internet.
+
+---
+
+# Knowledge Check
+
+Answer the following questions.
+
+1. What is the role of WIN11-CLIENT in the BlueWave Clinic lab?
+2. What is the role of UBUNTU-SOC in the BlueWave Clinic lab?
+3. What PowerShell command shows the Windows hostname?
+4. What PowerShell command shows the currently logged-in Windows user?
+5. What Ubuntu command shows the Ubuntu hostname?
+6. What Ubuntu command shows the currently logged-in Ubuntu user?
+7. Why should you avoid recording `127.0.0.1` as the lab IP address?
+8. What folder is used to store Windows evidence?
+9. What folder is used to store Ubuntu evidence?
+10. Why is it important to record hostnames during a cyber operations investigation?
+
+---
+
+# Summary
+
+In this lab, you completed the following tasks:
+
+- Signed in to WIN11-CLIENT.
+- Confirmed the Windows 11 endpoint role.
+- Opened Windows PowerShell.
+- Collected Windows hostname, user, computer name, and IP address information.
+- Signed in to UBUNTU-SOC.
+- Opened Ubuntu Terminal.
+- Collected Ubuntu hostname, user, home directory, and IP address information.
+- Tested basic connectivity between the two virtual machines.
+- Created Windows and Ubuntu evidence folders.
+- Checked the preloaded lab file locations.
+- Created Lab 01 evidence notes.
+
+You are now ready for Lab 02, where you will access Elastic and Kibana.
+
+---
+
+# Deliverables
+
+Submit or retain the following items as directed by your instructor.
+
+| Deliverable | Location |
+|---|---|
+| Windows Lab 01 evidence notes | `C:\BlueWave\Evidence\Lab01-Environment-Notes.txt` |
+| Ubuntu Lab 01 evidence copy | `/home/student/bluewave/evidence/Lab01-Environment-Notes.txt` |
+| Screenshot of Windows hostname and user | Skillable submission area |
+| Screenshot of Windows IPv4 address | Skillable submission area |
+| Screenshot of Ubuntu hostname and user | Skillable submission area |
+| Screenshot of Ubuntu IPv4 address | Skillable submission area |
+| Screenshot of Windows-to-Ubuntu connectivity test | Skillable submission area |
+| Screenshot of Ubuntu-to-Windows connectivity test | Skillable submission area |
+| Screenshot of Windows evidence folder | Skillable submission area |
+| Screenshot of Ubuntu evidence folder | Skillable submission area |
+| Screenshot of Windows lab files folder | Skillable submission area |
+| Screenshot of Ubuntu lab files folder | Skillable submission area |
+| Screenshot of completed Windows evidence notes file | Skillable submission area |
+
+---
+
+# Instructor Notes
+
+## Expected Knowledge Check Answers
+
+1. WIN11-CLIENT is the Windows 11 endpoint and analyst workstation.
+2. UBUNTU-SOC is the Ubuntu SOC server that will later host Elastic, Kibana, and Fleet.
+3. The Windows hostname command is:
+
+```powershell
+hostname
+```
+
+4. The Windows logged-in user command is:
+
+```powershell
+whoami
+```
+
+5. The Ubuntu hostname command is:
+
+```bash
+hostname
+```
+
+6. The Ubuntu logged-in user command is:
+
+```bash
+whoami
+```
+
+7. `127.0.0.1` is a loopback address and does not identify the machine on the lab network.
+8. The Windows evidence folder is:
+
+```text
+C:\BlueWave\Evidence
+```
+
+9. The Ubuntu evidence folder is:
+
+```text
+/home/student/bluewave/evidence
+```
+
+10. Hostnames help analysts connect events to the correct system during an investigation.
+
+---
+
+## Expected Evidence Files
+
+Students should create:
+
+```text
+C:\BlueWave\Evidence\Lab01-Environment-Notes.txt
+```
+
+and:
+
+```text
+/home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+---
+
+## Expected Command Outputs
+
+Windows hostname should usually be:
+
+```text
+WIN11-CLIENT
+```
+
+Ubuntu hostname should usually be:
+
+```text
+UBUNTU-SOC
+```
+
+Windows evidence folder validation should return:
+
+```text
+True
+```
+
+Ubuntu evidence file validation should return:
+
+```text
+Ubuntu evidence file exists
+```
+
+---
+
+## Common Student Mistakes
+
+| Mistake | Instructor Guidance |
+|---|---|
+| Student records `127.0.0.1` as an IP address | Explain that this is the loopback address |
+| Student runs Ubuntu commands in PowerShell | Direct the student to UBUNTU-SOC Terminal |
+| Student runs PowerShell commands in Ubuntu Terminal | Direct the student to WIN11-CLIENT PowerShell |
+| Student forgets to save the evidence file | Have the student reopen Notepad and save again |
+| Student worries about failed ping | Explain that ICMP may be blocked and the result should be documented |
+| Student runs the simulator early | Remind the student that simulator activity begins in a later lab |
+| Student tries to access Elastic in Lab 01 | Explain that Elastic orientation begins in Lab 02 |
+
+---
+
+## Grading Guidance
+
+Suggested grading allocation:
+
+| Criteria | Points |
+|---|---:|
+| Windows hostname, user, computer name, and IP recorded | 15 |
+| Ubuntu hostname, user, home directory, and IP recorded | 15 |
+| Connectivity tests attempted and documented | 15 |
+| Windows evidence folder created | 10 |
+| Ubuntu evidence folder created | 10 |
+| Lab file locations checked | 10 |
+| Evidence notes completed clearly | 15 |
+| Screenshots captured | 10 |
+| Total | 100 |
+
+Do not heavily penalise failed ping results if the student used the correct commands and documented the result.
+
+---
+
+## Elastic Basic License Reminder
+
+Elastic is not used in this lab.
+
+For the course:
+
+- Use self-managed Elastic.
+- Use the free Elastic Basic license.
+- Do not use Elastic Cloud.
+- Do not require paid subscriptions.
+- Do not require external internet access.
+
+---
+
+End of Lab 01.
