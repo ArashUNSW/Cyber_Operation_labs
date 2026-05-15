@@ -127,7 +127,7 @@ C:\BlueWave\Evidence
 ### Common Kibana URL Format
 
 ```text
-`http://<UBUNTU-SOC-IP>:5601`
+http://<UBUNTU-SOC-IP>:5601
 ```
 
 Example:
