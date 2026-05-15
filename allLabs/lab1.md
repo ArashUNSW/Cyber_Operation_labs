@@ -3,7 +3,7 @@
 ## Estimated Time
 
 60–90 minutes
-`IPv4 Address
+`IPv4 Address`
 ---
 
 ## Lab Purpose
