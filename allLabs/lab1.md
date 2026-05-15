@@ -18,7 +18,7 @@ This lab prepares you for later labs where the Windows 11 endpoint sends logs to
 
 ## How to Use Copy and Type Options
 
-This Skillable lab gives you two options for command steps.
+This Skillable lab gives you two options for every command, search term, file path, filename, and template that a student may need to enter.
 
 ### Copy Option
 
@@ -1603,13 +1603,24 @@ Before you finish the lab, confirm each item is complete.
 
 ---
 
+
 # Troubleshooting
 
 ## Problem: PowerShell does not open
 
 Open the **Windows Start** menu.
 
-Search for:
+Search for **PowerShell**.
+
+### Copy
+
+```text
+PowerShell
+```
+
+### Type
+
+Type this into the Windows search box:
 
 ```text
 PowerShell
@@ -1617,13 +1628,25 @@ PowerShell
 
 Open **Windows PowerShell**.
 
+If Windows Terminal opens instead, that is acceptable if it gives you a PowerShell prompt.
+
 ---
 
 ## Problem: Ubuntu Terminal does not open
 
 Open the Ubuntu application search.
 
-Search for:
+Search for **Terminal**.
+
+### Copy
+
+```text
+Terminal
+```
+
+### Type
+
+Type this into the Ubuntu application search:
 
 ```text
 Terminal
@@ -1639,6 +1662,22 @@ Record the exact hostname shown.
 
 Tell your instructor if the hostname is very different from the lab instructions.
 
+To check again, run this command on **WIN11-CLIENT** in **PowerShell**.
+
+### Copy
+
+```powershell
+hostname
+```
+
+### Type
+
+Type this into PowerShell:
+
+```powershell
+hostname
+```
+
 ---
 
 ## Problem: The Ubuntu hostname is not UBUNTU-SOC
@@ -1646,6 +1685,22 @@ Tell your instructor if the hostname is very different from the lab instructions
 Record the exact hostname shown.
 
 Tell your instructor if the hostname is very different from the lab instructions.
+
+To check again, run this command on **UBUNTU-SOC** in **Terminal**.
+
+### Copy
+
+```bash
+hostname
+```
+
+### Type
+
+Type this into Terminal:
+
+```bash
+hostname
+```
 
 ---
 
@@ -1655,14 +1710,50 @@ Look for the active Ethernet adapter.
 
 Ignore adapters that show:
 
+### Copy
+
 ```text
 Media disconnected
 ```
 
-Do not use:
+### Type
+
+Look for and ignore this text:
+
+```text
+Media disconnected
+```
+
+Do not use the loopback address.
+
+### Copy
 
 ```text
 127.0.0.1
+```
+
+### Type
+
+Do not record this address:
+
+```text
+127.0.0.1
+```
+
+Run the cleaner Windows IPv4 command again if needed.
+
+### Copy
+
+```powershell
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
+```
+
+### Type
+
+Type this into PowerShell exactly as shown:
+
+```powershell
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
 ```
 
 ---
@@ -1671,19 +1762,49 @@ Do not use:
 
 Record the first non-loopback IPv4 address.
 
-You can also run:
+You can also run this command on **UBUNTU-SOC**.
+
+### Copy
 
 ```bash
 ip addr show
 ```
 
-Look for an address after:
+### Type
+
+Type this into Terminal:
+
+```bash
+ip addr show
+```
+
+Look for an address after this word:
+
+### Copy
 
 ```text
 inet
 ```
 
-Do not use:
+### Type
+
+Look for this word in the output:
+
+```text
+inet
+```
+
+Do not use the loopback address.
+
+### Copy
+
+```text
+127.0.0.1
+```
+
+### Type
+
+Do not record this address:
 
 ```text
 127.0.0.1
@@ -1695,10 +1816,36 @@ Do not use:
 
 Check that you typed the correct Ubuntu IP address.
 
-Try again:
+Try the command again on **WIN11-CLIENT** in **PowerShell**.
+
+### Copy
 
 ```powershell
 ping <UBUNTU-SOC-IP>
+```
+
+### Type
+
+Type this into PowerShell, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+
+```powershell
+ping <UBUNTU-SOC-IP>
+```
+
+Example:
+
+### Copy
+
+```powershell
+ping 10.1.1.10
+```
+
+### Type
+
+Type this example only if your Ubuntu IP address is `10.1.1.10`:
+
+```powershell
+ping 10.1.1.10
 ```
 
 If it still fails, ICMP may be blocked.
@@ -1713,10 +1860,36 @@ Do not change firewall settings in this lab.
 
 Check that you typed the correct Windows IP address.
 
-Try again:
+Try the command again on **UBUNTU-SOC** in **Terminal**.
+
+### Copy
 
 ```bash
 ping -c 4 <WIN11-CLIENT-IP>
+```
+
+### Type
+
+Type this into Terminal, replacing `<WIN11-CLIENT-IP>` with your Windows IP address:
+
+```bash
+ping -c 4 <WIN11-CLIENT-IP>
+```
+
+Example:
+
+### Copy
+
+```bash
+ping -c 4 10.1.1.20
+```
+
+### Type
+
+Type this example only if your Windows IP address is `10.1.1.20`:
+
+```bash
+ping -c 4 10.1.1.20
 ```
 
 If it still fails, the Windows firewall may be blocking ping.
@@ -1727,21 +1900,129 @@ Do not change firewall settings in this lab.
 
 ---
 
+## Problem: The Windows evidence folder does not exist
+
+Run this command on **WIN11-CLIENT** in **PowerShell**.
+
+### Copy
+
+```powershell
+New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
+```
+
+### Type
+
+Type this into PowerShell:
+
+```powershell
+New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
+```
+
+Then confirm the folder exists.
+
+### Copy
+
+```powershell
+Test-Path "C:\BlueWave\Evidence"
+```
+
+### Type
+
+Type this into PowerShell:
+
+```powershell
+Test-Path "C:\BlueWave\Evidence"
+```
+
+Expected result:
+
+```text
+True
+```
+
+---
+
+## Problem: The Ubuntu evidence folder does not exist
+
+Run this command on **UBUNTU-SOC** in **Terminal**.
+
+### Copy
+
+```bash
+mkdir -p /home/student/bluewave/evidence
+```
+
+### Type
+
+Type this into Terminal:
+
+```bash
+mkdir -p /home/student/bluewave/evidence
+```
+
+Then confirm the folder exists.
+
+### Copy
+
+```bash
+ls -ld /home/student/bluewave/evidence
+```
+
+### Type
+
+Type this into Terminal:
+
+```bash
+ls -ld /home/student/bluewave/evidence
+```
+
+---
+
 ## Problem: The Windows evidence file is missing
 
-Check that you saved the file as:
+Check that you saved the file with this exact filename.
+
+### Copy
 
 ```text
 Lab01-Environment-Notes.txt
 ```
 
-Check that you saved it in:
+### Type
+
+Type this filename exactly:
+
+```text
+Lab01-Environment-Notes.txt
+```
+
+Check that you saved it in this exact folder.
+
+### Copy
 
 ```text
 C:\BlueWave\Evidence
 ```
 
-Confirm with:
+### Type
+
+Type this path exactly:
+
+```text
+C:\BlueWave\Evidence
+```
+
+Confirm with this command on **WIN11-CLIENT** in **PowerShell**.
+
+### Copy
+
+```powershell
+Test-Path "C:\BlueWave\Evidence\Lab01-Environment-Notes.txt"
+```
+
+### Type
+
+Type this into PowerShell:
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab01-Environment-Notes.txt"
@@ -1752,6 +2033,122 @@ Expected result:
 ```text
 True
 ```
+
+---
+
+## Problem: The Ubuntu evidence file is missing
+
+Create it again on **UBUNTU-SOC** in **Terminal**.
+
+### Copy
+
+```bash
+nano /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+### Type
+
+Type this into Terminal:
+
+```bash
+nano /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+Then confirm it exists.
+
+### Copy
+
+```bash
+ls -l /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+### Type
+
+Type this into Terminal:
+
+```bash
+ls -l /home/student/bluewave/evidence/Lab01-Environment-Notes.txt
+```
+
+---
+
+## Problem: `C:\LabFiles` is missing
+
+Check the path carefully on **WIN11-CLIENT**.
+
+### Copy
+
+```text
+C:\LabFiles
+```
+
+### Type
+
+Type this path exactly:
+
+```text
+C:\LabFiles
+```
+
+You can also confirm with PowerShell.
+
+### Copy
+
+```powershell
+Test-Path "C:\LabFiles"
+```
+
+### Type
+
+Type this into PowerShell:
+
+```powershell
+Test-Path "C:\LabFiles"
+```
+
+If it is still missing, record the issue and notify your instructor.
+
+Do not download files from the internet.
+
+---
+
+## Problem: `/home/student/labfiles` is missing
+
+Check the path carefully on **UBUNTU-SOC**.
+
+### Copy
+
+```text
+/home/student/labfiles
+```
+
+### Type
+
+Type this path exactly:
+
+```text
+/home/student/labfiles
+```
+
+You can also confirm with Terminal.
+
+### Copy
+
+```bash
+ls -la /home/student/labfiles
+```
+
+### Type
+
+Type this into Terminal:
+
+```bash
+ls -la /home/student/labfiles
+```
+
+If it is still missing, record the issue and notify your instructor.
+
+Do not download files from the internet.
 
 ---
 
