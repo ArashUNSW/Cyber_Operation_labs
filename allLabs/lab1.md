@@ -80,7 +80,7 @@ In later labs:
 > This lab does not require internet access.
 
 > [!alert]
-> Do not run `BlueWaveActivitySimulator.exe` in this lab. The simulator is introduced in a later lab.
+> Do not run `BlueWaveActivitySimulator.exe` in this lab. The simulator is introduced in a later `lab`.
 
 ---
 
