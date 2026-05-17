@@ -268,7 +268,7 @@ Use **WIN11-CLIENT** and **Windows PowerShell**.
 ### Student Input - Copy or Type
 
 ```powershell
-++++ipconfig++++
+ipconfig
 ```
 
 2. Look for the active network adapter.
@@ -278,7 +278,7 @@ Use **WIN11-CLIENT** and **Windows PowerShell**.
 ### Student Input - Copy or Type
 
 ```powershell
-++++Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength++++
+Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
 ```
 
 5. Record the IPv4 address and active network adapter.
