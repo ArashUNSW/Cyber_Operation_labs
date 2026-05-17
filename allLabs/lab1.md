@@ -232,9 +232,9 @@ Run each command and record the result.
 
 | Purpose | Student Input - Copy or Type | Record In Evidence Notes |
 |---|---|---|
-| Windows hostname | `hostname` | `Windows hostname:` |
-| Logged-in user | `whoami` | `Windows logged-in user:` |
-| Computer name variable | `$env:COMPUTERNAME` | `Windows COMPUTERNAME value:` |
+| Windows hostname | +++hostname+++ | `Windows hostname:` |
+| Logged-in user | +++whoami+++ | `Windows logged-in user:` |
+| Computer name variable | +++$env:COMPUTERNAME+++ | `Windows COMPUTERNAME value:` |
 
 ## Expected Result
 
