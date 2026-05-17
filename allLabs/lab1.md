@@ -82,8 +82,8 @@ In later labs:
 
 | Evidence File | Location |
 |---|---|
-| ++++Lab01-Environment-Notes.txt++++ | `C:\BlueWave\Evidence\Lab01-Environment-Notes.txt` |
-| `Lab01-Environment-Notes.txt` | `/home/student/bluewave/evidence/Lab01-Environment-Notes.txt` |
+| Lab01-Environment-Notes.txt | +++C:\BlueWave\Evidence\Lab01-Environment-Notes.txt+++ |
+| Lab01-Environment-Notes.txt | +++/home/student/bluewave/evidence/Lab01-Environment-Notes.txt+++ |
 
 ---
 
@@ -202,9 +202,8 @@ Use **WIN11-CLIENT**.
 
 ### Student Input - Copy or Type
 
-```text
-PowerShell
-```
+```text```  ++++PowerShell++++
+
 
 3. Open **Windows PowerShell**.
 
@@ -269,7 +268,7 @@ Use **WIN11-CLIENT** and **Windows PowerShell**.
 ### Student Input - Copy or Type
 
 ```powershell
-ipconfig
+++++ipconfig++++
 ```
 
 2. Look for the active network adapter.
@@ -279,7 +278,7 @@ ipconfig
 ### Student Input - Copy or Type
 
 ```powershell
-Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength
+++++Get-NetIPAddress -AddressFamily IPv4 | Where-Object {$_.IPAddress -notlike "127.*"} | Select-Object InterfaceAlias, IPAddress, PrefixLength++++
 ```
 
 5. Record the IPv4 address and active network adapter.
