@@ -16,23 +16,26 @@ This lab helps BlueWave Clinic practise endpoint investigation using safe simula
 
 ---
 
-## How to Use Copy and Type Options
+## How to Use Copy or Type Inputs
 
-This lab uses **Copy** and **Type** options for every command, query, search term, path, filename, and template that students may need to enter.
+This lab keeps the Skillable **Copy or Type** requirement without repeating the same command twice.
 
-### Copy Option
+For each command, query, search term, path, filename, URL, or template, you will see one block named:
 
-Use the **Copy** option when you want to copy and paste the text directly into the lab environment.
+```text
+Student Input - Copy or Type
+```
 
-### Type Option
+You may either:
 
-Use the **Type** option when you need to manually type the text.
+- Copy the text directly into the lab environment.
+- Type the same text manually.
 
 > [!note]
-> The Copy and Type options contain the same command or text. Use one option unless your instructor tells you otherwise.
+> Copy or type the text exactly as shown. You only need to use one method.
 
 > [!alert]
-> Type commands and queries exactly as shown. Commands and Kibana queries are sensitive to spaces, punctuation, quotation marks, backslashes, and field names.
+> Commands, queries, paths, quotation marks, slashes, backslashes, and spaces must match the instructions exactly.
 
 ---
 
@@ -224,15 +227,7 @@ Use **Windows PowerShell**.
 2. Open **Windows PowerShell**.
 3. Confirm the hostname.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -257,15 +252,7 @@ Capture a screenshot of the hostname result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows hostname:
-```
-
-### Type
-
-Type this into your evidence notes, then add the hostname:
+### Student Input - Copy or Type
 
 ```text
 Windows hostname:
@@ -285,15 +272,7 @@ Use **Windows PowerShell**.
 
 1. In PowerShell, check the evidence folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence"
@@ -302,15 +281,7 @@ Test-Path "C:\BlueWave\Evidence"
 2. Press **Enter**.
 3. If the result is `False`, create the folder.
 
-### Copy
-
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
@@ -330,15 +301,7 @@ Capture a screenshot if your instructor requires evidence folder validation.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows evidence folder confirmed:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Windows evidence folder confirmed:
@@ -358,15 +321,7 @@ Use **Windows PowerShell**.
 
 1. Check the Elastic Agent service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -400,15 +355,7 @@ Capture a screenshot showing the Elastic Agent service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent service status:
@@ -428,15 +375,7 @@ Use **Windows PowerShell**.
 
 1. Check the Sysmon64 service.
 
-### Copy
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
@@ -445,15 +384,7 @@ Get-Service Sysmon64 -ErrorAction SilentlyContinue
 2. Press **Enter**.
 3. If no result appears, check the alternate service name.
 
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -486,15 +417,7 @@ Capture a screenshot showing Sysmon service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Sysmon service status:
@@ -520,15 +443,7 @@ Use this lab document.
 
 ## Simulator Safety Statement
 
-### Copy
-
-```text
-BlueWaveActivitySimulator.exe is a safe educational activity generator used to create harmless Windows events for SOC analysis. It is not malware. It must only be used inside the lab environment.
-```
-
-### Type
-
-Type this statement into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 BlueWaveActivitySimulator.exe is a safe educational activity generator used to create harmless Windows events for SOC analysis. It is not malware. It must only be used inside the lab environment.
@@ -544,16 +459,7 @@ No screenshot is required for this task unless instructed.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator safety statement reviewed:
-Simulator described as malware:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your answers:
+### Student Input - Copy or Type
 
 ```text
 Simulator safety statement reviewed:
@@ -581,15 +487,7 @@ Use **Windows PowerShell**.
 
 1. Check whether the simulator folder exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Simulators"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Simulators"
@@ -598,15 +496,7 @@ Test-Path "C:\LabFiles\Simulators"
 2. Press **Enter**.
 3. List the simulator folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Simulators"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Simulators"
@@ -615,15 +505,7 @@ Get-ChildItem "C:\LabFiles\Simulators"
 4. Press **Enter**.
 5. Look for the simulator file.
 
-### Copy
-
-```text
-BlueWaveActivitySimulator.exe
-```
-
-### Type
-
-Look for this filename:
+### Student Input - Copy or Type
 
 ```text
 BlueWaveActivitySimulator.exe
@@ -631,15 +513,7 @@ BlueWaveActivitySimulator.exe
 
 6. Confirm the full simulator path.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -667,16 +541,7 @@ Capture a screenshot showing the simulator file in the folder.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator file found:
-Simulator file path:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator file found:
@@ -704,15 +569,7 @@ Use **Windows PowerShell**.
 
 1. Record the current system time.
 
-### Copy
-
-```powershell
-Get-Date
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Date
@@ -740,15 +597,7 @@ Capture a screenshot showing the time before simulator execution.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator pre-run timestamp:
-```
-
-### Type
-
-Type this into your evidence notes, then add the timestamp:
+### Student Input - Copy or Type
 
 ```text
 Simulator pre-run timestamp:
@@ -770,15 +619,7 @@ Use **Windows PowerShell**.
 2. Make sure the simulator file exists.
 3. Run the simulator.
 
-### Copy
-
-```powershell
-Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -817,17 +658,7 @@ Capture a screenshot showing the PowerShell command used to run the simulator.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator run command:
-Simulator executed:
-Visible activity observed:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your observations:
+### Student Input - Copy or Type
 
 ```text
 Simulator run command:
@@ -849,15 +680,7 @@ Use **Windows PowerShell**.
 
 1. Record the current system time after the simulator runs.
 
-### Copy
-
-```powershell
-Get-Date
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Date
@@ -878,15 +701,7 @@ Capture a screenshot showing the time after simulator execution.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator post-run timestamp:
-```
-
-### Type
-
-Type this into your evidence notes, then add the timestamp:
+### Student Input - Copy or Type
 
 ```text
 Simulator post-run timestamp:
@@ -906,15 +721,7 @@ Use **Windows PowerShell**.
 
 1. Check whether the simulator output folder exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput"
@@ -923,15 +730,7 @@ Test-Path "C:\BlueWave\SimulatorOutput"
 2. Press **Enter**.
 3. List the BlueWave folder contents.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\BlueWave"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\BlueWave"
@@ -959,16 +758,7 @@ Capture a screenshot showing the simulator output folder.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator output folder created:
-Simulator output folder path:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator output folder created:
@@ -989,15 +779,7 @@ Use **Windows PowerShell**.
 
 1. Check whether the simulator note file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -1006,15 +788,7 @@ Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
 2. Press **Enter**.
 3. Display the file contents.
 
-### Copy
-
-```powershell
-Get-Content "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Content "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -1045,17 +819,7 @@ Capture a screenshot showing the output file contents.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator output file created:
-Simulator output file path:
-Simulator output file message:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator output file created:
@@ -1077,15 +841,7 @@ Use **Windows PowerShell**.
 
 1. Query recent Sysmon events.
 
-### Copy
-
-```powershell
-Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 20 | Select-Object TimeCreated, Id, ProviderName, Message
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 20 | Select-Object TimeCreated, Id, ProviderName, Message
@@ -1115,16 +871,7 @@ Capture a screenshot showing recent Sysmon events after simulator execution.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Recent Sysmon events after simulator:
-Sysmon Event ID 1 visible after simulator:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Recent Sysmon events after simulator:
@@ -1146,15 +893,7 @@ Use **Windows Event Viewer**.
 1. Select the **Windows Start** menu.
 2. Search for **Event Viewer**.
 
-### Copy
-
-```text
-Event Viewer
-```
-
-### Type
-
-Type this into the Windows search box:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer
@@ -1163,15 +902,7 @@ Event Viewer
 3. Open **Event Viewer**.
 4. Navigate to the Sysmon Operational log.
 
-### Copy
-
-```text
-Applications and Services Logs > Microsoft > Windows > Sysmon > Operational
-```
-
-### Type
-
-Navigate to this path in Event Viewer:
+### Student Input - Copy or Type
 
 ```text
 Applications and Services Logs > Microsoft > Windows > Sysmon > Operational
@@ -1193,17 +924,7 @@ Capture a screenshot showing a recent Sysmon event in Event Viewer.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Event Viewer Sysmon log reviewed:
-Recent Sysmon event ID observed:
-Recent Sysmon event time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer Sysmon log reviewed:
@@ -1227,15 +948,7 @@ Use a web browser.
 2. Enter the Kibana URL.
 3. Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu SOC IP address.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser address bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -1260,16 +973,7 @@ Capture a screenshot showing Kibana open if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Kibana URL used:
-Kibana opened successfully:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Kibana URL used:
@@ -1291,15 +995,7 @@ Use **Kibana** in the browser.
 1. Open the Kibana main navigation menu.
 2. Search for **Discover**.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -1318,15 +1014,7 @@ Capture a screenshot showing Discover open.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Discover opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Discover opened:
@@ -1347,15 +1035,7 @@ Use **Kibana Discover**.
 1. Locate the data view selector in Discover.
 2. Select a logs-related data view.
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Look for or select this data view:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -1363,15 +1043,7 @@ logs-*
 
 Alternative possible data view:
 
-### Copy
-
-```text
-winlogbeat-*
-```
-
-### Type
-
-Look for this data view if `logs-*` is not available:
+### Student Input - Copy or Type
 
 ```text
 winlogbeat-*
@@ -1379,15 +1051,7 @@ winlogbeat-*
 
 3. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -1414,16 +1078,7 @@ Capture a screenshot showing the selected data view and time range.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Data view selected:
-Time range used:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Data view selected:
@@ -1445,15 +1100,7 @@ Use **Kibana Discover**.
 1. Click the Kibana query bar.
 2. Enter the host query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -1464,15 +1111,7 @@ host.name : "WIN11-CLIENT"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
@@ -1488,16 +1127,7 @@ Capture a screenshot showing events from WIN11-CLIENT.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Host query used:
-Events from WIN11-CLIENT found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Host query used:
@@ -1518,15 +1148,7 @@ Use **Kibana Discover**.
 
 1. Search for the simulator process by name.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1537,15 +1159,7 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 If no results appear, try the process executable field:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
@@ -1553,15 +1167,7 @@ host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
 
 If still no results appear, try a broader message search:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
@@ -1583,20 +1189,7 @@ Capture a screenshot showing the simulator process in Kibana.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator process query used:
-Simulator process found:
-Simulator process timestamp:
-Simulator process user:
-Simulator process parent process:
-Simulator process command line:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator process query used:
@@ -1621,15 +1214,7 @@ Use **Kibana Discover**.
 
 1. Search for the simulator process as a Sysmon process creation event.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1640,15 +1225,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and e
 
 If no results appear, try this alternate event ID field:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.event_id : 1 and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.event_id : 1 and message : *BlueWaveActivitySimulator*
@@ -1667,16 +1244,7 @@ Capture a screenshot showing the simulator Sysmon Event ID 1 event.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator Sysmon Event ID 1 query used:
-Simulator Sysmon Event ID 1 found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator Sysmon Event ID 1 query used:
@@ -1697,15 +1265,7 @@ Use **Kibana Discover**.
 
 1. Search for Notepad process activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
@@ -1716,15 +1276,7 @@ host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
 
 If no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *notepad*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *notepad*
@@ -1754,18 +1306,7 @@ Capture a screenshot showing Notepad process activity or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Notepad child process found:
-Notepad timestamp:
-Notepad parent process:
-Notepad command line:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Notepad child process found:
@@ -1788,15 +1329,7 @@ Use **Kibana Discover**.
 
 1. Search for Calculator process activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "calc.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "calc.exe"
@@ -1807,15 +1340,7 @@ host.name : "WIN11-CLIENT" and process.name : "calc.exe"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : *Calculator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : *Calculator*
@@ -1823,15 +1348,7 @@ host.name : "WIN11-CLIENT" and process.name : *Calculator*
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *calc*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *calc*
@@ -1857,19 +1374,7 @@ Capture a screenshot showing Calculator process activity or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Calculator child process found:
-Calculator process name observed:
-Calculator timestamp:
-Calculator parent process:
-Calculator command line:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Calculator child process found:
@@ -1893,15 +1398,7 @@ Use **Kibana Discover**.
 
 1. Search for `whoami` command-line activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *whoami*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *whoami*
@@ -1912,15 +1409,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *whoami*
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
@@ -1928,15 +1417,7 @@ host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
@@ -1958,19 +1439,7 @@ Capture a screenshot showing `whoami` process activity or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-whoami child process found:
-whoami timestamp:
-whoami parent process:
-whoami command line:
-whoami user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 whoami child process found:
@@ -1994,15 +1463,7 @@ Use **Kibana Discover**.
 
 1. Search for `hostname` command-line activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *hostname*
@@ -2013,15 +1474,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *hostname*
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
@@ -2029,15 +1482,7 @@ host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
@@ -2059,19 +1504,7 @@ Capture a screenshot showing `hostname` process activity or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-hostname child process found:
-hostname timestamp:
-hostname parent process:
-hostname command line:
-hostname user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 hostname child process found:
@@ -2095,15 +1528,7 @@ Use **Kibana Discover**.
 
 1. Search for `ipconfig` command-line activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
@@ -2114,15 +1539,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
@@ -2130,15 +1547,7 @@ host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *ipconfig*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *ipconfig*
@@ -2160,19 +1569,7 @@ Capture a screenshot showing `ipconfig` process activity or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-ipconfig child process found:
-ipconfig timestamp:
-ipconfig parent process:
-ipconfig command line:
-ipconfig user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 ipconfig child process found:
@@ -2196,15 +1593,7 @@ Use **Kibana Discover**.
 
 1. Search for the simulator output path.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *SimulatorOutput*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *SimulatorOutput*
@@ -2215,15 +1604,7 @@ host.name : "WIN11-CLIENT" and message : *SimulatorOutput*
 
 If no results appear, try searching for the output file name:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *activity-note.txt*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *activity-note.txt*
@@ -2231,15 +1612,7 @@ host.name : "WIN11-CLIENT" and message : *activity-note.txt*
 
 If still no results appear, try searching for the BlueWave keyword:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWave*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWave*
@@ -2264,17 +1637,7 @@ Capture a screenshot showing file-related activity or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator output file activity found in Kibana:
-File activity query used:
-File activity result:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator output file activity found in Kibana:
@@ -2296,15 +1659,7 @@ Use **Kibana Discover**.
 
 1. Search for possible HTTP activity related to the simulator.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *http*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *http*
@@ -2317,15 +1672,7 @@ If the Ubuntu SOC IP is known, try searching for it.
 
 Replace `<UBUNTU-SOC-IP>` with the Ubuntu IP address.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *<UBUNTU-SOC-IP>*
-```
-
-### Type
-
-Type this into the Kibana query bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *<UBUNTU-SOC-IP>*
@@ -2352,17 +1699,7 @@ Capture a screenshot of the HTTP activity search or result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Possible HTTP activity searched:
-HTTP activity found:
-HTTP activity query used:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Possible HTTP activity searched:
@@ -2384,15 +1721,7 @@ Use **Kibana Discover**.
 
 1. Run the simulator process query again.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -2405,24 +1734,7 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 Look for these fields:
 
-### Copy
-
-```text
-@timestamp
-host.name
-user.name
-process.name
-process.executable
-process.command_line
-process.parent.name
-process.parent.executable
-event.provider
-event.code
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 @timestamp
@@ -2447,21 +1759,7 @@ Capture a screenshot showing the simulator event details.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Selected simulator event timestamp:
-Selected simulator process name:
-Selected simulator process path:
-Selected simulator command line:
-Selected simulator parent process:
-Selected simulator username:
-Selected simulator event ID:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Selected simulator event timestamp:
@@ -2490,17 +1788,7 @@ Use your evidence notes.
 3. Review the output folder and output file.
 4. Decide whether the activity is:
 
-### Copy
-
-```text
-Normal
-Suspicious-looking
-Malicious
-```
-
-### Type
-
-Choose one of these classifications:
+### Student Input - Copy or Type
 
 ```text
 Normal
@@ -2533,16 +1821,7 @@ No screenshot is required for this task unless instructed.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Activity classification:
-Classification explanation:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your decision:
+### Student Input - Copy or Type
 
 ```text
 Activity classification:
@@ -2568,15 +1847,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2584,15 +1855,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab06-Simulator-Timeline.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab06-Simulator-Timeline.txt
@@ -2600,87 +1863,7 @@ Lab06-Simulator-Timeline.txt
 
 ## Timeline Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 06 - Simulator Event Timeline
-
-Student Name:
-Date:
-
-Investigation Window
-
-Simulator pre-run timestamp:
-Simulator post-run timestamp:
-
-Timeline Entry 1
-Timestamp:
-Source:
-Host:
-User:
-Event type:
-Process name:
-Command line:
-Parent process:
-Event ID:
-Notes:
-
-Timeline Entry 2
-Timestamp:
-Source:
-Host:
-User:
-Event type:
-Process name:
-Command line:
-Parent process:
-Event ID:
-Notes:
-
-Timeline Entry 3
-Timestamp:
-Source:
-Host:
-User:
-Event type:
-Process name:
-Command line:
-Parent process:
-Event ID:
-Notes:
-
-Timeline Entry 4
-Timestamp:
-Source:
-Host:
-User:
-Event type:
-Process name:
-Command line:
-Parent process:
-Event ID:
-Notes:
-
-Timeline Entry 5
-Timestamp:
-Source:
-Host:
-User:
-Event type:
-Process name:
-Command line:
-Parent process:
-Event ID:
-Notes:
-
-Timeline Summary
-Write 3 to 5 sentences explaining the order of events and what the simulator did.
-```
-
-### Type
-
-Type this template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -2789,15 +1972,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2805,15 +1980,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab06-Simulator-Investigation.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab06-Simulator-Investigation.txt
@@ -2821,137 +1988,7 @@ Lab06-Simulator-Investigation.txt
 
 ## Investigation Notes Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 06 - Analysing Simulated Endpoint Activity
-
-Student Name:
-Date:
-
-1. Environment Verification
-
-Windows hostname:
-Windows evidence folder confirmed:
-Elastic Agent service status:
-Sysmon service status:
-
-2. Simulator Safety
-
-Simulator safety statement reviewed:
-Simulator described as malware:
-
-3. Simulator File Verification
-
-Simulator file found:
-Simulator file path:
-Simulator pre-run timestamp:
-Simulator run command:
-Simulator executed:
-Visible activity observed:
-Simulator post-run timestamp:
-
-4. Simulator Output
-
-Simulator output folder created:
-Simulator output folder path:
-Simulator output file created:
-Simulator output file path:
-Simulator output file message:
-
-5. Local Event Review
-
-Recent Sysmon events after simulator:
-Sysmon Event ID 1 visible after simulator:
-Event Viewer Sysmon log reviewed:
-Recent Sysmon event ID observed:
-Recent Sysmon event time:
-
-6. Kibana Setup
-
-Kibana URL used:
-Kibana opened successfully:
-Discover opened:
-Data view selected:
-Time range used:
-Host query used:
-Events from WIN11-CLIENT found:
-
-7. Simulator Process Investigation
-
-Simulator process query used:
-Simulator process found:
-Simulator process timestamp:
-Simulator process user:
-Simulator process parent process:
-Simulator process command line:
-Simulator Sysmon Event ID 1 query used:
-Simulator Sysmon Event ID 1 found:
-
-8. Child Process Investigation
-
-Notepad child process found:
-Notepad timestamp:
-Notepad parent process:
-Notepad command line:
-
-Calculator child process found:
-Calculator process name observed:
-Calculator timestamp:
-Calculator parent process:
-Calculator command line:
-
-whoami child process found:
-whoami timestamp:
-whoami parent process:
-whoami command line:
-whoami user:
-
-hostname child process found:
-hostname timestamp:
-hostname parent process:
-hostname command line:
-hostname user:
-
-ipconfig child process found:
-ipconfig timestamp:
-ipconfig parent process:
-ipconfig command line:
-ipconfig user:
-
-9. File and Network Activity
-
-Simulator output file activity found in Kibana:
-File activity query used:
-File activity result:
-Possible HTTP activity searched:
-HTTP activity found:
-HTTP activity query used:
-
-10. Selected Simulator Event
-
-Selected simulator event timestamp:
-Selected simulator process name:
-Selected simulator process path:
-Selected simulator command line:
-Selected simulator parent process:
-Selected simulator username:
-Selected simulator event ID:
-
-11. Assessment
-
-Activity classification:
-Classification explanation:
-
-12. Lab Summary
-
-Write 3 to 5 sentences explaining what you found during the simulator investigation.
-```
-
-### Type
-
-Type this template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -3105,15 +2142,7 @@ Use **Windows PowerShell**.
 
 1. Confirm the timeline file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab06-Simulator-Timeline.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab06-Simulator-Timeline.txt"
@@ -3122,15 +2151,7 @@ Test-Path "C:\BlueWave\Evidence\Lab06-Simulator-Timeline.txt"
 2. Press **Enter**.
 3. Confirm the investigation notes file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab06-Simulator-Investigation.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab06-Simulator-Investigation.txt"
@@ -3240,15 +2261,7 @@ Before finishing the lab, confirm each item is complete.
 
 Check the simulator folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Simulators"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Simulators"
@@ -3270,15 +2283,7 @@ Do not download or create a replacement simulator.
 
 Check the exact path.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -3292,15 +2297,7 @@ True
 
 Try running it again:
 
-### Copy
-
-```powershell
-Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -3314,15 +2311,7 @@ If it still does not run, ask your instructor.
 
 Check the output folder path.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput"
@@ -3338,15 +2327,7 @@ Ask your instructor before manually creating the folder.
 
 Check the output file path.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -3360,15 +2341,7 @@ If the result is `False`, record the issue and ask your instructor.
 
 Check the Elastic Agent service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -3382,29 +2355,13 @@ If the service is not running, review Lab 03 or ask your instructor.
 
 Check both possible Sysmon service names.
 
-### Copy
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
 ```
 
-### Type
-
-Type this into PowerShell:
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -3418,15 +2375,7 @@ If Sysmon is not running, review Lab 05 or ask your instructor.
 
 Try this command again:
 
-### Copy
-
-```powershell
-Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 20 | Select-Object TimeCreated, Id, ProviderName, Message
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 20 | Select-Object TimeCreated, Id, ProviderName, Message
@@ -3440,15 +2389,7 @@ If no events appear, ask your instructor to verify Sysmon configuration.
 
 Check the Kibana URL.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -3462,15 +2403,7 @@ If Kibana still does not open, confirm Kibana is running or ask your instructor.
 
 First check the time range.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -3478,15 +2411,7 @@ Last 24 hours
 
 Try expanding to:
 
-### Copy
-
-```text
-Last 7 days
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 7 days
@@ -3494,43 +2419,19 @@ Last 7 days
 
 Try alternate simulator queries:
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
@@ -3542,71 +2443,31 @@ host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
 
 Try broader searches.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *notepad*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *notepad*
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *calc*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *calc*
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *ipconfig*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *ipconfig*
@@ -3620,15 +2481,7 @@ File creation visibility depends on Sysmon configuration.
 
 Confirm the file exists locally:
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -3644,27 +2497,7 @@ Elastic field names may vary.
 
 Try alternate fields such as:
 
-### Copy
-
-```text
-event.code
-winlog.event_id
-event.provider
-winlog.provider_name
-winlog.channel
-event.dataset
-process.name
-process.executable
-process.command_line
-process.parent.name
-process.parent.executable
-user.name
-message
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -3688,15 +2521,7 @@ message
 
 Check the evidence folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\BlueWave\Evidence"
