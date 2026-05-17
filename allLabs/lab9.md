@@ -16,23 +16,26 @@ This lab combines skills from Labs 01 through 08.
 
 ---
 
-## How to Use Copy and Type Options
+## How to Use Copy or Type Inputs
 
-This lab uses **Copy** and **Type** options for every command, query, search term, path, filename, and template that students may need to enter.
+This lab keeps the Skillable **Copy or Type** requirement without repeating the same command twice.
 
-### Copy Option
+For each command, query, search term, path, filename, URL, or template, you will see one block named:
 
-Use the **Copy** option when you want to copy and paste the text directly into the lab environment.
+```text
+Student Input - Copy or Type
+```
 
-### Type Option
+You may either:
 
-Use the **Type** option when you need to manually type the text.
+- Copy the text directly into the lab environment.
+- Type the same text manually.
 
 > [!note]
-> The Copy and Type options contain the same command or text. Use one option unless your instructor tells you otherwise.
+> Copy or type the text exactly as shown. You only need to use one method.
 
 > [!alert]
-> Type commands and queries exactly as shown. Commands and Kibana queries are sensitive to spaces, punctuation, quotation marks, backslashes, and field names.
+> Commands, queries, paths, quotation marks, slashes, backslashes, and spaces must match the instructions exactly.
 
 ---
 
@@ -219,15 +222,7 @@ Use **Windows PowerShell**.
 2. Open **Windows PowerShell**.
 3. Confirm the hostname.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -252,15 +247,7 @@ Capture a screenshot of the hostname result if required.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Affected host:
-```
-
-### Type
-
-Type this into your final report, then add the hostname:
+### Student Input - Copy or Type
 
 ```text
 Affected host:
@@ -280,15 +267,7 @@ Use **Windows PowerShell**.
 
 1. Check the evidence folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence"
@@ -297,15 +276,7 @@ Test-Path "C:\BlueWave\Evidence"
 2. Press **Enter**.
 3. If the result is `False`, create the folder.
 
-### Copy
-
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
@@ -313,15 +284,7 @@ New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
 
 4. Confirm the folder contents.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\BlueWave\Evidence"
@@ -341,15 +304,7 @@ Capture a screenshot showing the evidence folder validation.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Evidence folder confirmed:
-```
-
-### Type
-
-Type this into your final report:
+### Student Input - Copy or Type
 
 ```text
 Evidence folder confirmed:
@@ -369,15 +324,7 @@ Use **Windows PowerShell**.
 
 1. Check the Elastic Agent service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -411,15 +358,7 @@ Capture a screenshot showing the Elastic Agent service status.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Elastic Agent service status:
-```
-
-### Type
-
-Type this into your final report, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent service status:
@@ -439,15 +378,7 @@ Use **Windows PowerShell**.
 
 1. Check the Sysmon64 service.
 
-### Copy
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
@@ -456,15 +387,7 @@ Get-Service Sysmon64 -ErrorAction SilentlyContinue
 2. Press **Enter**.
 3. If no result appears, check the alternate service name.
 
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -497,15 +420,7 @@ Capture a screenshot showing Sysmon service status.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Sysmon service status:
-```
-
-### Type
-
-Type this into your final report, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Sysmon service status:
@@ -525,15 +440,7 @@ Use **Windows PowerShell**.
 
 1. Check whether a Windows capstone briefing file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Logs\capstone-briefing.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Logs\capstone-briefing.txt"
@@ -542,15 +449,7 @@ Test-Path "C:\LabFiles\Logs\capstone-briefing.txt"
 2. Press **Enter**.
 3. If the result is `True`, display the briefing.
 
-### Copy
-
-```powershell
-Get-Content "C:\LabFiles\Logs\capstone-briefing.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Content "C:\LabFiles\Logs\capstone-briefing.txt"
@@ -560,15 +459,7 @@ Get-Content "C:\LabFiles\Logs\capstone-briefing.txt"
 
 ## Default Capstone Briefing
 
-### Copy
-
-```text
-BlueWave Clinic SOC received a detection related to process activity on WIN11-CLIENT. The activity may include BlueWaveActivitySimulator.exe and related commands such as whoami, hostname, and ipconfig. The analyst must determine what occurred, identify the affected user and process relationships, collect indicators, build a timeline, and write a final incident report.
-```
-
-### Type
-
-Use this default briefing if no briefing file is available:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic SOC received a detection related to process activity on WIN11-CLIENT. The activity may include BlueWaveActivitySimulator.exe and related commands such as whoami, hostname, and ipconfig. The analyst must determine what occurred, identify the affected user and process relationships, collect indicators, build a timeline, and write a final incident report.
@@ -584,16 +475,7 @@ Capture a screenshot showing the briefing or the missing file check.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Case briefing source:
-Case briefing summary:
-```
-
-### Type
-
-Type these lines into your final report, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Case briefing source:
@@ -616,15 +498,7 @@ Use **Terminal**.
 2. Open **Terminal**.
 3. Check the capstone folder.
 
-### Copy
-
-```bash
-ls -la /home/student/labfiles/capstone
-```
-
-### Type
-
-Type this into Terminal:
+### Student Input - Copy or Type
 
 ```bash
 ls -la /home/student/labfiles/capstone
@@ -633,15 +507,7 @@ ls -la /home/student/labfiles/capstone
 4. Press **Enter**.
 5. If a briefing file exists, display it.
 
-### Copy
-
-```bash
-cat /home/student/labfiles/capstone/capstone-briefing.txt
-```
-
-### Type
-
-Type this into Terminal:
+### Student Input - Copy or Type
 
 ```bash
 cat /home/student/labfiles/capstone/capstone-briefing.txt
@@ -649,15 +515,7 @@ cat /home/student/labfiles/capstone/capstone-briefing.txt
 
 6. If an event file exists, list it.
 
-### Copy
-
-```bash
-ls -l /home/student/labfiles/capstone/capstone-events.csv
-```
-
-### Type
-
-Type this into Terminal:
+### Student Input - Copy or Type
 
 ```bash
 ls -l /home/student/labfiles/capstone/capstone-events.csv
@@ -675,17 +533,7 @@ Capture a screenshot if capstone files are present.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Ubuntu capstone folder checked:
-Ubuntu capstone briefing found:
-Ubuntu capstone event file found:
-```
-
-### Type
-
-Type these lines into your final report, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Ubuntu capstone folder checked:
@@ -709,15 +557,7 @@ Use a web browser.
 2. Enter the Kibana URL.
 3. Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu SOC IP address.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser address bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -742,16 +582,7 @@ Capture a screenshot showing Kibana open if required.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Kibana URL used:
-Kibana opened successfully:
-```
-
-### Type
-
-Type these lines into your final report, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Kibana URL used:
@@ -773,15 +604,7 @@ Use **Kibana Discover**.
 1. Open the Kibana main navigation menu.
 2. Search for **Discover**.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -800,15 +623,7 @@ Capture a screenshot showing Discover open.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Discover opened:
-```
-
-### Type
-
-Type this into your final report:
+### Student Input - Copy or Type
 
 ```text
 Discover opened:
@@ -829,15 +644,7 @@ Use **Kibana Discover**.
 1. Locate the data view selector.
 2. Select a logs-related data view.
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Look for or select this data view:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -845,15 +652,7 @@ logs-*
 
 Alternative possible data view:
 
-### Copy
-
-```text
-winlogbeat-*
-```
-
-### Type
-
-Look for this data view if `logs-*` is not available:
+### Student Input - Copy or Type
 
 ```text
 winlogbeat-*
@@ -861,15 +660,7 @@ winlogbeat-*
 
 3. Set the time range to **Last 7 days** for the capstone.
 
-### Copy
-
-```text
-Last 7 days
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 7 days
@@ -896,16 +687,7 @@ Capture a screenshot showing the data view and time range.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Data view selected:
-Time range used:
-```
-
-### Type
-
-Type these lines into your final report, then add values:
+### Student Input - Copy or Type
 
 ```text
 Data view selected:
@@ -926,15 +708,7 @@ Use **Kibana Discover**.
 
 1. Search for events from WIN11-CLIENT.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -945,15 +719,7 @@ host.name : "WIN11-CLIENT"
 
 If no results appear, try:
 
-### Copy
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
@@ -961,15 +727,7 @@ agent.name : "WIN11-CLIENT"
 
 If still no results appear, try:
 
-### Copy
-
-```text
-message : *WIN11-CLIENT*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 message : *WIN11-CLIENT*
@@ -985,16 +743,7 @@ Capture a screenshot showing events from WIN11-CLIENT.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Host event query used:
-Events from affected host found:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 Host event query used:
@@ -1015,15 +764,7 @@ Use **Kibana Discover**.
 
 1. Search for the primary capstone process.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1034,15 +775,7 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
@@ -1050,15 +783,7 @@ host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
@@ -1077,17 +802,7 @@ Capture a screenshot showing the primary process query.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Primary process query used:
-Primary process found:
-Primary process name:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 Primary process query used:
@@ -1113,25 +828,7 @@ Use **Kibana Discover**.
 
 Look for:
 
-### Copy
-
-```text
-@timestamp
-host.name
-user.name
-process.name
-process.executable
-process.command_line
-process.parent.name
-process.parent.executable
-event.provider
-event.code
-winlog.event_id
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 @timestamp
@@ -1157,24 +854,7 @@ Capture a screenshot showing the key event details.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Key event timestamp:
-Affected host:
-Affected user:
-Key process:
-Key process path:
-Key command line:
-Parent process:
-Parent process path:
-Event provider:
-Event ID:
-```
-
-### Type
-
-Type these lines into your final report, then add values:
+### Student Input - Copy or Type
 
 ```text
 Key event timestamp:
@@ -1203,15 +883,7 @@ Use **Kibana Discover**.
 
 1. Search for Sysmon process creation events for the primary process.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1222,15 +894,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and e
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.event_id : 1 and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.event_id : 1 and message : *BlueWaveActivitySimulator*
@@ -1238,15 +902,7 @@ host.name : "WIN11-CLIENT" and winlog.event_id : 1 and message : *BlueWaveActivi
 
 If still no results appear, search all Sysmon process creation events:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.code : "1"
-```
-
-### Type
-
-Type this broader query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.code : "1"
@@ -1262,16 +918,7 @@ Capture a screenshot showing the Sysmon Event ID 1 query.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Sysmon Event ID 1 query used:
-Sysmon process creation event found:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon Event ID 1 query used:
@@ -1292,15 +939,7 @@ Use **Kibana Discover**.
 
 1. Search for `whoami` activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *whoami*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *whoami*
@@ -1311,15 +950,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *whoami*
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
@@ -1327,15 +958,7 @@ host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
@@ -1351,19 +974,7 @@ Capture a screenshot showing the `whoami` result or query attempt.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-whoami activity found:
-whoami timestamp:
-whoami user:
-whoami parent process:
-whoami command line:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 whoami activity found:
@@ -1387,15 +998,7 @@ Use **Kibana Discover**.
 
 1. Search for `hostname` activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *hostname*
@@ -1406,15 +1009,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *hostname*
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
@@ -1422,15 +1017,7 @@ host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
@@ -1446,19 +1033,7 @@ Capture a screenshot showing the `hostname` result or query attempt.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-hostname activity found:
-hostname timestamp:
-hostname user:
-hostname parent process:
-hostname command line:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 hostname activity found:
@@ -1482,15 +1057,7 @@ Use **Kibana Discover**.
 
 1. Search for `ipconfig` activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
@@ -1501,15 +1068,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
@@ -1517,15 +1076,7 @@ host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *ipconfig*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *ipconfig*
@@ -1541,19 +1092,7 @@ Capture a screenshot showing the `ipconfig` result or query attempt.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-ipconfig activity found:
-ipconfig timestamp:
-ipconfig user:
-ipconfig parent process:
-ipconfig command line:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 ipconfig activity found:
@@ -1577,15 +1116,7 @@ Use **Kibana Discover**.
 
 1. Search for Notepad activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
@@ -1595,15 +1126,7 @@ host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
 3. Record the result.
 4. Search for Calculator activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "calc.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "calc.exe"
@@ -1612,15 +1135,7 @@ host.name : "WIN11-CLIENT" and process.name : "calc.exe"
 5. Press **Enter** or select **Update**.
 6. If Calculator does not appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *calc*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *calc*
@@ -1639,22 +1154,7 @@ Capture a screenshot showing Notepad or Calculator activity or query attempts.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Notepad activity found:
-Notepad timestamp:
-Notepad parent process:
-
-Calculator activity found:
-Calculator process name observed:
-Calculator timestamp:
-Calculator parent process:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 Notepad activity found:
@@ -1681,15 +1181,7 @@ Use **Windows PowerShell**.
 
 1. Check whether the simulator output folder exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput"
@@ -1698,15 +1190,7 @@ Test-Path "C:\BlueWave\SimulatorOutput"
 2. Press **Enter**.
 3. Check whether the simulator output file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -1715,15 +1199,7 @@ Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
 4. Press **Enter**.
 5. If the file exists, read it.
 
-### Copy
-
-```powershell
-Get-Content "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Content "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -1745,17 +1221,7 @@ Capture a screenshot showing the local simulator output evidence.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Simulator output folder exists:
-Simulator output file exists:
-Simulator output file message:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator output folder exists:
@@ -1777,15 +1243,7 @@ Use **Kibana Discover**.
 
 1. Search for the simulator output folder.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *SimulatorOutput*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *SimulatorOutput*
@@ -1794,15 +1252,7 @@ host.name : "WIN11-CLIENT" and message : *SimulatorOutput*
 2. Press **Enter** or select **Update**.
 3. If no results appear, search for the output file.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *activity-note.txt*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *activity-note.txt*
@@ -1810,15 +1260,7 @@ host.name : "WIN11-CLIENT" and message : *activity-note.txt*
 
 4. If no results appear, search for BlueWave.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWave*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWave*
@@ -1837,17 +1279,7 @@ Capture a screenshot showing the file evidence query.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-File evidence found in Kibana:
-File evidence query used:
-File evidence result:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 File evidence found in Kibana:
@@ -1869,15 +1301,7 @@ Use **Kibana Discover**.
 
 1. Search for Security events from the affected host.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Auditing"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Auditing"
@@ -1888,15 +1312,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Audi
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Security"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Security"
@@ -1912,18 +1328,7 @@ Capture a screenshot showing Security event search results or query attempt.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Security events reviewed:
-Security query used:
-Relevant Security event found:
-Relevant Security event ID:
-```
-
-### Type
-
-Type these lines into your final report, then add findings:
+### Student Input - Copy or Type
 
 ```text
 Security events reviewed:
@@ -1950,26 +1355,7 @@ Use **Kibana Discover**, PowerShell output, and your final report.
 
 Suggested indicators:
 
-### Copy
-
-```text
-Host: WIN11-CLIENT
-Process: BlueWaveActivitySimulator.exe
-File path: C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe
-Output folder: C:\BlueWave\SimulatorOutput
-Output file: C:\BlueWave\SimulatorOutput\activity-note.txt
-Command: whoami
-Command: hostname
-Command: ipconfig
-Process: notepad.exe
-Process: calc.exe
-Event provider: Microsoft-Windows-Sysmon
-Event ID: 1
-```
-
-### Type
-
-Use these examples to type at least five indicators into your report:
+### Student Input - Copy or Type
 
 ```text
 Host: WIN11-CLIENT
@@ -1996,20 +1382,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Indicator 1:
-Indicator 2:
-Indicator 3:
-Indicator 4:
-Indicator 5:
-Additional indicators:
-```
-
-### Type
-
-Type these lines into your final report, then add indicators:
+### Student Input - Copy or Type
 
 ```text
 Indicator 1:
@@ -2039,73 +1412,7 @@ Use **Kibana Discover** and your final report.
 
 Timeline structure:
 
-### Copy
-
-```text
-Timeline Entry 1
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 2
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 3
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 4
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 5
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 6
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-```
-
-### Type
-
-Type this timeline structure into your final report:
+### Student Input - Copy or Type
 
 ```text
 Timeline Entry 1
@@ -2199,18 +1506,7 @@ Use your final report.
 
 Classification options:
 
-### Copy
-
-```text
-Expected training activity
-Suspicious-looking but authorised
-Needs escalation
-Malicious
-```
-
-### Type
-
-Choose one of these classifications:
+### Student Input - Copy or Type
 
 ```text
 Expected training activity
@@ -2244,16 +1540,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Final classification:
-Classification rationale:
-```
-
-### Type
-
-Type these lines into your final report, then add your explanation:
+### Student Input - Copy or Type
 
 ```text
 Final classification:
@@ -2278,15 +1565,7 @@ Use your final report.
 
 Suggested executive summary structure:
 
-### Copy
-
-```text
-BlueWave Clinic reviewed endpoint activity on WIN11-CLIENT after a detection identified simulator-related process activity. The activity involved the approved BlueWave Activity Simulator and related command activity used for SOC training. The investigation reviewed Elastic events, Sysmon process creation data, and local endpoint evidence. The activity was classified as authorised training activity, although it appeared suspicious enough to require analyst review. No emergency containment is required, but the evidence should be retained and similar unexpected activity in production should be escalated.
-```
-
-### Type
-
-Type this executive summary or write your own version:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic reviewed endpoint activity on WIN11-CLIENT after a detection identified simulator-related process activity. The activity involved the approved BlueWave Activity Simulator and related command activity used for SOC training. The investigation reviewed Elastic events, Sysmon process creation data, and local endpoint evidence. The activity was classified as authorised training activity, although it appeared suspicious enough to require analyst review. No emergency containment is required, but the evidence should be retained and similar unexpected activity in production should be escalated.
@@ -2302,15 +1581,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Executive summary:
-```
-
-### Type
-
-Type this heading into your final report, then add your summary:
+### Student Input - Copy or Type
 
 ```text
 Executive summary:
@@ -2342,15 +1613,7 @@ Use your final report.
 
 Technical summary structure:
 
-### Copy
-
-```text
-The affected endpoint was WIN11-CLIENT. The key process reviewed was BlueWaveActivitySimulator.exe. The investigation used Kibana Discover, Sysmon process creation events, Windows event data, and local endpoint file checks. The key event was reviewed for timestamp, user, process path, command line, parent process, event provider, and event ID. Related activity searches included whoami, hostname, ipconfig, Notepad, and Calculator. Evidence supports that the activity was authorised lab simulation rather than malicious activity.
-```
-
-### Type
-
-Type this technical summary or write your own version:
+### Student Input - Copy or Type
 
 ```text
 The affected endpoint was WIN11-CLIENT. The key process reviewed was BlueWaveActivitySimulator.exe. The investigation used Kibana Discover, Sysmon process creation events, Windows event data, and local endpoint file checks. The key event was reviewed for timestamp, user, process path, command line, parent process, event provider, and event ID. Related activity searches included whoami, hostname, ipconfig, Notepad, and Calculator. Evidence supports that the activity was authorised lab simulation rather than malicious activity.
@@ -2366,15 +1629,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Technical summary:
-```
-
-### Type
-
-Type this heading into your final report, then add your summary:
+### Student Input - Copy or Type
 
 ```text
 Technical summary:
@@ -2398,15 +1653,7 @@ Use your final report.
 
 Suggested containment recommendation:
 
-### Copy
-
-```text
-No emergency containment is required because the activity was approved lab simulation. If similar activity occurred unexpectedly in production, isolate the affected endpoint, preserve Elastic and endpoint evidence, and escalate to a senior analyst.
-```
-
-### Type
-
-Type this recommendation or write your own:
+### Student Input - Copy or Type
 
 ```text
 No emergency containment is required because the activity was approved lab simulation. If similar activity occurred unexpectedly in production, isolate the affected endpoint, preserve Elastic and endpoint evidence, and escalate to a senior analyst.
@@ -2422,15 +1669,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Containment recommendation:
-```
-
-### Type
-
-Type this heading into your final report, then add your recommendation:
+### Student Input - Copy or Type
 
 ```text
 Containment recommendation:
@@ -2453,15 +1692,7 @@ Use your final report.
 
 Suggested recovery recommendation:
 
-### Copy
-
-```text
-No system recovery is required for the approved simulator activity. Confirm Elastic Agent and Sysmon remain running, retain the final report and screenshots, and leave evidence files in C:\BlueWave\Evidence for grading and review.
-```
-
-### Type
-
-Type this recommendation or write your own:
+### Student Input - Copy or Type
 
 ```text
 No system recovery is required for the approved simulator activity. Confirm Elastic Agent and Sysmon remain running, retain the final report and screenshots, and leave evidence files in C:\BlueWave\Evidence for grading and review.
@@ -2477,15 +1708,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Recovery recommendation:
-```
-
-### Type
-
-Type this heading into your final report, then add your recommendation:
+### Student Input - Copy or Type
 
 ```text
 Recovery recommendation:
@@ -2509,15 +1732,7 @@ Use your final report.
 
 Suggested escalation recommendation:
 
-### Copy
-
-```text
-Escalation is not required for approved lab activity. Escalation would be required if this activity occurred without authorisation, involved an unknown executable, affected multiple hosts, included unusual network connections, or showed signs of credential misuse.
-```
-
-### Type
-
-Type this recommendation or write your own:
+### Student Input - Copy or Type
 
 ```text
 Escalation is not required for approved lab activity. Escalation would be required if this activity occurred without authorisation, involved an unknown executable, affected multiple hosts, included unusual network connections, or showed signs of credential misuse.
@@ -2533,15 +1748,7 @@ No screenshot is required unless instructed.
 
 ## Record in Final Report
 
-### Copy
-
-```text
-Escalation recommendation:
-```
-
-### Type
-
-Type this heading into your final report, then add your recommendation:
+### Student Input - Copy or Type
 
 ```text
 Escalation recommendation:
@@ -2566,15 +1773,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2582,15 +1781,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab9-Final-Incident-Report.md
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab9-Final-Incident-Report.md
@@ -2598,202 +1789,7 @@ Lab9-Final-Incident-Report.md
 
 ## Final Report Template
 
-### Copy
-
-```markdown
-# BlueWave Clinic Final Incident Report
-
-## Lab
-
-Lab 09 - Final Elastic Cyber Operations Capstone
-
-## Student Information
-
-Student Name:
-Date:
-
-## 1. Executive Summary
-
-Executive summary:
-
-## 2. Case Briefing
-
-Case briefing source:
-Case briefing summary:
-Ubuntu capstone folder checked:
-Ubuntu capstone briefing found:
-Ubuntu capstone event file found:
-
-## 3. Environment Verification
-
-Affected host:
-Evidence folder confirmed:
-Elastic Agent service status:
-Sysmon service status:
-Kibana URL used:
-Kibana opened successfully:
-Discover opened:
-Data view selected:
-Time range used:
-
-## 4. Key Event Details
-
-Host event query used:
-Events from affected host found:
-Primary process query used:
-Primary process found:
-Primary process name:
-Key event timestamp:
-Affected user:
-Key process:
-Key process path:
-Key command line:
-Parent process:
-Parent process path:
-Event provider:
-Event ID:
-Sysmon Event ID 1 query used:
-Sysmon process creation event found:
-
-## 5. Related Activity
-
-whoami activity found:
-whoami timestamp:
-whoami user:
-whoami parent process:
-whoami command line:
-
-hostname activity found:
-hostname timestamp:
-hostname user:
-hostname parent process:
-hostname command line:
-
-ipconfig activity found:
-ipconfig timestamp:
-ipconfig user:
-ipconfig parent process:
-ipconfig command line:
-
-Notepad activity found:
-Notepad timestamp:
-Notepad parent process:
-
-Calculator activity found:
-Calculator process name observed:
-Calculator timestamp:
-Calculator parent process:
-
-## 6. File and Local Evidence
-
-Simulator output folder exists:
-Simulator output file exists:
-Simulator output file message:
-File evidence found in Kibana:
-File evidence query used:
-File evidence result:
-
-## 7. Windows Security Review
-
-Security events reviewed:
-Security query used:
-Relevant Security event found:
-Relevant Security event ID:
-
-## 8. Indicators
-
-Indicator 1:
-Indicator 2:
-Indicator 3:
-Indicator 4:
-Indicator 5:
-Additional indicators:
-
-## 9. Timeline
-
-Timeline Entry 1
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 2
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 3
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 4
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 5
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-Timeline Entry 6
-Time:
-Source:
-Event:
-Host:
-User:
-Process:
-Parent process:
-Notes:
-
-## 10. Classification
-
-Final classification:
-Classification rationale:
-
-## 11. Technical Summary
-
-Technical summary:
-
-## 12. Response Recommendations
-
-Containment recommendation:
-Recovery recommendation:
-Escalation recommendation:
-
-## 13. Final Analyst Notes
-
-Write 4 to 6 sentences explaining what you learned during the capstone investigation and how Elastic helped the investigation.
-```
-
-### Type
-
-Type this final report template into Notepad manually:
+### Student Input - Copy or Type
 
 ```markdown
 # BlueWave Clinic Final Incident Report
@@ -3012,15 +2008,7 @@ Use **Windows PowerShell**.
 
 1. Confirm the final report exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
@@ -3029,15 +2017,7 @@ Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
 2. Press **Enter**.
 3. If the result is `True`, list the file.
 
-### Copy
-
-```powershell
-Get-Item "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Item "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
@@ -3082,15 +2062,7 @@ Use **Kibana**, **PowerShell**, and **File Explorer**.
 11. Confirm containment, recovery, and escalation recommendations were written.
 12. Confirm the final report exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
@@ -3167,15 +2139,7 @@ Before finishing the capstone, confirm each item is complete.
 
 Check the Kibana URL.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -3201,29 +2165,13 @@ No prepared briefing file was found. Default capstone briefing was used.
 
 Try alternate host queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Copy
-
-```text
-message : *WIN11-CLIENT*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 message : *WIN11-CLIENT*
@@ -3231,15 +2179,7 @@ message : *WIN11-CLIENT*
 
 Also expand the time range.
 
-### Copy
-
-```text
-Last 30 days
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 30 days
@@ -3251,29 +2191,13 @@ Last 30 days
 
 Try alternate simulator queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
@@ -3281,15 +2205,7 @@ host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
 
 If instructed, generate safe activity by running the simulator:
 
-### Copy
-
-```powershell
-Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -3304,29 +2220,13 @@ Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
 
 Try alternate fields.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.event_id : 1
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and winlog.event_id : 1
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.code : "1"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.code : "1"
@@ -3338,43 +2238,19 @@ host.name : "WIN11-CLIENT" and event.code : "1"
 
 Try broader message searches.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *ipconfig*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *ipconfig*
@@ -3390,15 +2266,7 @@ File activity visibility depends on Sysmon configuration.
 
 Confirm local file evidence instead.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -3406,15 +2274,7 @@ Test-Path "C:\BlueWave\SimulatorOutput\activity-note.txt"
 
 Read the file:
 
-### Copy
-
-```powershell
-Get-Content "C:\BlueWave\SimulatorOutput\activity-note.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Content "C:\BlueWave\SimulatorOutput\activity-note.txt"
@@ -3428,27 +2288,7 @@ Elastic field names may vary.
 
 Try alternate fields such as:
 
-### Copy
-
-```text
-event.code
-winlog.event_id
-event.provider
-winlog.provider_name
-winlog.channel
-event.dataset
-process.name
-process.executable
-process.command_line
-process.parent.name
-process.parent.executable
-user.name
-message
-```
-
-### Type
-
-Look for these fields in event details:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -3472,15 +2312,7 @@ message
 
 Check that you saved it as:
 
-### Copy
-
-```text
-Lab9-Final-Incident-Report.md
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab9-Final-Incident-Report.md
@@ -3488,15 +2320,7 @@ Lab9-Final-Incident-Report.md
 
 Check that you saved it in:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this path exactly:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -3504,15 +2328,7 @@ C:\BlueWave\Evidence
 
 Confirm with:
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab9-Final-Incident-Report.md"
