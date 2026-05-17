@@ -18,23 +18,26 @@ This lab introduces the difference between events, alerts, detections, and incid
 
 ---
 
-## How to Use Copy and Type Options
+## How to Use Copy or Type Inputs
 
-This lab uses **Copy** and **Type** options for every command, query, search term, path, filename, and template that students may need to enter.
+This lab keeps the Skillable **Copy or Type** requirement without repeating the same command twice.
 
-### Copy Option
+For each command, query, search term, path, filename, URL, or template, you will see one block named:
 
-Use the **Copy** option when you want to copy and paste the text directly into the lab environment.
+```text
+Student Input - Copy or Type
+```
 
-### Type Option
+You may either:
 
-Use the **Type** option when you need to manually type the text.
+- Copy the text directly into the lab environment.
+- Type the same text manually.
 
 > [!note]
-> The Copy and Type options contain the same command or text. Use one option unless your instructor tells you otherwise.
+> Copy or type the text exactly as shown. You only need to use one method.
 
 > [!alert]
-> Type commands and queries exactly as shown. Commands and Kibana queries are sensitive to spaces, punctuation, quotation marks, backslashes, and field names.
+> Commands, queries, paths, quotation marks, slashes, backslashes, and spaces must match the instructions exactly.
 
 ---
 
@@ -258,15 +261,7 @@ Use **Windows PowerShell**.
 2. Open **Windows PowerShell**.
 3. Confirm the hostname.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -291,15 +286,7 @@ Capture a screenshot of the hostname result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows hostname:
-```
-
-### Type
-
-Type this into your evidence notes, then add the hostname:
+### Student Input - Copy or Type
 
 ```text
 Windows hostname:
@@ -319,15 +306,7 @@ Use **Windows PowerShell**.
 
 1. In PowerShell, check the evidence folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence"
@@ -336,15 +315,7 @@ Test-Path "C:\BlueWave\Evidence"
 2. Press **Enter**.
 3. If the result is `False`, create the folder.
 
-### Copy
-
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
@@ -364,15 +335,7 @@ Capture a screenshot if your instructor requires evidence folder validation.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows evidence folder confirmed:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Windows evidence folder confirmed:
@@ -392,15 +355,7 @@ Use **Windows PowerShell**.
 
 1. Check the Elastic Agent service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -434,15 +389,7 @@ Capture a screenshot showing the Elastic Agent service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent service status:
@@ -462,15 +409,7 @@ Use **Windows PowerShell**.
 
 1. Check the Sysmon64 service.
 
-### Copy
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
@@ -479,15 +418,7 @@ Get-Service Sysmon64 -ErrorAction SilentlyContinue
 2. Press **Enter**.
 3. If no result appears, check the alternate service name.
 
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -520,15 +451,7 @@ Capture a screenshot showing Sysmon service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Sysmon service status:
@@ -548,15 +471,7 @@ Use **Windows PowerShell**.
 
 1. Check the simulator file path.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -582,16 +497,7 @@ Capture a screenshot showing the simulator file path check if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator file exists:
-Simulator file path:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator file exists:
@@ -614,15 +520,7 @@ Use a web browser.
 2. Enter the Kibana URL.
 3. Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu SOC IP address.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser address bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -647,16 +545,7 @@ Capture a screenshot showing Kibana open if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Kibana URL used:
-Kibana opened successfully:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Kibana URL used:
@@ -678,15 +567,7 @@ Use **Kibana** in the browser.
 1. Open the Kibana main navigation menu.
 2. Search for **Discover**.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -705,15 +586,7 @@ Capture a screenshot showing Discover open.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Discover opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Discover opened:
@@ -734,15 +607,7 @@ Use **Kibana Discover**.
 1. Locate the data view selector in Discover.
 2. Select a logs-related data view.
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Look for or select this data view:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -750,15 +615,7 @@ logs-*
 
 Alternative possible data view:
 
-### Copy
-
-```text
-winlogbeat-*
-```
-
-### Type
-
-Look for this data view if `logs-*` is not available:
+### Student Input - Copy or Type
 
 ```text
 winlogbeat-*
@@ -766,15 +623,7 @@ winlogbeat-*
 
 3. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -801,16 +650,7 @@ Capture a screenshot showing the selected data view and time range.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Data view selected:
-Time range used:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Data view selected:
@@ -832,15 +672,7 @@ Use **Kibana Discover**.
 1. Click the Kibana query bar.
 2. Enter the primary detection query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -851,15 +683,7 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
@@ -867,15 +691,7 @@ host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
@@ -893,16 +709,7 @@ Capture a screenshot showing the query and results or no-result state.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Primary detection query:
-Primary query matched existing events:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Primary detection query:
@@ -923,15 +730,7 @@ Use **Kibana Discover**.
 
 1. Enter the `whoami` detection query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *whoami*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *whoami*
@@ -942,15 +741,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *whoami*
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
@@ -958,15 +749,7 @@ host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
@@ -984,16 +767,7 @@ Capture a screenshot showing the query and result.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-whoami detection query:
-whoami query matched existing events:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 whoami detection query:
@@ -1014,15 +788,7 @@ Use **Kibana Discover**.
 
 1. Enter the `hostname` detection query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *hostname*
@@ -1033,15 +799,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *hostname*
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
@@ -1049,15 +807,7 @@ host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
 
 If still no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
@@ -1075,16 +825,7 @@ Capture a screenshot showing the query and result.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-hostname detection query:
-hostname query matched existing events:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 hostname detection query:
@@ -1106,15 +847,7 @@ Use **Kibana**.
 1. Open the Kibana main navigation menu.
 2. Search for **Rules**.
 
-### Copy
-
-```text
-Rules
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Rules
@@ -1122,15 +855,7 @@ Rules
 
 3. Also search for **Alerts** if needed.
 
-### Copy
-
-```text
-Alerts
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Alerts
@@ -1162,16 +887,7 @@ Capture a screenshot showing the Rules area or the unavailable feature state.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection rules available:
-Fallback workflow required:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your answer:
+### Student Input - Copy or Type
 
 ```text
 Detection rules available:
@@ -1198,17 +914,7 @@ Complete this task only if detection rules are available.
 
 Possible navigation names include:
 
-### Copy
-
-```text
-Security
-Rules
-Detection rules
-```
-
-### Type
-
-Look for these navigation names:
+### Student Input - Copy or Type
 
 ```text
 Security
@@ -1218,15 +924,7 @@ Detection rules
 
 4. Select **Create rule** or **Create new rule**.
 
-### Copy
-
-```text
-Create rule
-```
-
-### Type
-
-Look for this button:
+### Student Input - Copy or Type
 
 ```text
 Create rule
@@ -1242,15 +940,7 @@ Capture a screenshot showing the rule creation workflow.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection rule creation page opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Detection rule creation page opened:
@@ -1272,15 +962,7 @@ Complete this task only if detection rules are available.
 
 1. Select the custom query rule type if prompted.
 
-### Copy
-
-```text
-Custom query
-```
-
-### Type
-
-Select this rule type:
+### Student Input - Copy or Type
 
 ```text
 Custom query
@@ -1288,15 +970,7 @@ Custom query
 
 2. Enter the rule name.
 
-### Copy
-
-```text
-BlueWave - Simulator Process Activity
-```
-
-### Type
-
-Type this rule name:
+### Student Input - Copy or Type
 
 ```text
 BlueWave - Simulator Process Activity
@@ -1304,15 +978,7 @@ BlueWave - Simulator Process Activity
 
 3. Enter the rule description.
 
-### Copy
-
-```text
-Detects safe BlueWave Activity Simulator process execution on WIN11-CLIENT for training and triage practice.
-```
-
-### Type
-
-Type this rule description:
+### Student Input - Copy or Type
 
 ```text
 Detects safe BlueWave Activity Simulator process execution on WIN11-CLIENT for training and triage practice.
@@ -1320,15 +986,7 @@ Detects safe BlueWave Activity Simulator process execution on WIN11-CLIENT for t
 
 4. Enter the index pattern or data view if required.
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Type or select this index pattern if required:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -1336,15 +994,7 @@ logs-*
 
 5. Enter the KQL query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this KQL query:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1352,15 +1002,7 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 6. Set the severity.
 
-### Copy
-
-```text
-Low
-```
-
-### Type
-
-Select or type this severity:
+### Student Input - Copy or Type
 
 ```text
 Low
@@ -1368,15 +1010,7 @@ Low
 
 7. Set the risk score if required.
 
-### Copy
-
-```text
-21
-```
-
-### Type
-
-Type this risk score if required:
+### Student Input - Copy or Type
 
 ```text
 21
@@ -1384,15 +1018,7 @@ Type this risk score if required:
 
 8. Set the rule interval if required.
 
-### Copy
-
-```text
-5 minutes
-```
-
-### Type
-
-Select or type this interval:
+### Student Input - Copy or Type
 
 ```text
 5 minutes
@@ -1400,15 +1026,7 @@ Select or type this interval:
 
 9. Set the look-back time if required.
 
-### Copy
-
-```text
-10 minutes
-```
-
-### Type
-
-Select or type this look-back time:
+### Student Input - Copy or Type
 
 ```text
 10 minutes
@@ -1432,21 +1050,7 @@ Capture a screenshot showing the completed rule settings or saved rule.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection rule name:
-Detection rule query:
-Detection rule severity:
-Detection rule risk score:
-Detection rule interval:
-Detection rule look-back:
-Detection rule enabled:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Detection rule name:
@@ -1474,15 +1078,7 @@ Complete this task only if detection rules are available and the screen allows t
 
 1. Add a tag if the rule supports tags.
 
-### Copy
-
-```text
-BlueWave
-```
-
-### Type
-
-Type this tag:
+### Student Input - Copy or Type
 
 ```text
 BlueWave
@@ -1490,15 +1086,7 @@ BlueWave
 
 2. Add another tag if supported.
 
-### Copy
-
-```text
-Training
-```
-
-### Type
-
-Type this tag:
+### Student Input - Copy or Type
 
 ```text
 Training
@@ -1506,15 +1094,7 @@ Training
 
 3. Add investigation guidance if supported.
 
-### Copy
-
-```text
-Review the process name, parent process, command line, user, timestamp, and related child processes. Confirm whether the activity was generated by the approved BlueWave lab simulator.
-```
-
-### Type
-
-Type this investigation guidance:
+### Student Input - Copy or Type
 
 ```text
 Review the process name, parent process, command line, user, timestamp, and related child processes. Confirm whether the activity was generated by the approved BlueWave lab simulator.
@@ -1533,16 +1113,7 @@ Capture a screenshot if tags or investigation guidance were added.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection rule tags added:
-Investigation guidance added:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Detection rule tags added:
@@ -1566,15 +1137,7 @@ Complete this task only if detection rules are available.
 1. Review the rule settings.
 2. Confirm the query is correct.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Verify that this query is present:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1593,16 +1156,7 @@ Capture a screenshot showing the saved and enabled rule.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection rule saved:
-Detection rule enabled:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Detection rule saved:
@@ -1626,16 +1180,7 @@ Complete this task only if detection rules are available and manual run is avail
 1. Open the saved detection rule.
 2. Look for **Run rule** or **Manual run**.
 
-### Copy
-
-```text
-Run rule
-Manual run
-```
-
-### Type
-
-Look for one of these options:
+### Student Input - Copy or Type
 
 ```text
 Run rule
@@ -1644,15 +1189,7 @@ Manual run
 
 3. If available, run the rule over the last 24 hours.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -1676,17 +1213,7 @@ Capture a screenshot showing manual run results if available.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Manual rule run available:
-Manual rule run completed:
-Alerts generated during manual run:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Manual rule run available:
@@ -1711,15 +1238,7 @@ Complete this task if detection rules are unavailable.
 1. Open **Discover**.
 2. Enter the primary detection query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -1727,15 +1246,7 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 3. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -1744,15 +1255,7 @@ Last 24 hours
 4. Save the query if the saved query option is available.
 5. Name the saved query.
 
-### Copy
-
-```text
-BlueWave Simulator Process Detection Query
-```
-
-### Type
-
-Type this saved query name:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Simulator Process Detection Query
@@ -1783,17 +1286,7 @@ Capture a screenshot showing the saved query or the manual query in Discover.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Saved query fallback used:
-Saved query name:
-Manual detection query documented:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Saved query fallback used:
@@ -1817,15 +1310,7 @@ Complete this task if detection rules are unavailable.
 
 1. Enter the `whoami` query in Discover.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *whoami*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *whoami*
@@ -1834,15 +1319,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *whoami*
 2. Save the query if available.
 3. Name the saved query.
 
-### Copy
-
-```text
-BlueWave whoami Activity Query
-```
-
-### Type
-
-Type this saved query name:
+### Student Input - Copy or Type
 
 ```text
 BlueWave whoami Activity Query
@@ -1860,17 +1337,7 @@ Capture a screenshot showing the query.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-whoami saved query created:
-whoami saved query name:
-whoami manual query documented:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 whoami saved query created:
@@ -1894,15 +1361,7 @@ Complete this task if detection rules are unavailable.
 
 1. Enter the `hostname` query in Discover.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *hostname*
@@ -1911,15 +1370,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *hostname*
 2. Save the query if available.
 3. Name the saved query.
 
-### Copy
-
-```text
-BlueWave hostname Activity Query
-```
-
-### Type
-
-Type this saved query name:
+### Student Input - Copy or Type
 
 ```text
 BlueWave hostname Activity Query
@@ -1937,17 +1388,7 @@ Capture a screenshot showing the query.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-hostname saved query created:
-hostname saved query name:
-hostname manual query documented:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 hostname saved query created:
@@ -1970,15 +1411,7 @@ Use **Windows PowerShell**.
 1. Return to Windows PowerShell.
 2. Record the current time.
 
-### Copy
-
-```powershell
-Get-Date
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Date
@@ -1987,15 +1420,7 @@ Get-Date
 3. Press **Enter**.
 4. Run `whoami`.
 
-### Copy
-
-```powershell
-whoami
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 whoami
@@ -2004,15 +1429,7 @@ whoami
 5. Press **Enter**.
 6. Run `hostname`.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -2021,15 +1438,7 @@ hostname
 7. Press **Enter**.
 8. Run the BlueWave Activity Simulator.
 
-### Copy
-
-```powershell
-Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -2039,15 +1448,7 @@ Start-Process -FilePath "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
 10. Wait for the simulator to complete.
 11. Record the current time again.
 
-### Copy
-
-```powershell
-Get-Date
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Date
@@ -2072,18 +1473,7 @@ Capture a screenshot showing the safe activity commands.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Safe test activity generated:
-Test activity start time:
-Test activity commands:
-Test activity end time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Safe test activity generated:
@@ -2107,15 +1497,7 @@ Use **Kibana**.
 1. Return to Kibana Discover.
 2. Set the time range to **Last 15 minutes**.
 
-### Copy
-
-```text
-Last 15 minutes
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 15 minutes
@@ -2124,15 +1506,7 @@ Last 15 minutes
 3. Refresh Discover.
 4. If no events appear, set the time range to **Last 1 hour**.
 
-### Copy
-
-```text
-Last 1 hour
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 1 hour
@@ -2153,16 +1527,7 @@ Capture a screenshot if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Post-test time range used:
-Events refreshed after test activity:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Post-test time range used:
@@ -2183,15 +1548,7 @@ Use **Kibana Discover**.
 
 1. Run the primary detection query again.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -2214,19 +1571,7 @@ Capture a screenshot showing the simulator query match.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Simulator detection matched after test:
-Matching simulator event timestamp:
-Matching simulator event user:
-Matching simulator parent process:
-Why the simulator query matched:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Simulator detection matched after test:
@@ -2250,15 +1595,7 @@ Use **Kibana Discover**.
 
 1. Run the `whoami` query again.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *whoami*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *whoami*
@@ -2271,15 +1608,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *whoami*
 
 If no event appears, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
@@ -2295,19 +1624,7 @@ Capture a screenshot showing the `whoami` query match.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-whoami detection matched after test:
-Matching whoami event timestamp:
-Matching whoami event user:
-Matching whoami parent process:
-Why the whoami query matched:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 whoami detection matched after test:
@@ -2331,15 +1648,7 @@ Use **Kibana Discover**.
 
 1. Run the `hostname` query again.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *hostname*
@@ -2352,15 +1661,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *hostname*
 
 If no event appears, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
@@ -2376,19 +1677,7 @@ Capture a screenshot showing the `hostname` query match.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-hostname detection matched after test:
-Matching hostname event timestamp:
-Matching hostname event user:
-Matching hostname parent process:
-Why the hostname query matched:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 hostname detection matched after test:
@@ -2415,15 +1704,7 @@ Complete this task only if detection rules are available and the rule was enable
 1. Open the Kibana main navigation menu.
 2. Search for **Alerts**.
 
-### Copy
-
-```text
-Alerts
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Alerts
@@ -2432,15 +1713,7 @@ Alerts
 3. Open **Alerts**.
 4. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -2448,15 +1721,7 @@ Last 24 hours
 
 5. Search or filter for the rule name.
 
-### Copy
-
-```text
-BlueWave - Simulator Process Activity
-```
-
-### Type
-
-Type or filter for this rule name:
+### Student Input - Copy or Type
 
 ```text
 BlueWave - Simulator Process Activity
@@ -2480,20 +1745,7 @@ Capture a screenshot showing the alert or no-alert result.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Alerts page reviewed:
-Alert generated:
-Alert rule name:
-Alert timestamp:
-Alert host:
-Alert user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Alerts page reviewed:
@@ -2523,15 +1775,7 @@ Use your evidence notes.
 
 Use this explanation structure:
 
-### Copy
-
-```text
-The detection matched because the event was generated on WIN11-CLIENT and the process or command line matched the detection query. The activity is safe lab activity, but it is useful for SOC training because it shows how endpoint process events can be detected and reviewed.
-```
-
-### Type
-
-Type this explanation into your evidence notes, or write your own version:
+### Student Input - Copy or Type
 
 ```text
 The detection matched because the event was generated on WIN11-CLIENT and the process or command line matched the detection query. The activity is safe lab activity, but it is useful for SOC training because it shows how endpoint process events can be detected and reviewed.
@@ -2547,15 +1791,7 @@ No screenshot is required unless instructed.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection match explanation:
-```
-
-### Type
-
-Type this into your evidence notes, then add your explanation:
+### Student Input - Copy or Type
 
 ```text
 Detection match explanation:
@@ -2578,18 +1814,7 @@ Use your evidence notes.
 
 Possible classifications:
 
-### Copy
-
-```text
-Expected training activity
-Suspicious-looking but authorised
-Needs triage
-False positive
-```
-
-### Type
-
-Choose one of these classifications:
+### Student Input - Copy or Type
 
 ```text
 Expected training activity
@@ -2624,16 +1849,7 @@ No screenshot is required unless instructed.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Detection result classification:
-Classification reason:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your decision:
+### Student Input - Copy or Type
 
 ```text
 Detection result classification:
@@ -2659,15 +1875,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2675,15 +1883,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab07-Detection-Rule-Notes.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab07-Detection-Rule-Notes.txt
@@ -2691,127 +1891,7 @@ Lab07-Detection-Rule-Notes.txt
 
 ## Detection Notes Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 07 - Creating Simple Elastic Detection Logic
-
-Student Name:
-Date:
-
-1. Environment Verification
-
-Windows hostname:
-Windows evidence folder confirmed:
-Elastic Agent service status:
-Sysmon service status:
-Simulator file exists:
-Simulator file path:
-
-2. Kibana Setup
-
-Kibana URL used:
-Kibana opened successfully:
-Discover opened:
-Data view selected:
-Time range used:
-
-3. Query Review
-
-Primary detection query:
-Primary query matched existing events:
-whoami detection query:
-whoami query matched existing events:
-hostname detection query:
-hostname query matched existing events:
-
-4. Detection Workflow
-
-Detection rules available:
-Fallback workflow required:
-Detection rule creation page opened:
-Saved query fallback used:
-Saved query name:
-Manual detection query documented:
-
-5. Detection Rule Details
-
-Detection rule name:
-Detection rule query:
-Detection rule severity:
-Detection rule risk score:
-Detection rule interval:
-Detection rule look-back:
-Detection rule tags added:
-Investigation guidance added:
-Detection rule saved:
-Detection rule enabled:
-Manual rule run available:
-Manual rule run completed:
-Alerts generated during manual run:
-
-6. Fallback Saved Queries
-
-whoami saved query created:
-whoami saved query name:
-whoami manual query documented:
-hostname saved query created:
-hostname saved query name:
-hostname manual query documented:
-
-7. Safe Test Activity
-
-Safe test activity generated:
-Test activity start time:
-Test activity commands:
-Test activity end time:
-Post-test time range used:
-Events refreshed after test activity:
-
-8. Detection Validation
-
-Simulator detection matched after test:
-Matching simulator event timestamp:
-Matching simulator event user:
-Matching simulator parent process:
-Why the simulator query matched:
-
-whoami detection matched after test:
-Matching whoami event timestamp:
-Matching whoami event user:
-Matching whoami parent process:
-Why the whoami query matched:
-
-hostname detection matched after test:
-Matching hostname event timestamp:
-Matching hostname event user:
-Matching hostname parent process:
-Why the hostname query matched:
-
-9. Alert Review
-
-Alerts page reviewed:
-Alert generated:
-Alert rule name:
-Alert timestamp:
-Alert host:
-Alert user:
-
-10. Detection Assessment
-
-Detection match explanation:
-Detection result classification:
-Classification reason:
-
-11. Lab Summary
-
-Write 3 to 5 sentences explaining what detection logic you created, how you tested it, and what matched.
-```
-
-### Type
-
-Type this template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -2955,15 +2035,7 @@ Use **Windows PowerShell**.
 
 1. Confirm the Lab 07 notes file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab07-Detection-Rule-Notes.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab07-Detection-Rule-Notes.txt"
@@ -3004,15 +2076,7 @@ Use **Kibana**, **PowerShell**, and **File Explorer**.
 7. Confirm the activity classification was written.
 8. Confirm the Lab 07 notes file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab07-Detection-Rule-Notes.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab07-Detection-Rule-Notes.txt"
@@ -3076,15 +2140,7 @@ Before finishing the lab, confirm each item is complete.
 
 Check the Kibana URL.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -3098,15 +2154,7 @@ If Kibana still does not open, confirm Kibana is running or ask your instructor.
 
 Use the Kibana navigation search.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -3122,15 +2170,7 @@ Use the saved query or manual query fallback.
 
 Primary fallback query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -3150,18 +2190,7 @@ Elastic screens may vary by version.
 
 Look for similar options such as:
 
-### Copy
-
-```text
-Rules
-Detection rules
-Create rule
-Custom query
-```
-
-### Type
-
-Look for these options:
+### Student Input - Copy or Type
 
 ```text
 Rules
@@ -3187,15 +2216,7 @@ Possible reasons:
 
 Use Discover to validate the query manually:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
@@ -3207,29 +2228,13 @@ host.name : "WIN11-CLIENT" and process.name : "BlueWaveActivitySimulator.exe"
 
 Try alternate simulator queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *BlueWaveActivitySimulator*
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
@@ -3237,15 +2242,7 @@ host.name : "WIN11-CLIENT" and message : *BlueWaveActivitySimulator*
 
 Also check the time range:
 
-### Copy
-
-```text
-Last 1 hour
-```
-
-### Type
-
-Select or type:
+### Student Input - Copy or Type
 
 ```text
 Last 1 hour
@@ -3257,29 +2254,13 @@ Last 1 hour
 
 Try broader message queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
@@ -3295,27 +2276,7 @@ Elastic field names may vary.
 
 Try alternate fields such as:
 
-### Copy
-
-```text
-event.code
-winlog.event_id
-event.provider
-winlog.provider_name
-winlog.channel
-event.dataset
-process.name
-process.executable
-process.command_line
-process.parent.name
-process.parent.executable
-user.name
-message
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -3339,15 +2300,7 @@ message
 
 Check the simulator file.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Simulators\BlueWaveActivitySimulator.exe"
@@ -3363,15 +2316,7 @@ Do not download or create a replacement simulator.
 
 Check that you saved it as:
 
-### Copy
-
-```text
-Lab07-Detection-Rule-Notes.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab07-Detection-Rule-Notes.txt
@@ -3379,15 +2324,7 @@ Lab07-Detection-Rule-Notes.txt
 
 Check that you saved it in:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this path exactly:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -3395,15 +2332,7 @@ C:\BlueWave\Evidence
 
 Confirm with:
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab07-Detection-Rule-Notes.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab07-Detection-Rule-Notes.txt"
