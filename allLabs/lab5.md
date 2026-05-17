@@ -16,23 +16,26 @@ This lab helps BlueWave Clinic improve endpoint visibility beyond standard Windo
 
 ---
 
-## How to Use Copy and Type Options
+## How to Use Copy or Type Inputs
 
-This lab uses **Copy** and **Type** options for every command, query, search term, path, filename, and template that students may need to enter.
+This lab keeps the Skillable **Copy or Type** requirement without repeating the same command twice.
 
-### Copy Option
+For each command, query, search term, path, filename, URL, or template, you will see one block named:
 
-Use the **Copy** option when you want to copy and paste the text directly into the lab environment.
+```text
+Student Input - Copy or Type
+```
 
-### Type Option
+You may either:
 
-Use the **Type** option when you need to manually type the text.
+- Copy the text directly into the lab environment.
+- Type the same text manually.
 
 > [!note]
-> The Copy and Type options contain the same command or text. Use one option unless your instructor tells you otherwise.
+> Copy or type the text exactly as shown. You only need to use one method.
 
 > [!alert]
-> Type commands and queries exactly as shown. Commands and Kibana queries are sensitive to spaces, punctuation, quotation marks, and field names.
+> Commands, queries, paths, quotation marks, slashes, backslashes, and spaces must match the instructions exactly.
 
 ---
 
@@ -204,15 +207,7 @@ Use **Windows PowerShell**.
 2. Open **Windows PowerShell**.
 3. Confirm the hostname.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -237,15 +232,7 @@ Capture a screenshot of the hostname result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows hostname:
-```
-
-### Type
-
-Type this into your evidence notes, then add the hostname:
+### Student Input - Copy or Type
 
 ```text
 Windows hostname:
@@ -265,15 +252,7 @@ Use **Windows PowerShell**.
 
 1. In PowerShell, check the evidence folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence"
@@ -282,15 +261,7 @@ Test-Path "C:\BlueWave\Evidence"
 2. Press **Enter**.
 3. If the result is `False`, create the folder.
 
-### Copy
-
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
@@ -310,15 +281,7 @@ Capture a screenshot if your instructor requires evidence folder validation.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows evidence folder confirmed:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Windows evidence folder confirmed:
@@ -338,15 +301,7 @@ Use **Windows PowerShell**.
 
 1. Check the Elastic Agent service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -380,15 +335,7 @@ Capture a screenshot showing the Elastic Agent service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent service status:
@@ -408,15 +355,7 @@ Use **Windows PowerShell**.
 
 1. Check the Tools folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Tools"
@@ -425,15 +364,7 @@ Test-Path "C:\LabFiles\Tools"
 2. Press **Enter**.
 3. List the files in the Tools folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Tools"
@@ -442,15 +373,7 @@ Get-ChildItem "C:\LabFiles\Tools"
 4. Press **Enter**.
 5. Look for the Sysmon executable.
 
-### Copy
-
-```text
-Sysmon64.exe
-```
-
-### Type
-
-Look for this filename:
+### Student Input - Copy or Type
 
 ```text
 Sysmon64.exe
@@ -458,15 +381,7 @@ Sysmon64.exe
 
 6. Look for the Sysmon configuration file.
 
-### Copy
-
-```text
-sysmon-bluewave.xml
-```
-
-### Type
-
-Look for this filename:
+### Student Input - Copy or Type
 
 ```text
 sysmon-bluewave.xml
@@ -496,17 +411,7 @@ Capture a screenshot showing the Sysmon files in `C:\LabFiles\Tools`.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon executable found:
-Sysmon configuration found:
-Sysmon files path:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon executable found:
@@ -528,15 +433,7 @@ Use **Windows PowerShell**.
 
 1. Check for the Sysmon service.
 
-### Copy
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
@@ -545,15 +442,7 @@ Get-Service Sysmon64 -ErrorAction SilentlyContinue
 2. Press **Enter**.
 3. If no result appears, try this alternate service name.
 
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -591,16 +480,7 @@ Capture a screenshot showing the Sysmon service status or the empty result.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon service found:
-Sysmon service status:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon service found:
@@ -630,15 +510,7 @@ If Sysmon is already installed, skip to Task 7.
 2. Select the **Windows Start** menu.
 3. Search for **PowerShell**.
 
-### Copy
-
-```text
-PowerShell
-```
-
-### Type
-
-Type this into the Windows search box:
+### Student Input - Copy or Type
 
 ```text
 PowerShell
@@ -649,15 +521,7 @@ PowerShell
 6. If prompted by User Account Control, select **Yes**.
 7. Change to the Tools folder.
 
-### Copy
-
-```powershell
-Set-Location "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into Administrator PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Set-Location "C:\LabFiles\Tools"
@@ -666,15 +530,7 @@ Set-Location "C:\LabFiles\Tools"
 8. Press **Enter**.
 9. Install Sysmon with the safe BlueWave configuration.
 
-### Copy
-
-```powershell
-.\Sysmon64.exe -accepteula -i .\sysmon-bluewave.xml
-```
-
-### Type
-
-Type this into Administrator PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 .\Sysmon64.exe -accepteula -i .\sysmon-bluewave.xml
@@ -708,16 +564,7 @@ Capture a screenshot showing Sysmon installation output if you installed it.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon installation performed:
-Sysmon installation result:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your result:
+### Student Input - Copy or Type
 
 ```text
 Sysmon installation performed:
@@ -738,15 +585,7 @@ Use **Windows PowerShell**.
 
 1. Check the Sysmon64 service.
 
-### Copy
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
@@ -755,15 +594,7 @@ Get-Service Sysmon64 -ErrorAction SilentlyContinue
 2. Press **Enter**.
 3. If no result appears, check the alternate service name.
 
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -793,15 +624,7 @@ Capture a screenshot showing Sysmon running.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon running after verification:
-```
-
-### Type
-
-Type this into your evidence notes, then add your result:
+### Student Input - Copy or Type
 
 ```text
 Sysmon running after verification:
@@ -821,15 +644,7 @@ Use **Windows PowerShell**.
 
 1. Check for the Sysmon Operational log.
 
-### Copy
-
-```powershell
-Get-WinEvent -ListLog "Microsoft-Windows-Sysmon/Operational"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-WinEvent -ListLog "Microsoft-Windows-Sysmon/Operational"
@@ -859,17 +674,7 @@ Capture a screenshot showing the Sysmon Operational log exists.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon Operational log exists:
-Sysmon Operational log enabled:
-Sysmon Operational record count:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon Operational log exists:
@@ -892,15 +697,7 @@ Use **Windows Event Viewer**.
 1. Select the **Windows Start** menu.
 2. Search for **Event Viewer**.
 
-### Copy
-
-```text
-Event Viewer
-```
-
-### Type
-
-Type this into the Windows search box:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer
@@ -913,15 +710,7 @@ Event Viewer
 7. Expand **Sysmon**.
 8. Select **Operational**.
 
-### Copy
-
-```text
-Applications and Services Logs > Microsoft > Windows > Sysmon > Operational
-```
-
-### Type
-
-Navigate to this path in Event Viewer:
+### Student Input - Copy or Type
 
 ```text
 Applications and Services Logs > Microsoft > Windows > Sysmon > Operational
@@ -941,16 +730,7 @@ Capture a screenshot showing the Sysmon Operational log in Event Viewer.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon Operational log visible in Event Viewer:
-Recent Sysmon events visible:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon Operational log visible in Event Viewer:
@@ -972,15 +752,7 @@ Use **Windows PowerShell**.
 1. Return to PowerShell.
 2. Start Notepad.
 
-### Copy
-
-```powershell
-Start-Process notepad.exe
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Start-Process notepad.exe
@@ -1006,16 +778,7 @@ Capture a screenshot showing Notepad open if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Generated activity: notepad.exe
-Activity time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add the approximate time:
+### Student Input - Copy or Type
 
 ```text
 Generated activity: notepad.exe
@@ -1036,15 +799,7 @@ Use **Windows PowerShell**.
 
 1. Start Calculator.
 
-### Copy
-
-```powershell
-Start-Process calc.exe
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Start-Process calc.exe
@@ -1073,16 +828,7 @@ Capture a screenshot showing Calculator open if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Generated activity: calc.exe
-Activity time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add the approximate time:
+### Student Input - Copy or Type
 
 ```text
 Generated activity: calc.exe
@@ -1103,15 +849,7 @@ Use **Windows PowerShell**.
 
 1. Run the `whoami` command.
 
-### Copy
-
-```powershell
-whoami
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 whoami
@@ -1136,17 +874,7 @@ Capture a screenshot showing the `whoami` command and output.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Generated activity: whoami
-whoami output:
-Activity time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Generated activity: whoami
@@ -1168,15 +896,7 @@ Use **Windows PowerShell**.
 
 1. Run the `hostname` command.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -1201,17 +921,7 @@ Capture a screenshot showing the `hostname` command and output.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Generated activity: hostname
-hostname output:
-Activity time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Generated activity: hostname
@@ -1233,15 +943,7 @@ Use **Windows PowerShell**.
 
 1. Run the `ipconfig` command.
 
-### Copy
-
-```powershell
-ipconfig
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 ipconfig
@@ -1263,16 +965,7 @@ Capture a screenshot showing the `ipconfig` command and output.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Generated activity: ipconfig
-Activity time:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add the approximate time:
+### Student Input - Copy or Type
 
 ```text
 Generated activity: ipconfig
@@ -1293,15 +986,7 @@ Use **Windows PowerShell**.
 
 1. Query recent Sysmon events locally.
 
-### Copy
-
-```powershell
-Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10 | Select-Object TimeCreated, Id, ProviderName, Message
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-WinEvent -LogName "Microsoft-Windows-Sysmon/Operational" -MaxEvents 10 | Select-Object TimeCreated, Id, ProviderName, Message
@@ -1331,16 +1016,7 @@ Capture a screenshot showing recent Sysmon events in PowerShell.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Recent Sysmon events visible locally:
-Sysmon Event ID 1 visible locally:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Recent Sysmon events visible locally:
@@ -1363,15 +1039,7 @@ Use a web browser.
 2. Enter the Kibana URL.
 3. Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu SOC IP address.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser address bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -1396,16 +1064,7 @@ Capture a screenshot showing that Kibana is open if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Kibana URL used:
-Kibana opened successfully:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Kibana URL used:
@@ -1427,15 +1086,7 @@ Use **Kibana** in the browser.
 1. Open the Kibana main navigation menu.
 2. Search for **Discover**.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -1454,15 +1105,7 @@ Capture a screenshot showing Discover open.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Discover opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Discover opened:
@@ -1483,15 +1126,7 @@ Use **Kibana Discover**.
 1. Locate the data view selector in Discover.
 2. Select a logs-related data view.
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Look for or select this data view:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -1499,15 +1134,7 @@ logs-*
 
 Alternative possible data views:
 
-### Copy
-
-```text
-winlogbeat-*
-```
-
-### Type
-
-Look for this data view if `logs-*` is not available:
+### Student Input - Copy or Type
 
 ```text
 winlogbeat-*
@@ -1515,15 +1142,7 @@ winlogbeat-*
 
 3. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -1550,16 +1169,7 @@ Capture a screenshot showing the selected data view and time range.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Data view selected:
-Time range used:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Data view selected:
@@ -1581,15 +1191,7 @@ Use **Kibana Discover**.
 1. Click the Kibana query bar.
 2. Enter the host query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -1600,15 +1202,7 @@ host.name : "WIN11-CLIENT"
 
 If no events appear, try this alternate query:
 
-### Copy
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
@@ -1624,16 +1218,7 @@ Capture a screenshot showing events from WIN11-CLIENT.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Host query used:
-Events from WIN11-CLIENT found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Host query used:
@@ -1654,15 +1239,7 @@ Use **Kibana Discover**.
 
 1. Search for Sysmon events using the provider field.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon"
@@ -1673,15 +1250,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon"
 
 If no results appear, try the Sysmon dataset query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational"
@@ -1689,15 +1258,7 @@ host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational"
 
 If still no results appear, try the channel query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Microsoft-Windows-Sysmon/Operational"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Microsoft-Windows-Sysmon/Operational"
@@ -1726,16 +1287,7 @@ Capture a screenshot showing Sysmon events in Discover.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon query used:
-Sysmon events found in Kibana:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon query used:
@@ -1756,15 +1308,7 @@ Use **Kibana Discover**.
 
 1. Search for Sysmon Event ID 1.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1"
@@ -1775,15 +1319,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and e
 
 If no results appear, try the alternate event ID field:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and winlog.event_id : 1
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and winlog.event_id : 1
@@ -1791,15 +1327,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and w
 
 If still no results appear, try the dataset version:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational" and event.code : "1"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational" and event.code : "1"
@@ -1821,16 +1349,7 @@ Capture a screenshot showing Sysmon Event ID 1 process creation events.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon Event ID 1 query used:
-Sysmon Event ID 1 events found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon Event ID 1 query used:
@@ -1852,15 +1371,7 @@ Use **Kibana Discover**.
 1. In Discover, locate the field list.
 2. Add or view the timestamp field.
 
-### Copy
-
-```text
-@timestamp
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 @timestamp
@@ -1868,15 +1379,7 @@ Search for or add this field:
 
 3. Add or view the process name field.
 
-### Copy
-
-```text
-process.name
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 process.name
@@ -1884,15 +1387,7 @@ process.name
 
 4. Add or view the process executable field.
 
-### Copy
-
-```text
-process.executable
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 process.executable
@@ -1900,15 +1395,7 @@ process.executable
 
 5. Add or view the command line field.
 
-### Copy
-
-```text
-process.command_line
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 process.command_line
@@ -1916,15 +1403,7 @@ process.command_line
 
 6. Add or view the parent process name field.
 
-### Copy
-
-```text
-process.parent.name
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 process.parent.name
@@ -1932,15 +1411,7 @@ process.parent.name
 
 7. Add or view the username field.
 
-### Copy
-
-```text
-user.name
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 user.name
@@ -1948,15 +1419,7 @@ user.name
 
 8. Add or view the event code field.
 
-### Copy
-
-```text
-event.code
-```
-
-### Type
-
-Search for or add this field:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -1987,16 +1450,7 @@ Capture a screenshot showing process-related fields in Discover.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Process fields added or reviewed:
-Missing fields, if any:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Process fields added or reviewed:
@@ -2017,15 +1471,7 @@ Use **Kibana Discover**.
 
 1. Search for Notepad process activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
@@ -2036,15 +1482,7 @@ host.name : "WIN11-CLIENT" and process.name : "notepad.exe"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.executable : *notepad*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.executable : *notepad*
@@ -2052,15 +1490,7 @@ host.name : "WIN11-CLIENT" and process.executable : *notepad*
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *notepad*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *notepad*
@@ -2080,19 +1510,7 @@ Capture a screenshot showing the Notepad process event.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Notepad query used:
-Notepad event found:
-Notepad timestamp:
-Notepad parent process:
-Notepad command line:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Notepad query used:
@@ -2116,15 +1534,7 @@ Use **Kibana Discover**.
 
 1. Search for Calculator process activity.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "calc.exe"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "calc.exe"
@@ -2135,15 +1545,7 @@ host.name : "WIN11-CLIENT" and process.name : "calc.exe"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : *Calculator*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : *Calculator*
@@ -2151,15 +1553,7 @@ host.name : "WIN11-CLIENT" and process.name : *Calculator*
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *calc*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *calc*
@@ -2190,20 +1584,7 @@ Capture a screenshot showing the Calculator-related process event or query attem
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Calculator query used:
-Calculator event found:
-Calculator process name observed:
-Calculator timestamp:
-Calculator parent process:
-Calculator command line:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Calculator query used:
@@ -2228,15 +1609,7 @@ Use **Kibana Discover**.
 
 1. Search for `whoami` in process command lines.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *whoami*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *whoami*
@@ -2247,15 +1620,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *whoami*
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
@@ -2263,15 +1628,7 @@ host.name : "WIN11-CLIENT" and process.name : "whoami.exe"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *whoami*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *whoami*
@@ -2291,20 +1648,7 @@ Capture a screenshot showing the `whoami` process event.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-whoami query used:
-whoami event found:
-whoami timestamp:
-whoami parent process:
-whoami command line:
-whoami user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 whoami query used:
@@ -2329,15 +1673,7 @@ Use **Kibana Discover**.
 
 1. Search for `hostname` in process command lines.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *hostname*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *hostname*
@@ -2348,15 +1684,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *hostname*
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
@@ -2364,15 +1692,7 @@ host.name : "WIN11-CLIENT" and process.name : "hostname.exe"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *hostname*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *hostname*
@@ -2392,20 +1712,7 @@ Capture a screenshot showing the `hostname` process event.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-hostname query used:
-hostname event found:
-hostname timestamp:
-hostname parent process:
-hostname command line:
-hostname user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 hostname query used:
@@ -2430,15 +1737,7 @@ Use **Kibana Discover**.
 
 1. Search for `ipconfig` in process command lines.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
@@ -2449,15 +1748,7 @@ host.name : "WIN11-CLIENT" and process.command_line : *ipconfig*
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
@@ -2465,15 +1756,7 @@ host.name : "WIN11-CLIENT" and process.name : "ipconfig.exe"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *ipconfig*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *ipconfig*
@@ -2493,20 +1776,7 @@ Capture a screenshot showing the `ipconfig` process event.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-ipconfig query used:
-ipconfig event found:
-ipconfig timestamp:
-ipconfig parent process:
-ipconfig command line:
-ipconfig user:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 ipconfig query used:
@@ -2531,15 +1801,7 @@ Use **Kibana Discover**.
 
 1. Run a query that returns Sysmon Event ID 1 events.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and event.code : "1"
@@ -2552,24 +1814,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon" and e
 
 Look for these fields:
 
-### Copy
-
-```text
-@timestamp
-host.name
-user.name
-process.name
-process.executable
-process.command_line
-process.parent.name
-process.parent.executable
-event.provider
-event.code
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 @timestamp
@@ -2594,21 +1839,7 @@ Capture a screenshot showing the open Sysmon event details.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Selected Sysmon event timestamp:
-Selected Sysmon event process name:
-Selected Sysmon event process path:
-Selected Sysmon event command line:
-Selected Sysmon event parent process:
-Selected Sysmon event username:
-Selected Sysmon event ID:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Selected Sysmon event timestamp:
@@ -2639,15 +1870,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2655,15 +1878,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab05-Sysmon-Process-Timeline.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab05-Sysmon-Process-Timeline.txt
@@ -2671,82 +1886,7 @@ Lab05-Sysmon-Process-Timeline.txt
 
 ## Process Timeline Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 05 - Sysmon Process Activity Timeline
-
-Student Name:
-Date:
-
-Timeline Entry 1
-Timestamp:
-Host:
-User:
-Process name:
-Process path:
-Command line:
-Parent process:
-Event provider:
-Event ID:
-Notes:
-
-Timeline Entry 2
-Timestamp:
-Host:
-User:
-Process name:
-Process path:
-Command line:
-Parent process:
-Event provider:
-Event ID:
-Notes:
-
-Timeline Entry 3
-Timestamp:
-Host:
-User:
-Process name:
-Process path:
-Command line:
-Parent process:
-Event provider:
-Event ID:
-Notes:
-
-Timeline Entry 4
-Timestamp:
-Host:
-User:
-Process name:
-Process path:
-Command line:
-Parent process:
-Event provider:
-Event ID:
-Notes:
-
-Timeline Entry 5
-Timestamp:
-Host:
-User:
-Process name:
-Process path:
-Command line:
-Parent process:
-Event provider:
-Event ID:
-Notes:
-
-Timeline Summary
-Write 3 to 5 sentences explaining what process activity you observed and why Sysmon Event ID 1 is useful.
-```
-
-### Type
-
-Type this template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -2850,15 +1990,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2866,15 +1998,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab05-Sysmon-Notes.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab05-Sysmon-Notes.txt
@@ -2882,128 +2006,7 @@ Lab05-Sysmon-Notes.txt
 
 ## Lab Notes Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 05 - Collecting Sysmon Process Activity
-
-Student Name:
-Date:
-
-1. Environment Verification
-
-Windows hostname:
-Windows evidence folder confirmed:
-Elastic Agent service status:
-
-2. Sysmon Verification
-
-Sysmon executable found:
-Sysmon configuration found:
-Sysmon files path:
-Sysmon service found:
-Sysmon service status:
-Sysmon installation performed:
-Sysmon installation result:
-Sysmon running after verification:
-Sysmon Operational log exists:
-Sysmon Operational log enabled:
-Sysmon Operational record count:
-Sysmon Operational log visible in Event Viewer:
-Recent Sysmon events visible:
-Recent Sysmon events visible locally:
-Sysmon Event ID 1 visible locally:
-
-3. Safe Activity Generated
-
-Generated activity: notepad.exe
-Activity time:
-
-Generated activity: calc.exe
-Activity time:
-
-Generated activity: whoami
-whoami output:
-Activity time:
-
-Generated activity: hostname
-hostname output:
-Activity time:
-
-Generated activity: ipconfig
-Activity time:
-
-4. Kibana Verification
-
-Kibana URL used:
-Kibana opened successfully:
-Discover opened:
-Data view selected:
-Time range used:
-Host query used:
-Events from WIN11-CLIENT found:
-Sysmon query used:
-Sysmon events found in Kibana:
-Sysmon Event ID 1 query used:
-Sysmon Event ID 1 events found:
-Process fields added or reviewed:
-Missing fields, if any:
-
-5. Process Searches
-
-Notepad query used:
-Notepad event found:
-Notepad timestamp:
-Notepad parent process:
-Notepad command line:
-
-Calculator query used:
-Calculator event found:
-Calculator process name observed:
-Calculator timestamp:
-Calculator parent process:
-Calculator command line:
-
-whoami query used:
-whoami event found:
-whoami timestamp:
-whoami parent process:
-whoami command line:
-whoami user:
-
-hostname query used:
-hostname event found:
-hostname timestamp:
-hostname parent process:
-hostname command line:
-hostname user:
-
-ipconfig query used:
-ipconfig event found:
-ipconfig timestamp:
-ipconfig parent process:
-ipconfig command line:
-ipconfig user:
-
-6. Selected Sysmon Event
-
-Selected Sysmon event timestamp:
-Selected Sysmon event process name:
-Selected Sysmon event process path:
-Selected Sysmon event command line:
-Selected Sysmon event parent process:
-Selected Sysmon event username:
-Selected Sysmon event ID:
-
-7. Lab Summary
-
-Write 3 to 5 sentences explaining what you learned about Sysmon, process creation events, and Kibana analysis.
-```
-
-### Type
-
-Type this template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -3148,15 +2151,7 @@ Use **Windows PowerShell**.
 
 1. Confirm the process timeline file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab05-Sysmon-Process-Timeline.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab05-Sysmon-Process-Timeline.txt"
@@ -3165,15 +2160,7 @@ Test-Path "C:\BlueWave\Evidence\Lab05-Sysmon-Process-Timeline.txt"
 2. Press **Enter**.
 3. Confirm the notes file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab05-Sysmon-Notes.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab05-Sysmon-Notes.txt"
@@ -3281,15 +2268,7 @@ Before finishing the lab, confirm each item is complete.
 
 Check the Tools folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Tools"
@@ -3312,29 +2291,13 @@ Do not download Sysmon from the internet.
 
 Check both possible service names.
 
-### Copy
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon64 -ErrorAction SilentlyContinue
 ```
 
-### Type
-
-Type this into PowerShell:
-
-```powershell
-Get-Service Sysmon64 -ErrorAction SilentlyContinue
-```
-
-### Copy
-
-```powershell
-Get-Service Sysmon -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service Sysmon -ErrorAction SilentlyContinue
@@ -3350,15 +2313,7 @@ Check that PowerShell is running as Administrator.
 
 Search for:
 
-### Copy
-
-```text
-PowerShell
-```
-
-### Type
-
-Type this into Windows search:
+### Student Input - Copy or Type
 
 ```text
 PowerShell
@@ -3368,15 +2323,7 @@ Right-click **Windows PowerShell** and select **Run as administrator**.
 
 Then run:
 
-### Copy
-
-```powershell
-Set-Location "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into Administrator PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Set-Location "C:\LabFiles\Tools"
@@ -3384,15 +2331,7 @@ Set-Location "C:\LabFiles\Tools"
 
 Then run:
 
-### Copy
-
-```powershell
-.\Sysmon64.exe -accepteula -i .\sysmon-bluewave.xml
-```
-
-### Type
-
-Type this into Administrator PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 .\Sysmon64.exe -accepteula -i .\sysmon-bluewave.xml
@@ -3404,15 +2343,7 @@ Type this into Administrator PowerShell:
 
 Try checking the log again.
 
-### Copy
-
-```powershell
-Get-WinEvent -ListLog "Microsoft-Windows-Sysmon/Operational"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-WinEvent -ListLog "Microsoft-Windows-Sysmon/Operational"
@@ -3428,15 +2359,7 @@ Ask your instructor before making changes.
 
 Check that the Kibana URL is correct.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -3450,43 +2373,19 @@ If Kibana still does not open, confirm Kibana is running or ask your instructor.
 
 Try these queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Sysmon"
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : "windows.sysmon_operational"
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Microsoft-Windows-Sysmon/Operational"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Microsoft-Windows-Sysmon/Operational"
@@ -3496,15 +2395,7 @@ Also check the time range.
 
 Set it to:
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -3512,15 +2403,7 @@ Last 24 hours
 
 If still no events appear, try:
 
-### Copy
-
-```text
-Last 7 days
-```
-
-### Type
-
-Select or type:
+### Student Input - Copy or Type
 
 ```text
 Last 7 days
@@ -3532,29 +2415,13 @@ Last 7 days
 
 Try alternate event ID fields.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 event.code : "1"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-event.code : "1"
-```
-
-### Copy
-
-```text
-winlog.event_id : 1
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 winlog.event_id : 1
@@ -3562,15 +2429,7 @@ winlog.event_id : 1
 
 Try combining with the Sysmon channel:
 
-### Copy
-
-```text
-winlog.channel : "Microsoft-Windows-Sysmon/Operational" and winlog.event_id : 1
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 winlog.channel : "Microsoft-Windows-Sysmon/Operational" and winlog.event_id : 1
@@ -3582,29 +2441,13 @@ winlog.channel : "Microsoft-Windows-Sysmon/Operational" and winlog.event_id : 1
 
 Try broader message searches.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 message : *notepad*
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-message : *notepad*
-```
-
-### Copy
-
-```text
-message : *calc*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 message : *calc*
@@ -3624,19 +2467,7 @@ or another application host process.
 
 Try opening the full event details and look for related fields.
 
-### Copy
-
-```text
-process.command_line
-process.executable
-process.name
-message
-winlog.event_data.CommandLine
-```
-
-### Type
-
-Look for these fields:
+### Student Input - Copy or Type
 
 ```text
 process.command_line
@@ -3656,26 +2487,7 @@ Elastic field names may vary.
 
 Try alternate fields such as:
 
-### Copy
-
-```text
-event.code
-winlog.event_id
-event.provider
-winlog.provider_name
-winlog.channel
-event.dataset
-process.name
-process.executable
-process.command_line
-process.parent.name
-user.name
-message
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -3698,15 +2510,7 @@ message
 
 Check the evidence folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\BlueWave\Evidence"
