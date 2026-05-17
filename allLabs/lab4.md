@@ -16,23 +16,26 @@ This lab continues the BlueWave Clinic SOC build from Lab 03.
 
 ---
 
-## How to Use Copy and Type Options
+## How to Use Copy or Type Inputs
 
-This lab uses **Copy** and **Type** options for every command, query, search term, path, filename, and template that students may need to enter.
+This lab keeps the Skillable **Copy or Type** requirement without repeating the same command twice.
 
-### Copy Option
+For each command, query, search term, path, filename, URL, or template, you will see one block named:
 
-Use the **Copy** option when you want to copy and paste the text directly into the lab environment.
+```text
+Student Input - Copy or Type
+```
 
-### Type Option
+You may either:
 
-Use the **Type** option when you need to manually type the text.
+- Copy the text directly into the lab environment.
+- Type the same text manually.
 
 > [!note]
-> The Copy and Type options contain the same command or text. Use one option unless your instructor tells you otherwise.
+> Copy or type the text exactly as shown. You only need to use one method.
 
 > [!alert]
-> Type commands and queries exactly as shown. Queries are sensitive to spaces, punctuation, quotation marks, and field names.
+> Commands, queries, paths, quotation marks, slashes, backslashes, and spaces must match the instructions exactly.
 
 ---
 
@@ -189,15 +192,7 @@ Use **Windows PowerShell**.
 2. Open **Windows PowerShell**.
 3. Confirm the hostname.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -222,15 +217,7 @@ Capture a screenshot of the hostname result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows hostname:
-```
-
-### Type
-
-Type this into your evidence notes, then add the hostname:
+### Student Input - Copy or Type
 
 ```text
 Windows hostname:
@@ -250,15 +237,7 @@ Use **Windows PowerShell**.
 
 1. In PowerShell, check the evidence folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence"
@@ -267,15 +246,7 @@ Test-Path "C:\BlueWave\Evidence"
 2. Press **Enter**.
 3. If the result is `False`, create the folder.
 
-### Copy
-
-```powershell
-New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 New-Item -Path "C:\BlueWave\Evidence" -ItemType Directory -Force
@@ -295,15 +266,7 @@ Capture a screenshot if your instructor requires evidence folder validation.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows evidence folder confirmed:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Windows evidence folder confirmed:
@@ -323,15 +286,7 @@ Use **Windows PowerShell**.
 
 1. Check the Elastic Agent service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -365,15 +320,7 @@ Capture a screenshot showing the Elastic Agent service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent service status:
@@ -395,15 +342,7 @@ Use a web browser.
 2. Enter the Kibana URL.
 3. Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu SOC IP address.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser address bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -428,16 +367,7 @@ Capture a screenshot showing that Kibana is open.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Kibana URL used:
-Kibana opened successfully:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Kibana URL used:
@@ -459,15 +389,7 @@ Use **Kibana** in the browser.
 1. Open the Kibana main navigation menu.
 2. Search for **Discover**.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -486,15 +408,7 @@ Capture a screenshot showing Discover open.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Discover opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Discover opened:
@@ -517,15 +431,7 @@ Use **Kibana Discover**.
 
 Common data view names may include:
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Look for or select this data view:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -533,16 +439,7 @@ logs-*
 
 Alternative possible names:
 
-### Copy
-
-```text
-winlogbeat-*
-metrics-*
-```
-
-### Type
-
-Look for one of these if `logs-*` is not available:
+### Student Input - Copy or Type
 
 ```text
 winlogbeat-*
@@ -564,15 +461,7 @@ Capture a screenshot showing the selected data view.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Data view selected:
-```
-
-### Type
-
-Type this into your evidence notes, then add the selected data view:
+### Student Input - Copy or Type
 
 ```text
 Data view selected:
@@ -594,15 +483,7 @@ Use **Kibana Discover**.
 2. Select the time range.
 3. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -627,15 +508,7 @@ Capture a screenshot showing the time range set to Last 24 hours.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Time range used:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Time range used:
@@ -662,15 +535,7 @@ Use **Kibana Discover**.
 1. Click the Kibana query bar.
 2. Enter the host name query.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -681,15 +546,7 @@ host.name : "WIN11-CLIENT"
 
 If no events appear, try this alternate query:
 
-### Copy
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
@@ -697,15 +554,7 @@ agent.name : "WIN11-CLIENT"
 
 If still no events appear, try this broader query:
 
-### Copy
-
-```text
-message : *WIN11-CLIENT*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 message : *WIN11-CLIENT*
@@ -733,16 +582,7 @@ Capture a screenshot showing events from WIN11-CLIENT in Discover.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Host query used:
-Events from WIN11-CLIENT found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Host query used:
@@ -764,15 +604,7 @@ Use **Kibana Discover**.
 1. In Discover, locate the field list.
 2. Search for the timestamp field.
 
-### Copy
-
-```text
-@timestamp
-```
-
-### Type
-
-Type or search for this field:
+### Student Input - Copy or Type
 
 ```text
 @timestamp
@@ -781,15 +613,7 @@ Type or search for this field:
 3. Add the field to the table if it is not already visible.
 4. Search for the host name field.
 
-### Copy
-
-```text
-host.name
-```
-
-### Type
-
-Type or search for this field:
+### Student Input - Copy or Type
 
 ```text
 host.name
@@ -798,15 +622,7 @@ host.name
 5. Add the field to the table.
 6. Search for the event provider field.
 
-### Copy
-
-```text
-event.provider
-```
-
-### Type
-
-Type or search for this field:
+### Student Input - Copy or Type
 
 ```text
 event.provider
@@ -815,15 +631,7 @@ event.provider
 7. Add the field to the table.
 8. Search for the event code field.
 
-### Copy
-
-```text
-event.code
-```
-
-### Type
-
-Type or search for this field:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -832,15 +640,7 @@ event.code
 9. Add the field to the table.
 10. Search for the message field.
 
-### Copy
-
-```text
-message
-```
-
-### Type
-
-Type or search for this field:
+### Student Input - Copy or Type
 
 ```text
 message
@@ -871,15 +671,7 @@ Capture a screenshot showing the Discover table with useful fields.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Fields added to Discover table:
-```
-
-### Type
-
-Type this into your evidence notes, then list the fields:
+### Student Input - Copy or Type
 
 ```text
 Fields added to Discover table:
@@ -900,15 +692,7 @@ Use **Kibana Discover**.
 1. Keep the time range set to **Last 24 hours**.
 2. Enter a query for Windows Security events.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Auditing"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Auditing"
@@ -919,15 +703,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Audi
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Security"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Security"
@@ -935,15 +711,7 @@ host.name : "WIN11-CLIENT" and winlog.channel : "Security"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *Security*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *Security*
@@ -964,18 +732,7 @@ Capture a screenshot showing Security events or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Security event query used:
-Security events found:
-Example Security event ID:
-Example Security provider:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Security event query used:
@@ -998,15 +755,7 @@ Use **Kibana Discover**.
 
 1. Enter a query for Windows System events.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "System"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "System"
@@ -1017,15 +766,7 @@ host.name : "WIN11-CLIENT" and winlog.channel : "System"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : "windows.system"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : "windows.system"
@@ -1033,15 +774,7 @@ host.name : "WIN11-CLIENT" and event.dataset : "windows.system"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *service*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *service*
@@ -1059,18 +792,7 @@ Capture a screenshot showing System events or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-System event query used:
-System events found:
-Example System event ID:
-Example System provider:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 System event query used:
@@ -1093,15 +815,7 @@ Use **Kibana Discover**.
 
 1. Enter a query for Windows Application events.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Application"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Application"
@@ -1112,15 +826,7 @@ host.name : "WIN11-CLIENT" and winlog.channel : "Application"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : "windows.application"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : "windows.application"
@@ -1128,15 +834,7 @@ host.name : "WIN11-CLIENT" and event.dataset : "windows.application"
 
 If still no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and message : *Application*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and message : *Application*
@@ -1154,18 +852,7 @@ Capture a screenshot showing Application events or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Application event query used:
-Application events found:
-Example Application event ID:
-Example Application provider:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Application event query used:
@@ -1188,15 +875,7 @@ Use **Kibana Discover**.
 
 1. Enter a query for PowerShell-related Windows events.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-PowerShell"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-PowerShell"
@@ -1207,15 +886,7 @@ host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-PowerShell"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Windows PowerShell"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Windows PowerShell"
@@ -1223,15 +894,7 @@ host.name : "WIN11-CLIENT" and winlog.channel : "Windows PowerShell"
 
 If still no results appear, try this query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Microsoft-Windows-PowerShell/Operational"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Microsoft-Windows-PowerShell/Operational"
@@ -1250,17 +913,7 @@ Capture a screenshot showing PowerShell events or the query attempt.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-PowerShell event query used:
-PowerShell events found:
-Example PowerShell event ID:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 PowerShell event query used:
@@ -1282,15 +935,7 @@ Use **Kibana Discover**.
 
 1. In Discover, use a query that returns events from WIN11-CLIENT.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -1303,21 +948,7 @@ host.name : "WIN11-CLIENT"
 
 Look for these fields if available:
 
-### Copy
-
-```text
-@timestamp
-host.name
-event.provider
-event.code
-winlog.channel
-message
-agent.name
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 @timestamp
@@ -1339,19 +970,7 @@ Capture a screenshot showing the open event details panel.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Selected Kibana event timestamp:
-Selected Kibana event provider:
-Selected Kibana event ID:
-Selected Kibana event channel:
-Selected Kibana event message summary:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add values from the event:
+### Student Input - Copy or Type
 
 ```text
 Selected Kibana event timestamp:
@@ -1376,15 +995,7 @@ Use **Windows Event Viewer**.
 1. Select the **Windows Start** menu.
 2. Search for **Event Viewer**.
 
-### Copy
-
-```text
-Event Viewer
-```
-
-### Type
-
-Type this into the Windows search box:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer
@@ -1405,15 +1016,7 @@ Capture a screenshot showing Event Viewer open.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Event Viewer opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer opened:
@@ -1434,15 +1037,7 @@ Use **Windows Event Viewer**.
 1. In Event Viewer, expand **Windows Logs**.
 2. Select **Security**.
 
-### Copy
-
-```text
-Windows Logs > Security
-```
-
-### Type
-
-Navigate to this path in Event Viewer:
+### Student Input - Copy or Type
 
 ```text
 Windows Logs > Security
@@ -1473,17 +1068,7 @@ Capture a screenshot showing a selected Security event in Event Viewer.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Event Viewer Security event ID:
-Event Viewer Security event time:
-Event Viewer Security source:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add values:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer Security event ID:
@@ -1506,15 +1091,7 @@ Use **Windows Event Viewer**.
 1. In Event Viewer, expand **Windows Logs**.
 2. Select **System**.
 
-### Copy
-
-```text
-Windows Logs > System
-```
-
-### Type
-
-Navigate to this path in Event Viewer:
+### Student Input - Copy or Type
 
 ```text
 Windows Logs > System
@@ -1534,17 +1111,7 @@ Capture a screenshot showing a selected System event in Event Viewer.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Event Viewer System event ID:
-Event Viewer System event time:
-Event Viewer System source:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add values:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer System event ID:
@@ -1573,15 +1140,7 @@ Use **Event Viewer** and **Kibana Discover**.
 
 Replace `<EVENT_ID>` with the event ID from Event Viewer.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.code : "<EVENT_ID>"
-```
-
-### Type
-
-Type this into the Kibana query bar, replacing `<EVENT_ID>` with your event ID:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.code : "<EVENT_ID>"
@@ -1601,15 +1160,7 @@ host.name : "WIN11-CLIENT" and event.code : "7036"
 
 If no results appear, try the alternate field:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.event_id : <EVENT_ID>
-```
-
-### Type
-
-Type this into the Kibana query bar, replacing `<EVENT_ID>` with your event ID:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.event_id : <EVENT_ID>
@@ -1646,20 +1197,7 @@ Capture a screenshot showing the Kibana search result.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Compared Event Viewer event ID:
-Compared Kibana query:
-Matching or similar Kibana event found:
-Timestamp comparison:
-Provider/source comparison:
-Message comparison:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Compared Event Viewer event ID:
@@ -1684,15 +1222,7 @@ Use **Kibana Discover**.
 
 1. In Discover, run a broader query for Windows logs.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.module : "windows"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.module : "windows"
@@ -1703,15 +1233,7 @@ host.name : "WIN11-CLIENT" and event.module : "windows"
 
 If no results appear, try:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : windows.*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : windows.*
@@ -1719,15 +1241,7 @@ host.name : "WIN11-CLIENT" and event.dataset : windows.*
 
 If still no results appear, return to:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -1743,16 +1257,7 @@ Capture a screenshot of the broader Windows log query results.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Broad Windows log query used:
-Broad Windows log query result:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Broad Windows log query used:
@@ -1773,15 +1278,7 @@ Use **Windows PowerShell**.
 
 1. Check whether the optional sample Windows events file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Logs\sample-windows-events.csv"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Logs\sample-windows-events.csv"
@@ -1790,15 +1287,7 @@ Test-Path "C:\LabFiles\Logs\sample-windows-events.csv"
 2. Press **Enter**.
 3. If the result is `True`, list the file details.
 
-### Copy
-
-```powershell
-Get-Item "C:\LabFiles\Logs\sample-windows-events.csv"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Item "C:\LabFiles\Logs\sample-windows-events.csv"
@@ -1831,16 +1320,7 @@ Capture a screenshot only if your instructor asks you to verify fallback files.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sample Windows events file checked:
-Sample Windows events file exists:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add the result:
+### Student Input - Copy or Type
 
 ```text
 Sample Windows events file checked:
@@ -1866,15 +1346,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to the Windows evidence folder.
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -1882,15 +1354,7 @@ C:\BlueWave\Evidence
 
 7. Save the file using the required filename.
 
-### Copy
-
-```text
-Lab04-Windows-Log-Summary.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab04-Windows-Log-Summary.txt
@@ -1898,95 +1362,7 @@ Lab04-Windows-Log-Summary.txt
 
 ## Evidence Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 04 - Collecting and Reviewing Windows Event Logs
-
-Student Name:
-Date:
-
-1. Environment Verification
-
-Windows hostname:
-Elastic Agent service status:
-Kibana URL used:
-Discover opened:
-Data view selected:
-Time range used:
-
-2. Host Event Search
-
-Host query used:
-Events from WIN11-CLIENT found:
-Fields added to Discover table:
-
-3. Windows Security Events
-
-Security event query used:
-Security events found:
-Example Security event ID:
-Example Security provider:
-
-4. Windows System Events
-
-System event query used:
-System events found:
-Example System event ID:
-Example System provider:
-
-5. Windows Application Events
-
-Application event query used:
-Application events found:
-Example Application event ID:
-Example Application provider:
-
-6. Windows PowerShell Events
-
-PowerShell event query used:
-PowerShell events found:
-Example PowerShell event ID:
-
-7. Selected Kibana Event
-
-Selected Kibana event timestamp:
-Selected Kibana event provider:
-Selected Kibana event ID:
-Selected Kibana event channel:
-Selected Kibana event message summary:
-
-8. Event Viewer Comparison
-
-Event Viewer opened:
-Event Viewer Security event ID:
-Event Viewer Security event time:
-Event Viewer Security source:
-Event Viewer System event ID:
-Event Viewer System event time:
-Event Viewer System source:
-
-Compared Event Viewer event ID:
-Compared Kibana query:
-Matching or similar Kibana event found:
-Timestamp comparison:
-Provider/source comparison:
-Message comparison:
-
-9. Optional Fallback File
-
-Sample Windows events file checked:
-Sample Windows events file exists:
-
-10. Lab Summary
-
-Write 3 to 5 sentences explaining what you learned about Windows Event Logs and how they appear in Kibana.
-```
-
-### Type
-
-Type this template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -2099,15 +1475,7 @@ Use **Windows PowerShell**.
 1. Open **Windows PowerShell**.
 2. Run the validation command.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab04-Windows-Log-Summary.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab04-Windows-Log-Summary.txt"
@@ -2148,15 +1516,7 @@ Use **Kibana**, **Event Viewer**, **PowerShell**, and **File Explorer**.
 7. Confirm you compared one Event Viewer event with Kibana.
 8. Confirm your Lab 04 evidence file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab04-Windows-Log-Summary.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab04-Windows-Log-Summary.txt"
@@ -2214,15 +1574,7 @@ Before finishing the lab, confirm each item is complete.
 
 Check that the Kibana URL is correct.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -2236,15 +1588,7 @@ If Kibana still does not open, confirm Kibana is running on UBUNTU-SOC or ask yo
 
 Use the Kibana navigation search.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -2258,16 +1602,7 @@ If Discover is still unavailable, ask your instructor to confirm your Kibana per
 
 Look for logs-related data views.
 
-### Copy
-
-```text
-logs-*
-winlogbeat-*
-```
-
-### Type
-
-Look for these data views:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -2284,15 +1619,7 @@ Check the time range.
 
 Set the time range to:
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -2300,15 +1627,7 @@ Last 24 hours
 
 Try expanding to:
 
-### Copy
-
-```text
-Last 7 days
-```
-
-### Type
-
-Select or type:
+### Student Input - Copy or Type
 
 ```text
 Last 7 days
@@ -2316,43 +1635,19 @@ Last 7 days
 
 Try alternate queries:
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Copy
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Copy
-
-```text
-message : *WIN11-CLIENT*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 message : *WIN11-CLIENT*
@@ -2364,15 +1659,7 @@ message : *WIN11-CLIENT*
 
 Check the service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -2386,29 +1673,13 @@ If the service is not found or not running, review Lab 03 or ask your instructor
 
 Try alternate Security queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Security"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Security"
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Auditing"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.provider : "Microsoft-Windows-Security-Auditing"
@@ -2422,29 +1693,13 @@ If no results appear, record the issue.
 
 Try alternate queries.
 
-### Copy
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "System"
 ```
 
-### Type
-
-Type this into the Kibana query bar:
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "System"
-```
-
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and winlog.channel : "Application"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and winlog.channel : "Application"
@@ -2460,21 +1715,7 @@ Elastic field names may vary by configuration.
 
 Try alternate fields such as:
 
-### Copy
-
-```text
-event.code
-winlog.event_id
-event.provider
-winlog.provider_name
-winlog.channel
-event.dataset
-message
-```
-
-### Type
-
-Look for these fields in the event details:
+### Student Input - Copy or Type
 
 ```text
 event.code
@@ -2492,15 +1733,7 @@ message
 
 Search for Event Viewer from the Windows Start menu.
 
-### Copy
-
-```text
-Event Viewer
-```
-
-### Type
-
-Type this into the Windows search box:
+### Student Input - Copy or Type
 
 ```text
 Event Viewer
@@ -2527,15 +1760,7 @@ Record what you observe.
 
 Check that you saved it as:
 
-### Copy
-
-```text
-Lab04-Windows-Log-Summary.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab04-Windows-Log-Summary.txt
@@ -2543,15 +1768,7 @@ Lab04-Windows-Log-Summary.txt
 
 Check that you saved it in:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this path exactly:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -2559,15 +1776,7 @@ C:\BlueWave\Evidence
 
 Confirm with:
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab04-Windows-Log-Summary.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab04-Windows-Log-Summary.txt"
