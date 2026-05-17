@@ -82,7 +82,7 @@ In later labs:
 
 | Evidence File | Location |
 |---|---|
-| `Lab01-Environment-Notes.txt` | `C:\BlueWave\Evidence\Lab01-Environment-Notes.txt` |
+| ++++Lab01-Environment-Notes.txt++++ | `C:\BlueWave\Evidence\Lab01-Environment-Notes.txt` |
 | `Lab01-Environment-Notes.txt` | `/home/student/bluewave/evidence/Lab01-Environment-Notes.txt` |
 
 ---
