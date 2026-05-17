@@ -16,23 +16,26 @@ This lab is an important step in the BlueWave Clinic SOC build. After this lab, 
 
 ---
 
-## How to Use Copy and Type Options
+## How to Use Copy or Type Inputs
 
-This lab uses **Copy** and **Type** options for every command, URL, path, filename, query, and template that students may need to enter.
+This lab keeps the Skillable **Copy or Type** requirement without repeating the same command twice.
 
-### Copy Option
+For each command, URL, path, filename, query, search term, or template, you will see one block named:
 
-Use the **Copy** option when you want to copy and paste the text directly into the lab environment.
+```text
+Student Input - Copy or Type
+```
 
-### Type Option
+You may either:
 
-Use the **Type** option when you need to manually type the text.
+- Copy the text directly into the lab environment.
+- Type the same text manually.
 
 > [!note]
-> The Copy and Type options contain the same command or text. Use one option unless your instructor tells you otherwise.
+> Copy or type the text exactly as shown. You only need to use one method.
 
 > [!alert]
-> Type commands exactly as shown. Commands are sensitive to spaces, punctuation, slashes, quotation marks, and backslashes.
+> Commands, URLs, paths, quotation marks, slashes, backslashes, and spaces must match the instructions exactly.
 
 ---
 
@@ -180,15 +183,7 @@ Use **WIN11-CLIENT**.
 3. Open **Windows PowerShell**.
 4. Confirm the hostname.
 
-### Copy
-
-```powershell
-hostname
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 hostname
@@ -213,15 +208,7 @@ Capture a screenshot showing the hostname result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows hostname:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value you saw:
+### Student Input - Copy or Type
 
 ```text
 Windows hostname:
@@ -243,15 +230,7 @@ Use **Windows PowerShell**.
 2. Test basic connectivity to UBUNTU-SOC.
 3. Replace `<UBUNTU-SOC-IP>` with the actual Ubuntu IP address.
 
-### Copy
-
-```powershell
-Test-NetConnection <UBUNTU-SOC-IP>
-```
-
-### Type
-
-Type this into PowerShell, replacing `<UBUNTU-SOC-IP>` with the actual Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```powershell
 Test-NetConnection <UBUNTU-SOC-IP>
@@ -285,15 +264,7 @@ Capture a screenshot of the connectivity result if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows-to-Ubuntu connectivity result:
-```
-
-### Type
-
-Type this into your evidence notes, then add the result:
+### Student Input - Copy or Type
 
 ```text
 Windows-to-Ubuntu connectivity result:
@@ -315,15 +286,7 @@ Use a web browser.
 2. Enter the Kibana URL.
 3. Replace `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser address bar, replacing `<UBUNTU-SOC-IP>` with your Ubuntu SOC IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -351,16 +314,7 @@ Capture a screenshot showing the Kibana home page.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Kibana URL used:
-Kibana opened successfully:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Kibana URL used:
@@ -382,15 +336,7 @@ Use **Kibana** in the browser.
 1. In Kibana, open the main navigation menu.
 2. Search for **Fleet**.
 
-### Copy
-
-```text
-Fleet
-```
-
-### Type
-
-Type this into the Kibana search or navigation search box:
+### Student Input - Copy or Type
 
 ```text
 Fleet
@@ -418,15 +364,7 @@ Capture a screenshot showing the Fleet page.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Fleet opened successfully:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Fleet opened successfully:
@@ -449,15 +387,7 @@ Use **Kibana Fleet**.
 
 The policy may be named something similar to:
 
-### Copy
-
-```text
-Windows Endpoint Policy
-```
-
-### Type
-
-Look for this or a similar policy name:
+### Student Input - Copy or Type
 
 ```text
 Windows Endpoint Policy
@@ -465,17 +395,7 @@ Windows Endpoint Policy
 
 Alternative possible names:
 
-### Copy
-
-```text
-BlueWave Windows Policy
-Default policy
-Windows policy
-```
-
-### Type
-
-Look for one of these possible policy names:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Windows Policy
@@ -498,15 +418,7 @@ Capture a screenshot showing the agent policy list.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Agent policy name:
-```
-
-### Type
-
-Type this into your evidence notes, then add the policy name:
+### Student Input - Copy or Type
 
 ```text
 Agent policy name:
@@ -528,15 +440,7 @@ Use **Kibana Fleet**.
 2. Review the integrations listed in the policy.
 3. Look for a Windows integration.
 
-### Copy
-
-```text
-Windows
-```
-
-### Type
-
-Look for this integration name:
+### Student Input - Copy or Type
 
 ```text
 Windows
@@ -547,19 +451,7 @@ Windows
 
 Look for log sources such as:
 
-### Copy
-
-```text
-Security
-System
-Application
-Windows PowerShell
-Microsoft-Windows-PowerShell/Operational
-```
-
-### Type
-
-Look for these log source names:
+### Student Input - Copy or Type
 
 ```text
 Security
@@ -592,16 +484,7 @@ Capture a screenshot showing the Windows integration in the policy.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows integration found:
-Windows log sources observed:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Windows integration found:
@@ -624,15 +507,7 @@ Use **Kibana Fleet**.
 2. Look for Sysmon-related collection.
 3. Search visually for terms such as:
 
-### Copy
-
-```text
-Sysmon
-```
-
-### Type
-
-Look for this term:
+### Student Input - Copy or Type
 
 ```text
 Sysmon
@@ -640,15 +515,7 @@ Sysmon
 
 4. Also look for the Sysmon log channel name.
 
-### Copy
-
-```text
-Microsoft-Windows-Sysmon/Operational
-```
-
-### Type
-
-Look for this log channel:
+### Student Input - Copy or Type
 
 ```text
 Microsoft-Windows-Sysmon/Operational
@@ -679,16 +546,7 @@ Capture a screenshot showing the policy area where Sysmon is included or where t
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Sysmon collection visible in policy:
-Sysmon log channel observed:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Sysmon collection visible in policy:
@@ -710,15 +568,7 @@ Use **Windows PowerShell**.
 1. Open **Windows PowerShell**.
 2. Check that the Tools folder exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\LabFiles\Tools"
@@ -727,15 +577,7 @@ Test-Path "C:\LabFiles\Tools"
 3. Press **Enter**.
 4. List the files in the Tools folder.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Tools"
@@ -744,15 +586,7 @@ Get-ChildItem "C:\LabFiles\Tools"
 5. Press **Enter**.
 6. Look for the Elastic Agent zip file.
 
-### Copy
-
-```text
-elastic-agent-windows.zip
-```
-
-### Type
-
-Look for this filename in the output:
+### Student Input - Copy or Type
 
 ```text
 elastic-agent-windows.zip
@@ -777,16 +611,7 @@ Capture a screenshot showing the Elastic Agent zip file in `C:\LabFiles\Tools`.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent installer found:
-Elastic Agent installer path:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent installer found:
@@ -814,15 +639,7 @@ Use **Windows PowerShell**.
 
 1. In PowerShell, check the common Elastic Agent installation folder.
 
-### Copy
-
-```powershell
-Test-Path "C:\Program Files\Elastic\Agent"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\Program Files\Elastic\Agent"
@@ -831,15 +648,7 @@ Test-Path "C:\Program Files\Elastic\Agent"
 2. Press **Enter**.
 3. Check whether the Elastic Agent service exists.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent -ErrorAction SilentlyContinue
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent -ErrorAction SilentlyContinue
@@ -869,16 +678,7 @@ Capture a screenshot showing whether the Elastic Agent service exists.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent already installed:
-Elastic Agent service status:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent already installed:
@@ -900,15 +700,7 @@ Use **Windows PowerShell**.
 1. Complete this task only if Elastic Agent is not already installed or your instructor tells you to reinstall it.
 2. Create a working folder for the extracted installer.
 
-### Copy
-
-```powershell
-New-Item -Path "C:\LabFiles\Tools\elastic-agent" -ItemType Directory -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 New-Item -Path "C:\LabFiles\Tools\elastic-agent" -ItemType Directory -Force
@@ -917,15 +709,7 @@ New-Item -Path "C:\LabFiles\Tools\elastic-agent" -ItemType Directory -Force
 3. Press **Enter**.
 4. Extract the Elastic Agent zip file.
 
-### Copy
-
-```powershell
-Expand-Archive -Path "C:\LabFiles\Tools\elastic-agent-windows.zip" -DestinationPath "C:\LabFiles\Tools\elastic-agent" -Force
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Expand-Archive -Path "C:\LabFiles\Tools\elastic-agent-windows.zip" -DestinationPath "C:\LabFiles\Tools\elastic-agent" -Force
@@ -934,15 +718,7 @@ Expand-Archive -Path "C:\LabFiles\Tools\elastic-agent-windows.zip" -DestinationP
 5. Press **Enter**.
 6. List the extracted files.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Tools\elastic-agent" -Recurse | Select-Object FullName
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Tools\elastic-agent" -Recurse | Select-Object FullName
@@ -951,15 +727,7 @@ Get-ChildItem "C:\LabFiles\Tools\elastic-agent" -Recurse | Select-Object FullNam
 7. Press **Enter**.
 8. Look for:
 
-### Copy
-
-```text
-elastic-agent.exe
-```
-
-### Type
-
-Look for this file:
+### Student Input - Copy or Type
 
 ```text
 elastic-agent.exe
@@ -978,16 +746,7 @@ Capture a screenshot showing `elastic-agent.exe` in the extracted folder.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent extracted:
-Extracted folder location:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent extracted:
@@ -1053,16 +812,7 @@ Capture a screenshot showing the Add Agent page. Do not expose sensitive tokens 
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Fleet enrolment command obtained:
-Agent policy selected:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Fleet enrolment command obtained:
@@ -1085,15 +835,7 @@ Use **WIN11-CLIENT**.
 1. Select the **Windows Start** menu.
 2. Search for PowerShell.
 
-### Copy
-
-```text
-PowerShell
-```
-
-### Type
-
-Type this into the Windows search box:
+### Student Input - Copy or Type
 
 ```text
 PowerShell
@@ -1122,15 +864,7 @@ Capture a screenshot showing Administrator PowerShell if required.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Administrator PowerShell opened:
-```
-
-### Type
-
-Type this into your evidence notes:
+### Student Input - Copy or Type
 
 ```text
 Administrator PowerShell opened:
@@ -1153,15 +887,7 @@ Use **Administrator PowerShell**.
 
 If your extracted folder contains `elastic-agent.exe` directly, use:
 
-### Copy
-
-```powershell
-Set-Location "C:\LabFiles\Tools\elastic-agent"
-```
-
-### Type
-
-Type this into Administrator PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Set-Location "C:\LabFiles\Tools\elastic-agent"
@@ -1171,15 +897,7 @@ If the extracted files are inside a versioned folder, use the path that contains
 
 Example:
 
-### Copy
-
-```powershell
-Set-Location "C:\LabFiles\Tools\elastic-agent\elastic-agent-8.x.x-windows-x86_64"
-```
-
-### Type
-
-Type the path that matches your extracted folder:
+### Student Input - Copy or Type
 
 ```powershell
 Set-Location "C:\LabFiles\Tools\elastic-agent\elastic-agent-8.x.x-windows-x86_64"
@@ -1187,15 +905,7 @@ Set-Location "C:\LabFiles\Tools\elastic-agent\elastic-agent-8.x.x-windows-x86_64
 
 3. Confirm `elastic-agent.exe` exists.
 
-### Copy
-
-```powershell
-Test-Path ".\elastic-agent.exe"
-```
-
-### Type
-
-Type this into Administrator PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path ".\elastic-agent.exe"
@@ -1219,16 +929,7 @@ Capture a screenshot showing `Test-Path ".\elastic-agent.exe"` returning `True`.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent working folder:
-elastic-agent.exe found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent working folder:
@@ -1254,15 +955,7 @@ Use **Administrator PowerShell**.
 5. Press **Enter**.
 6. If prompted to continue, type `Y`.
 
-### Copy
-
-```text
-Y
-```
-
-### Type
-
-Type this if PowerShell asks whether you want to continue:
+### Student Input - Copy or Type
 
 ```text
 Y
@@ -1302,16 +995,7 @@ Capture a screenshot showing successful Elastic Agent installation or enrolment.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent install/enrolment completed:
-Installation result:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your result:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent install/enrolment completed:
@@ -1332,15 +1016,7 @@ Use **Windows PowerShell**.
 
 1. Run the service check command.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -1373,15 +1049,7 @@ Capture a screenshot showing the Elastic Agent service status.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Elastic Agent service status:
-```
-
-### Type
-
-Type this into your evidence notes, then add the value:
+### Student Input - Copy or Type
 
 ```text
 Elastic Agent service status:
@@ -1404,15 +1072,7 @@ Use **Kibana Fleet** in the browser.
 3. Select **Agents**.
 4. Look for the Windows endpoint hostname.
 
-### Copy
-
-```text
-WIN11-CLIENT
-```
-
-### Type
-
-Look for this hostname or your actual Windows hostname:
+### Student Input - Copy or Type
 
 ```text
 WIN11-CLIENT
@@ -1441,16 +1101,7 @@ Capture a screenshot showing WIN11-CLIENT in Fleet.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-WIN11-CLIENT visible in Fleet:
-Fleet agent status:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 WIN11-CLIENT visible in Fleet:
@@ -1473,19 +1124,7 @@ Use **Kibana Fleet**.
 2. Review the agent details page.
 3. Locate the following information if visible:
 
-### Copy
-
-```text
-Agent status
-Host name
-Agent policy
-Last check-in
-Agent version
-```
-
-### Type
-
-Look for these fields on the agent details page:
+### Student Input - Copy or Type
 
 ```text
 Agent status
@@ -1513,18 +1152,7 @@ Capture a screenshot showing the agent details page.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Agent hostname:
-Agent policy:
-Agent version:
-Last check-in:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add the values:
+### Student Input - Copy or Type
 
 ```text
 Agent hostname:
@@ -1548,15 +1176,7 @@ Use **Kibana**.
 1. Open the Kibana main navigation menu.
 2. Search for **Discover**.
 
-### Copy
-
-```text
-Discover
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Discover
@@ -1567,15 +1187,7 @@ Discover
 
 Possible data view names may include:
 
-### Copy
-
-```text
-logs-*
-```
-
-### Type
-
-Look for a data view similar to:
+### Student Input - Copy or Type
 
 ```text
 logs-*
@@ -1583,16 +1195,7 @@ logs-*
 
 Alternative possible data views:
 
-### Copy
-
-```text
-winlogbeat-*
-metrics-*
-```
-
-### Type
-
-Look for one of these if `logs-*` is not available:
+### Student Input - Copy or Type
 
 ```text
 winlogbeat-*
@@ -1601,15 +1204,7 @@ metrics-*
 
 5. Set the time range to **Last 24 hours**.
 
-### Copy
-
-```text
-Last 24 hours
-```
-
-### Type
-
-Select or type this time range:
+### Student Input - Copy or Type
 
 ```text
 Last 24 hours
@@ -1633,17 +1228,7 @@ Capture a screenshot showing Discover with the selected data view and time range
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Discover opened:
-Data view used:
-Time range used:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your values:
+### Student Input - Copy or Type
 
 ```text
 Discover opened:
@@ -1666,15 +1251,7 @@ Use **Kibana Discover**.
 1. In Discover, click the search query bar.
 2. Search for the Windows hostname.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -1685,15 +1262,7 @@ host.name : "WIN11-CLIENT"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
@@ -1701,15 +1270,7 @@ agent.name : "WIN11-CLIENT"
 
 If still no results appear, try searching for the hostname in the message field:
 
-### Copy
-
-```text
-message : *WIN11-CLIENT*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 message : *WIN11-CLIENT*
@@ -1739,16 +1300,7 @@ Capture a screenshot showing events from WIN11-CLIENT in Discover.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Kibana query used:
-Events from WIN11-CLIENT found:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Kibana query used:
@@ -1770,15 +1322,7 @@ Use **Kibana Discover**.
 1. Keep the time range set to **Last 24 hours**.
 2. Search for Windows events.
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.module : "windows"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.module : "windows"
@@ -1789,15 +1333,7 @@ host.name : "WIN11-CLIENT" and event.module : "windows"
 
 If no results appear, try this alternate query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT" and event.dataset : windows.*
-```
-
-### Type
-
-Type this alternate query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT" and event.dataset : windows.*
@@ -1805,15 +1341,7 @@ host.name : "WIN11-CLIENT" and event.dataset : windows.*
 
 If no results appear, try this broader query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this broader query into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -1841,16 +1369,7 @@ Capture a screenshot showing Windows-related events in Discover.
 
 ## Record in Evidence Notes
 
-### Copy
-
-```text
-Windows events found in Discover:
-Windows event query used:
-```
-
-### Type
-
-Type these lines into your evidence notes, then add your findings:
+### Student Input - Copy or Type
 
 ```text
 Windows events found in Discover:
@@ -1876,15 +1395,7 @@ Use **Notepad**.
 5. Select **Save As**.
 6. Browse to:
 
-### Copy
-
-```text
-C:\BlueWave\Evidence
-```
-
-### Type
-
-Type this into the Save As location if needed:
+### Student Input - Copy or Type
 
 ```text
 C:\BlueWave\Evidence
@@ -1892,15 +1403,7 @@ C:\BlueWave\Evidence
 
 7. Save the file as:
 
-### Copy
-
-```text
-Lab03-Agent-Enrolment-Notes.txt
-```
-
-### Type
-
-Type this filename exactly:
+### Student Input - Copy or Type
 
 ```text
 Lab03-Agent-Enrolment-Notes.txt
@@ -1908,75 +1411,7 @@ Lab03-Agent-Enrolment-Notes.txt
 
 ## Evidence Template
 
-### Copy
-
-```text
-BlueWave Clinic Cyber Operations with Elastic
-Lab 03 - Enrolling Windows 11 into Elastic
-
-Student Name:
-Date:
-
-1. Environment Information
-
-Windows hostname:
-Ubuntu SOC IP address:
-Kibana URL used:
-
-2. Fleet Review
-
-Fleet opened successfully:
-Agent policy name:
-Windows integration found:
-Windows log sources observed:
-Sysmon collection visible in policy:
-Sysmon log channel observed:
-
-3. Elastic Agent Installer
-
-Elastic Agent installer found:
-Elastic Agent installer path:
-Elastic Agent already installed before this lab:
-Elastic Agent extracted:
-Elastic Agent working folder:
-elastic-agent.exe found:
-
-4. Agent Enrolment
-
-Fleet enrolment command obtained:
-Agent policy selected:
-Administrator PowerShell opened:
-Elastic Agent install/enrolment completed:
-Installation result:
-Elastic Agent service status:
-
-5. Fleet Verification
-
-WIN11-CLIENT visible in Fleet:
-Fleet agent status:
-Agent hostname:
-Agent policy:
-Agent version:
-Last check-in:
-
-6. Discover Verification
-
-Discover opened:
-Data view used:
-Time range used:
-Kibana query used:
-Events from WIN11-CLIENT found:
-Windows events found in Discover:
-Windows event query used:
-
-7. Lab Summary
-
-Write 3 to 5 sentences explaining what you completed in this lab and why Elastic Agent enrolment matters.
-```
-
-### Type
-
-Type the same template into Notepad manually:
+### Student Input - Copy or Type
 
 ```text
 BlueWave Clinic Cyber Operations with Elastic
@@ -2073,15 +1508,7 @@ Use **Windows PowerShell**.
 1. Open **Windows PowerShell**.
 2. Run the file validation command.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab03-Agent-Enrolment-Notes.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab03-Agent-Enrolment-Notes.txt"
@@ -2115,15 +1542,7 @@ Use **Kibana**, **PowerShell**, and **File Explorer**.
 
 1. Confirm Elastic Agent service is running.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -2134,15 +1553,7 @@ Get-Service elastic-agent
 4. Confirm Discover shows events from WIN11-CLIENT.
 5. Confirm the Lab 03 notes file exists.
 
-### Copy
-
-```powershell
-Test-Path "C:\BlueWave\Evidence\Lab03-Agent-Enrolment-Notes.txt"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Test-Path "C:\BlueWave\Evidence\Lab03-Agent-Enrolment-Notes.txt"
@@ -2201,15 +1612,7 @@ Before finishing the lab, confirm each item is complete.
 
 Check that the Kibana URL is correct.
 
-### Copy
-
-```text
-http://<UBUNTU-SOC-IP>:5601
-```
-
-### Type
-
-Type this into the browser, replacing `<UBUNTU-SOC-IP>` with your Ubuntu IP address:
+### Student Input - Copy or Type
 
 ```text
 http://<UBUNTU-SOC-IP>:5601
@@ -2223,15 +1626,7 @@ If Kibana still does not open, confirm Kibana is running on UBUNTU-SOC in Lab 02
 
 Use the Kibana navigation search.
 
-### Copy
-
-```text
-Fleet
-```
-
-### Type
-
-Type this into the Kibana navigation search:
+### Student Input - Copy or Type
 
 ```text
 Fleet
@@ -2245,18 +1640,7 @@ If Fleet is unavailable, ask your instructor whether the lab uses a preconfigure
 
 Look for similar policy names.
 
-### Copy
-
-```text
-Windows Endpoint Policy
-BlueWave Windows Policy
-Default policy
-Windows policy
-```
-
-### Type
-
-Look for these names in Fleet:
+### Student Input - Copy or Type
 
 ```text
 Windows Endpoint Policy
@@ -2273,15 +1657,7 @@ If no policy is available, ask your instructor to confirm Fleet preparation.
 
 Check the expected path.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Tools"
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Tools"
@@ -2301,15 +1677,7 @@ Do not download Elastic Agent from the internet.
 
 List the extracted files recursively.
 
-### Copy
-
-```powershell
-Get-ChildItem "C:\LabFiles\Tools\elastic-agent" -Recurse | Select-Object FullName
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-ChildItem "C:\LabFiles\Tools\elastic-agent" -Recurse | Select-Object FullName
@@ -2333,15 +1701,7 @@ Open PowerShell as Administrator.
 
 Search for:
 
-### Copy
-
-```text
-PowerShell
-```
-
-### Type
-
-Type this into Windows search:
+### Student Input - Copy or Type
 
 ```text
 PowerShell
@@ -2372,15 +1732,7 @@ Ask your instructor if the enrolment token needs to be regenerated.
 
 Check the service.
 
-### Copy
-
-```powershell
-Get-Service elastic-agent
-```
-
-### Type
-
-Type this into PowerShell:
+### Student Input - Copy or Type
 
 ```powershell
 Get-Service elastic-agent
@@ -2421,15 +1773,7 @@ Try these steps:
 1. Set the time range to **Last 24 hours**.
 2. Try this query:
 
-### Copy
-
-```text
-host.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 host.name : "WIN11-CLIENT"
@@ -2437,15 +1781,7 @@ host.name : "WIN11-CLIENT"
 
 3. Try this alternate query:
 
-### Copy
-
-```text
-agent.name : "WIN11-CLIENT"
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 agent.name : "WIN11-CLIENT"
@@ -2453,15 +1789,7 @@ agent.name : "WIN11-CLIENT"
 
 4. Try this broader query:
 
-### Copy
-
-```text
-*
-```
-
-### Type
-
-Type this into the Kibana query bar:
+### Student Input - Copy or Type
 
 ```text
 *
@@ -2477,19 +1805,7 @@ Elastic field names may vary.
 
 Try alternate fields such as:
 
-### Copy
-
-```text
-host.name
-agent.name
-winlog.computer_name
-event.dataset
-message
-```
-
-### Type
-
-Look for these fields in event details:
+### Student Input - Copy or Type
 
 ```text
 host.name
