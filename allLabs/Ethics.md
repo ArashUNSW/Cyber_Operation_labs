@@ -72,5 +72,6 @@ Not allowed activities include:
 
 This course may use:
 
-```text
+``` text
 BlueWaveActivitySimulator.exe
+```
