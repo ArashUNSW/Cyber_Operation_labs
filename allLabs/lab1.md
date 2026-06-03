@@ -618,7 +618,7 @@ Use both machines.
 
 Check the Windows lab files folder.
 
-### Student Input - Copy or Type
+### Student Input - This folder contains information of tools, Simulators and Logs are used in this course. 
 
 ```powershell
 Test-Path "C:\LabFiles"
