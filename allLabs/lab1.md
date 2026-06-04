@@ -106,9 +106,6 @@ In later labs:
 |---|---|
 | `/home/student/labfiles` | Main Ubuntu lab files folder |
 | `/home/student/labfiles/logs` | Sample logs |
-| `/home/student/labfiles/scripts` | Helper scripts |
-| `/home/student/labfiles/templates` | Evidence and report templates |
-| `/home/student/labfiles/capstone` | Capstone files used later |
 | `/home/student/bluewave/evidence` | Ubuntu evidence folder |
 
 ---
@@ -631,7 +628,6 @@ Look for:
 Tools
 Simulators
 Logs
-Templates
 ```
 
 ## Steps on UBUNTU-SOC
@@ -646,11 +642,8 @@ ls -la /home/student/labfiles
 
 Look for:
 
-```text files
-logs
-scripts
-templates
-capstone
+```text files 
+Logs
 ```
 
 > [!alert]
