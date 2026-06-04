@@ -625,8 +625,8 @@ Get-ChildItem "C:\LabFiles"
 Look for:
 
 ```text files
-Tools
-Simulators
+Tools,
+Simulators,
 Logs
 ```
 
