@@ -700,12 +700,13 @@ Elasticsearch should show as `active (running)`.
 > [!alert]
 > These settings are for an isolated training lab. Do not copy this configuration directly into production.
 > The password is not a default password. For a .deb install, you need to reset/generate it manually.
-> ```bash
+```bash
     sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
-    ```
+```
 > If you want to choose your own password instead, run:
  ```bash
-  sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i ```
+  sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic -i
+```
 
 ---
 
