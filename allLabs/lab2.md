@@ -652,6 +652,146 @@ Elasticsearch port configured:
 
 ---
 
+# Task 9 - Configure Elasticsearch for the Training Lab
+
+## Where to Work
+
+Use **UBUNTU-SOC** and **Terminal**.
+
+## Steps
+
+These settings support a simple single-node training lab.
+
+---
+
+## 1. Back up the Elasticsearch configuration file
+
+### Student Input - Copy or Type
+
+```bash
+sudo cp /etc/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml.bak.$(date +%Y%m%d%H%M%S)
+```
+
+---
+
+## 2. Fix the Elasticsearch log path if it was entered incorrectly
+
+This corrects the bad path shown as `/ var/log/elasticsearch`.
+
+### Student Input - Copy or Type
+
+```bash
+sudo sed -i 's|^path.logs: / var/log/elasticsearch|path.logs: /var/log/elasticsearch|' /etc/elasticsearch/elasticsearch.yml
+```
+
+---
+
+## 3. Disable the bootstrap master node setting
+
+This setting conflicts with `discovery.type: single-node`.
+
+### Student Input - Copy or Type
+
+```bash
+sudo sed -i 's|^[[:space:]]*cluster.initial_master_nodes:|# cluster.initial_master_nodes:|' /etc/elasticsearch/elasticsearch.yml
+```
+
+---
+
+## 4. Add single-node discovery if it is not already configured
+
+### Student Input - Copy or Type
+
+```bash
+sudo grep -qE '^[[:space:]]*discovery.type:' /etc/elasticsearch/elasticsearch.yml || echo 'discovery.type: single-node' | sudo tee -a /etc/elasticsearch/elasticsearch.yml >/dev/null
+```
+
+---
+
+## 5. Add the Elasticsearch network binding if it is not already configured
+
+### Student Input - Copy or Type
+
+```bash
+sudo grep -qE '^[[:space:]]*network.host:' /etc/elasticsearch/elasticsearch.yml || echo 'network.host: 0.0.0.0' | sudo tee -a /etc/elasticsearch/elasticsearch.yml >/dev/null
+```
+
+---
+
+## 6. Add the Elasticsearch HTTP port if it is not already configured
+
+### Student Input - Copy or Type
+
+```bash
+sudo grep -qE '^[[:space:]]*http.port:' /etc/elasticsearch/elasticsearch.yml || echo 'http.port: 9200' | sudo tee -a /etc/elasticsearch/elasticsearch.yml >/dev/null
+```
+
+---
+
+## 7. Review active Elasticsearch configuration lines
+
+### Student Input - Copy or Type
+
+```bash
+sudo grep -v '^[[:space:]]*#' /etc/elasticsearch/elasticsearch.yml | sed '/^[[:space:]]*$/d'
+```
+
+## Expected Result
+
+The configuration should include values similar to:
+
+```text
+discovery.type: single-node
+network.host: 0.0.0.0
+http.port: 9200
+```
+
+The active configuration should **not** include:
+
+```text
+cluster.initial_master_nodes: ["UBUNTU-SOC"]
+```
+
+---
+
+## 8. Restart Elasticsearch
+
+### Student Input - Copy or Type
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart elasticsearch
+sudo systemctl status elasticsearch --no-pager -l
+```
+
+## Expected Result
+
+Elasticsearch should show as `active (running)`.
+
+---
+
+> [!alert]
+> These settings are for an isolated training lab. Do not copy this configuration directly into production.
+
+---
+
+## Record in Evidence Notes
+
+```text
+Elasticsearch configuration backed up:
+Elasticsearch log path checked:
+Elasticsearch bootstrap master node setting disabled:
+Elasticsearch single-node configured:
+Elasticsearch network host configured:
+Elasticsearch port configured:
+Elasticsearch service restarted:
+```
+
+
+
+
+---
+
 # Task 10 - Start and Enable Elasticsearch
 
 ## Where to Work
