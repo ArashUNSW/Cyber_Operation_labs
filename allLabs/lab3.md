@@ -233,10 +233,6 @@ Use **Windows PowerShell**.
 ### Student Input - Copy or Type
 
 ```powershell
-ping <UBUNTU-SOC-IP>
-```
-
-```powershell
 Test-NetConnection <UBUNTU-SOC-IP>
 ```
 
