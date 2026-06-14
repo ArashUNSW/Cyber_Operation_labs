@@ -687,7 +687,11 @@ cluster.initial_master_nodes: ["UBUNTU-SOC"]
 
 ```bash
 sudo systemctl daemon-reload
+```
+```bash
 sudo systemctl restart elasticsearch
+```
+```bash
 sudo systemctl status elasticsearch --no-pager -l
 ```
 
