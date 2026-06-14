@@ -384,6 +384,24 @@ Use **Kibana Fleet**.
 
 1. In Fleet, select **Agent policies**.
 2. Look for a policy prepared for Windows endpoints.
+3. If you see this message on Fleet
+“Unable to initialize fleet. Agent binary source needs encrypted saved object API key to be set”
+This Fleet error means Kibana is missing the encrypted saved objects key. Fleet needs this key to securely store API keys and agent settings.
+
+```text
+sudo nano /etc/kibana/kibana.yml
+```
+
+Add this line at the bottom:
+```text
+xpack.encryptedSavedObjects.encryptionKey: "my_secure_fleet_key_123456789012345"
+```
+
+Save the file
+If you are using nano:
+Press Ctrl + O (Write Out) to save.
+Press Enter to confirm the filename.
+Press Ctrl + X to exit.
 
 The policy may be named something similar to:
 
