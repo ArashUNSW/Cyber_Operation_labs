@@ -1050,10 +1050,6 @@ server.port: 5601
 sudo nano /etc/kibana/kibana.yml
 ```
 
-```bash
-sudo nano /etc/kibana/kibana.yml
-```
-
 ## Add this line at the bottom:
 
 ```bash
