@@ -1044,6 +1044,26 @@ server.host: "0.0.0.0"
 server.port: 5601
 ```
 
+## Add the encrypted saved objects key in Kibana 
+
+```bash
+sudo nano /etc/kibana/kibana.yml
+```
+
+```bash
+sudo nano /etc/kibana/kibana.yml
+```
+
+## Add this line at the bottom:
+
+```bash
+xpack.encryptedSavedObjects.encryptionKey: "my_secure_fleet_key_123456789012345"
+```
+
+## Save the file
+
+Press Ctrl + O (Write Out) to save. Press Enter to confirm the filename. Press Ctrl + X to exit.
+
 ## Record in Evidence Notes
 
 ```text
